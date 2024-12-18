@@ -1,7 +1,6 @@
-/* Importa la fuente desde node_modules */
-@import '@fontsource/jetbrains-mono/400.css'; /* Peso normal */
-@import '@fontsource/jetbrains-mono/500.css'; /* Peso medio */
-@import '@fontsource/jetbrains-mono/700.css'; /* Peso negrita */
+@import '@fontsource/jetbrains-mono/400.css'; 
+@import '@fontsource/jetbrains-mono/500.css'; 
+@import '@fontsource/jetbrains-mono/700.css'; 
 
 
 body, html {

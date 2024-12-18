@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faFileAlt, faChartLine, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faFileAlt, faChartLine, faProjectDiagram, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import './App.css';
 import './Transitions.css';
@@ -9,6 +9,7 @@ import Home from './views/Home';
 import Projects from './views/Projects';
 import Resume from './views/Resume';
 import Stats from './views/Stats';
+import Contact from './views/Contact';
 
 const App = () => {
   const [section, setSection] = useState('home');
@@ -23,6 +24,8 @@ const App = () => {
         return <Resume />;
       case 'stats':
         return <Stats />;
+      case 'contact':
+        return <Contact />;
       default:
         return <div className="content-section">Select and option</div>;
     }
@@ -62,6 +65,11 @@ const App = () => {
           <li className={`nav-item ${section === 'stats' ? 'active' : ''}`}>
             <button className="btn text-start w-100" onClick={() => setSection('stats')}>
               <FontAwesomeIcon icon={faChartLine} className="me-2" /> Stats
+            </button>
+          </li>
+          <li className={`nav-item ${section === 'contact' ? 'active' : ''}`}>
+            <button className="btn text-start w-100" onClick={() => setSection('contact')}>
+              <FontAwesomeIcon icon={faEnvelope} className="me-2" /> Contact Me
             </button>
           </li>
         </ul>
