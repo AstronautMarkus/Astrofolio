@@ -1,16 +1,16 @@
 .square-container {
   background: linear-gradient(to bottom, #1b1b1b, #111111);
-  width: 85vw;
-  height: 80vh;
+  width: auto;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
+  padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
-
 
 .header-image img {
   width: 180px;
