@@ -17,7 +17,7 @@ const App = () => {
   const renderContent = () => {
     switch (section) {
       case 'home':
-        return <Home />;
+        return <Home setSection={setSection} />;
       case 'projects':
         return <Projects />;
       case 'resume':
@@ -27,9 +27,10 @@ const App = () => {
       case 'contact':
         return <Contact />;
       default:
-        return <div className="content-section">Select and option</div>;
+        return <div className="content-section">Select an option</div>;
     }
   };
+  
 
   return (
     <div className="d-flex vh-100">

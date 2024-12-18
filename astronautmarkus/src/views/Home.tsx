@@ -1,6 +1,6 @@
 import './Home.css';
 
-const Home = () => (
+const Home = ({ setSection }: { setSection: (section: string) => void }) => (
   <div className="home-container d-flex justify-content-center align-items-center vh-100">
     <div className="square-container">
       <div className="content-box text-center">
@@ -19,12 +19,18 @@ const Home = () => (
           innovative software solutions with creativity and precision.
         </p>
         <div className="cta-buttons mt-4">
-          <a href="#projects" className="btn btn-primary me-3 btn-lg">
+          <button
+            onClick={() => setSection('projects')}
+            className="btn btn-primary me-3 btn-lg"
+          >
             Discover My Projects
-          </a>
-          <a href="#contact" className="btn btn-outline-light btn-lg">
+          </button>
+          <button
+            onClick={() => setSection('contact')}
+            className="btn btn-outline-light btn-lg"
+          >
             Get in Touch
-          </a>
+          </button>
         </div>
       </div>
     </div>
