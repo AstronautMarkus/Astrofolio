@@ -1,9 +1,30 @@
-import React from 'react';
+import './Home.css';
 
-const Projects = () => (
-  <div className="content-section">
-    📂 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+const Home = () => (
+  <div className="home-container d-flex justify-content-center align-items-center vh-100">
+    <div className="content-box shadow">
+      <h1 className="title">📂 My Projects</h1>
+      <div className="content">
+        <p>
+          Here are some of the projects I've been working on:
+        </p>
+        <ul className="project-list">
+          <li className="project-item">
+            <h2 className="project-title">Project 1</h2>
+            <p className="project-description">Description of project 1.</p>
+          </li>
+          <li className="project-item">
+            <h2 className="project-title">Project 2</h2>
+            <p className="project-description">Description of project 2.</p>
+          </li>
+          <li className="project-item">
+            <h2 className="project-title">Project 3</h2>
+            <p className="project-description">Description of project 3.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 );
 
-export default Projects;
+export default Home;

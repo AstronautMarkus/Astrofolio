@@ -9,26 +9,36 @@ body, html {
   width: 250px;
   height: 100%;
   flex-shrink: 0;
+  background: linear-gradient(to bottom, #1b1b1b, #111111); /* Dark gray gradient */
+  color: #fff;
 }
 
 .dashboard-logo img {
   border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
+}
+
+.nav-item {
+  margin-bottom: 10px; /* Add spacing between buttons */
 }
 
 .nav-item button {
   font-size: 1rem;
   color: #fff;
   transition: background-color 0.3s ease;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border: none;
 }
 
 .nav-item button:hover,
 .nav-item.active button {
-  background-color: #007bff;
+  background-color: #6f42c1; /* Purple color */
   color: #fff;
 }
 
 .nav-item.active button {
   font-weight: bold;
+  box-shadow: 0 0 10px rgba(111, 66, 193, 0.5); /* Purple glow effect */
 }
 
 .btn-outline-light {
@@ -39,4 +49,10 @@ body, html {
 .btn-outline-light:hover {
   background-color: #fff;
   color: #000;
+}
+
+.dashboard-footer {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px;
+  border-top: 1px solid #fff;
 }

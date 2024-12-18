@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faFileAlt, faChartLine, faCogs, faProjectDiagram, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faFileAlt, faChartLine, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import './App.css';
 import './Transitions.css';
 import Home from './views/Home';
@@ -23,17 +24,17 @@ const App = () => {
       case 'stats':
         return <Stats />;
       default:
-        return <div className="content-section">Seleccione una sección</div>;
+        return <div className="content-section">Select and option</div>;
     }
   };
 
   return (
     <div className="d-flex vh-100">
-      {/* Sidebar */}
-      <div className="dashboard-sidebar bg-dark text-light d-flex flex-column p-3 shadow">
+
+      <div className="dashboard-sidebar d-flex flex-column p-3 shadow">
         <div className="dashboard-logo text-center mb-4">
           <img
-            src="https://via.placeholder.com/80"
+            src="https://github.com/AstronautMarkus.png"
             alt="Logo"
             className="rounded-circle mb-2"
             width="80"
@@ -41,40 +42,39 @@ const App = () => {
           <h5 className="m-0">AstronautMarkus</h5>
         </div>
 
-        {/* Navegación */}
+
         <ul className="nav flex-column mb-auto">
           <li className={`nav-item ${section === 'home' ? 'active' : ''}`}>
-            <button className="btn btn-dark text-start w-100" onClick={() => setSection('home')}>
+            <button className="btn text-start w-100" onClick={() => setSection('home')}>
               <FontAwesomeIcon icon={faUser} className="me-2" /> Home
             </button>
           </li>
           <li className={`nav-item ${section === 'projects' ? 'active' : ''}`}>
-            <button className="btn btn-dark text-start w-100" onClick={() => setSection('projects')}>
+            <button className="btn text-start w-100" onClick={() => setSection('projects')}>
               <FontAwesomeIcon icon={faProjectDiagram} className="me-2" /> Projects
             </button>
           </li>
           <li className={`nav-item ${section === 'resume' ? 'active' : ''}`}>
-            <button className="btn btn-dark text-start w-100" onClick={() => setSection('resume')}>
+            <button className="btn text-start w-100" onClick={() => setSection('resume')}>
               <FontAwesomeIcon icon={faFileAlt} className="me-2" /> Resume
             </button>
           </li>
           <li className={`nav-item ${section === 'stats' ? 'active' : ''}`}>
-            <button className="btn btn-dark text-start w-100" onClick={() => setSection('stats')}>
+            <button className="btn text-start w-100" onClick={() => setSection('stats')}>
               <FontAwesomeIcon icon={faChartLine} className="me-2" /> Stats
             </button>
           </li>
         </ul>
 
-        {/* Footer */}
-        <div className="mt-auto text-center">
-          <button className="btn btn-outline-light w-100">
-            <FontAwesomeIcon icon={faSignOutAlt} className="me-2" /> Logout
-          </button>
+
+        <div className="dashboard-footer mt-auto text-center">
+            <a href="https://github.com/AstronautMarkus" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light w-100">
+              <FontAwesomeIcon icon={faGithub} className="me-2" /> GitHub
+            </a>
           <small className="d-block mt-2">&copy; 2024 AstronautMarkus</small>
         </div>
       </div>
 
-      {/* Contenido principal con transiciones */}
       <div className="flex-grow-1 p-4 bg-light overflow-auto">
         <TransitionGroup>
           <CSSTransition key={section} timeout={300} classNames="fade">
