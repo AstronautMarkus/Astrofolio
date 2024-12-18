@@ -1,8 +1,14 @@
+/* Importa la fuente desde node_modules */
+@import '@fontsource/jetbrains-mono/400.css'; /* Peso normal */
+@import '@fontsource/jetbrains-mono/500.css'; /* Peso medio */
+@import '@fontsource/jetbrains-mono/700.css'; /* Peso negrita */
+
+
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   position: relative;
   color: #fff;
 }
