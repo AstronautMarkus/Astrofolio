@@ -1,4 +1,6 @@
 import './Projects.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Projects = () => (
   <div className="home-container d-flex justify-content-center align-items-center vh-100">
@@ -10,10 +12,10 @@ const Projects = () => (
           <ul className="project-list">
             <li className="project-item d-flex">
               <div className="project-details">
-              <h2 className="project-title">AbbyBot</h2>
-                <p className="project-description text-center">
-                A multi-functional app designed to be your faithful companion on your Discord server, offering a wide variety of management and entertainment features to improve your experience on your server.
-                </p>
+              <h2 className="project-title">AbbyBot Project</h2>
+              <p className="project-description text-center">
+                Multi-functional Discord app with management and entertainment features.
+              </p>
               <ul className="project-sublist">
                 <li>
                 <strong>Discord AbbyBot:</strong> Multi-purpose tool for Discord with moderation, entertainment, and utility commands.
@@ -25,14 +27,24 @@ const Projects = () => (
                 <strong>AbbyBot Dashboard:</strong> Admin panel for managing guild configurations and statistics.
                 </li>
               </ul>
-                <div className="text-center project-links">
-                <a href="https://github.com/username/AbbyBot-API" target="_blank" rel="noopener noreferrer" className="card-link text-glow">AbbyBot API Repo</a>
-                <a href="https://github.com/username/AbbyBot-Website" target="_blank" rel="noopener noreferrer" className="card-link text-glow">AbbyBot Website Repo</a>
-                <a href="https://github.com/username/AbbyBot-Dashboard" target="_blank" rel="noopener noreferrer" className="card-link text-glow">AbbyBot Dashboard Repo</a>
-                </div>
+              <div className="text-center project-links">
+                <a href="https://github.com/AbbyBot/AbbyBot-API" target="_blank" rel="noopener noreferrer" className="btn btn-primary m-2">
+                <FontAwesomeIcon icon={faGithub} /> AbbyBot API
+                </a>
+                <a href="https://github.com/AbbyBot/AbbyBot-Website" target="_blank" rel="noopener noreferrer" className="btn btn-secondary m-2">
+                <FontAwesomeIcon icon={faGithub} /> AbbyBot Website
+                </a>
+                <a href="https://github.com/AbbyBot/AbbyBot-Dashboard" target="_blank" rel="noopener noreferrer" className="btn btn-success m-2">
+                <FontAwesomeIcon icon={faGithub} /> AbbyBot Dashboard
+                </a>
+                <a href="https://www.abbybotproject.com" target="_blank" rel="noopener noreferrer" className="btn btn-info m-2">
+                Visit AbbyBot Project
+                </a>
+              </div>
               </div>
               <div className="project-image">
               <img src="/src/assets/img/abbybot_logo.png" alt="AbbyBot" />
+              <p className='text-center mt-3'>Hello world!</p>
               </div>
             </li>
             <li className="project-item">
