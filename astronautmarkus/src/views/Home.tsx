@@ -2,26 +2,20 @@ import './Home.css';
 
 const Home = () => (
   <div className="home-container d-flex justify-content-center align-items-center vh-100">
-    <div className="content-box shadow">
-      <h1 className="title">🚀 Welcome to ReyesAndFriends.cl!</h1>
-      <div className="content">
-        <p>
-          Greetings, visitor! My name is <span className="highlight">Marcos Reyes</span>, also known as{' '}
-          <span className="highlight-alt">AstronautMarkus</span>. I am a passionate programmer, constantly exploring
-          new technologies and creative projects.
-        </p>
-        <p>
-          If you're curious about what I do, feel free to check out my work or learn more about me below:
-        </p>
-        <div className="buttons">
-          <button className="btn btn-primary me-2">
-            🧑‍🚀 Learn More About Me
-          </button>
-          <button className="btn btn-secondary">
-            📂 See My Projects
-          </button>
-        </div>
+    <div className="content-box text-center">
+      <div className="header-image mb-4">
+        <img
+          src="/src/assets/img/astronaut.png"
+          alt="Astronaut"
+          className="astronaut-image"
+        />
       </div>
+      <h1 className="title text-white">Fix Your Little Problem and Light This Candle!</h1>
+      <p className="intro text-light mt-3">
+        Hello! I'm <span className="highlight">Marcos Reyes</span>, also known as{' '}
+        <span className="highlight-alt">AstronautMarkus</span>. As a passionate developer and space enthusiast,
+        I'm on a mission to create innovative projects while exploring the vast universe of technology.
+      </p>
     </div>
   </div>
 );
