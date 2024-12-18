@@ -1,8 +1,29 @@
 import React from 'react';
+import './Home.css';
 
 const Home = () => (
-  <div className="content-section">
-    🏠 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <div className="home-container d-flex justify-content-center align-items-center vh-100">
+    <div className="content-box shadow">
+      <h1 className="title">🚀 Welcome to ReyesAndFriends.cl!</h1>
+      <div className="content">
+        <p>
+          Greetings, visitor! My name is <span className="highlight">Marcos Reyes</span>, also known as{' '}
+          <span className="highlight-alt">AstronautMarkus</span>. I am a passionate programmer, constantly exploring
+          new technologies and creative projects.
+        </p>
+        <p>
+          If you're curious about what I do, feel free to check out my work or learn more about me below:
+        </p>
+        <div className="buttons">
+          <button className="btn btn-primary me-2">
+            🧑‍🚀 Learn More About Me
+          </button>
+          <button className="btn btn-secondary">
+            📂 See My Projects
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 );
 

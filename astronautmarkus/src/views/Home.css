@@ -1,0 +1,44 @@
+.home-container {
+    color: #f8f9fa; /* Texto claro */
+  }
+  
+  .content-box {
+    background-color: #222; /* Fondo oscuro para el cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 30px;
+    max-width: 800px; /* Ancho máximo del cuadro */
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .highlight {
+    color: #00d4ff; /* Color azul claro */
+    font-weight: bold;
+  }
+  
+  .highlight-alt {
+    color: #ffb86c; /* Color naranja */
+    font-weight: bold;
+  }
+  
+  .buttons .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .shadow {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  

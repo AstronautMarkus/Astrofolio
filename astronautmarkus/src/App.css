@@ -5,13 +5,38 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
-.sidebar {
+.dashboard-sidebar {
   width: 250px;
+  height: 100%;
   flex-shrink: 0;
 }
 
-.content-section {
-  padding: 20px;
-  font-size: 1.5rem;
-  color: #333;
+.dashboard-logo img {
+  border: 2px solid #fff;
+}
+
+.nav-item button {
+  font-size: 1rem;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item button:hover,
+.nav-item.active button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.nav-item.active button {
+  font-weight: bold;
+}
+
+.btn-outline-light {
+  border: 1px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
 }
