@@ -75,7 +75,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className="flex-grow-1 p-4 bg-light overflow-auto">
+      <div className="flex-grow-1 p-4 overflow-auto">
         <TransitionGroup>
           <CSSTransition key={section} timeout={300} classNames="fade">
             <div>{renderContent()}</div>
