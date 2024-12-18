@@ -13,6 +13,7 @@ import Contact from './views/Contact';
 
 const App = () => {
   const [section, setSection] = useState('home');
+  const currentYear = new Date().getFullYear();
 
   const renderContent = () => {
     switch (section) {
@@ -80,7 +81,7 @@ const App = () => {
             <a href="https://github.com/AstronautMarkus" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light w-100">
               <FontAwesomeIcon icon={faGithub} className="me-2" /> GitHub
             </a>
-          <small className="d-block mt-2">&copy; 2024 AstronautMarkus</small>
+          <small className="d-block mt-2">&copy; {currentYear} AstronautMarkus</small>
         </div>
       </div>
 
