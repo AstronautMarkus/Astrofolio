@@ -35,6 +35,11 @@ body::before {
 .dashboard-logo img {
   border: 2px solid #fff;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
+  transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+.dashboard-logo img:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Glow effect on hover */
 }
 
 .nav-item {
