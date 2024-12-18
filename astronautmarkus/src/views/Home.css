@@ -57,7 +57,7 @@
   }
   
   .content-box {
-    background-color: #161b22;
+    background: linear-gradient(to bottom, #1b1b1b, #111111); /* Dark gray gradient */
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
