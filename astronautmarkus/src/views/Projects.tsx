@@ -47,42 +47,104 @@ const Projects = () => (
               <p className='text-center mt-3'>Hello world!</p>
               </div>
             </li>
-            <li className="project-item">
-              <h2 className="project-title">MofuLunches-API</h2>
+
+            <li className="project-item d-flex">
+              <div className="project-details">
+              <h2 className="project-title">📝 University Projects</h2>
               <p className="project-description">
-                Modular backend following Service Oriented Architecture principles. Built with Flask to ensure scalability and interoperability.
+                Compilation of most of the projects carried out in my years as a computer science student.
               </p>
+              </div>
             </li>
-            <li className="project-item">
-              <h2 className="project-title">MofuLunches-Web</h2>
-              <p className="project-description">
-                Dynamic front-end application with Flask, featuring an intuitive dashboard for administrators and cooks.
-              </p>
+
+            <li className="project-item card text-center text-light">
+              <div className="card-body">
+                <h2 className="card-title">MofuLunches-API</h2>
+                <img src="/src/assets/img/project_img/mofulunches_api.png" alt="MofuLunches-API" className="mt-4 mb-4" width="400" />
+                <p className="card-text">Modular backend following Service Oriented Architecture principles. Built with Flask to ensure scalability and interoperability.</p>
+                <p className="card-text"><small className="text-light">Semester: 2 Year: 2024</small></p>
+                <div className="d-flex justify-content-center">
+                  <img src="/src/assets/img/icons/flask.png" alt="Flask" className="tech-icon" />
+                  <img src="/src/assets/img/icons/python.png" alt="Python" className="tech-icon" />
+                  <img src="/src/assets/img/icons/mongodb.svg" alt="Mongo" className="tech-icon" />
+                  <img src="/src/assets/img/icons/docker.png" alt="Docker" className="tech-icon" />
+                  <img src="/src/assets/img/icons/dotenv.png" alt="Dotenv" className="tech-icon" />
+                </div>
+              </div>
             </li>
-            <li className="project-item">
-              <h2 className="project-title">MofuLunches-Totem</h2>
-              <p className="project-description">
-                Digital totem system designed for seamless integration within the ordering ecosystem, utilizing Vite, Electron, and React.
-              </p>
+
+            <li className="project-item card text-center text-light">
+              <div className="card-body">
+                <h2 className="card-title">MofuLunches-Web</h2>
+                <img src="/src/assets/img/project_img/mofulunches_web.jpg" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
+                <p className="card-text">Dynamic front-end application with Flask, featuring an intuitive dashboard for administrators and cooks.</p>
+                <p className="card-text"><small className="text-light">Semester: 2 Year: 2024</small></p>
+                <div className="tech-icons d-flex justify-content-center">
+                  <img src="/src/assets/img/icons/flask.png" alt="Flask" className="tech-icon" />
+                  <img src="/src/assets/img/icons/python.png" alt="Python" className="tech-icon" />
+                  <img src="/src/assets/img/icons/bootstrap.png" alt="Bootstrap" className="tech-icon" />
+                </div>
+              </div>
             </li>
-            <li className="project-item">
-              <h2 className="project-title">Mofu Store</h2>
-              <p className="project-description">
-                E-commerce site built with Django, themed around "fumofumo" stuffed animals from the Touhou Project saga.
-              </p>
+
+            <li className="project-item card text-center text-light">
+              <div className="card-body">
+                <h2 className="card-title">MofuLunches-Totem</h2>
+                <img src="/src/assets/img/project_img/mofulunches_totem.png" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
+                <p className="card-text">Digital totem system for order pickup using API, implemented with Arduino microcontrollers, built with Electron + Vite.</p>
+                <p className="card-text"><small className="text-light">Semester: 2 Year: 2024</small></p>
+                <div className="tech-icons d-flex justify-content-center">
+                  <img src="/src/assets/img/icons/react.webp" alt="React" className="tech-icon" />
+                  <img src="/src/assets/img/icons/vite.svg" alt="Vite" className="tech-icon" />
+                  <img src="/src/assets/img/icons/electron.svg" alt="Electron" className="tech-icon" />
+                  <img src="/src/assets/img/icons/arduino.svg" alt="Arduino" className="tech-icon" />
+                  <img src="/src/assets/img/icons/bootstrap.png" alt="Bootstrap" className="tech-icon" />
+                  <img src="/src/assets/img/icons/python.png" alt="Python" className="tech-icon" />
+
+                </div>
+              </div>
             </li>
-            <li className="project-item">
-              <h2 className="project-title">CONSTRU_MIC</h2>
-              <p className="project-description">
-                Web system for household item sales, featuring user accounts, product listings, and an admin module.
-              </p>
+
+            <li className="project-item card text-center text-light">
+              <div className="card-body">
+                <img src="/src/assets/img/project_img/mofustore.png" alt="Mofu Store" className="mt-4 mb-4" width="400" />
+                <h2 className="card-title">Mofu Store</h2>
+                <p className="card-text">E-commerce site built with Django, themed around "fumofumo" stuffed animals from the Touhou Project saga.</p>
+                <p className="card-text"><small className="text-muted">Semester: Spring 2022</small></p>
+                <div className="tech-icons d-flex justify-content-center">
+                  <img src="/src/assets/img/icons/django.png" alt="Django" className="tech-icon" />
+                  <img src="/src/assets/img/icons/python.png" alt="Python" className="tech-icon" />
+                  <img src="/src/assets/img/icons/bootstrap.png" alt="Bootstrap" className="tech-icon" />
+                </div>
+              </div>
             </li>
-            <li className="project-item">
-              <h2 className="project-title">CamellosFood-Repartidor</h2>
-              <p className="project-description">
-                Mobile application system for food delivery, focusing on a delivery driver module.
-              </p>
+
+            <li className="project-item card text-center text-light">
+              <div className="card-body">
+                <img src="/src/assets/img/constru_mic.png" alt="CONSTRU_MIC" className="card-img-top" />
+                <h2 className="card-title">CONSTRU_MIC</h2>
+                <p className="card-text">Web system for household item sales, featuring user accounts, product listings, and an admin module.</p>
+                <p className="card-text"><small className="text-muted">Semester: Fall 2021</small></p>
+                <div className="tech-icons d-flex justify-content-center">
+                  <img src="/src/assets/icons/react.png" alt="React" className="tech-icon" />
+                  <img src="/src/assets/icons/nodejs.png" alt="Node.js" className="tech-icon" />
+                </div>
+              </div>
             </li>
+
+            <li className="project-item card text-center text-light">
+              <div className="card-body">
+                <img src="/src/assets/img/camellosfood_repartidor.png" alt="CamellosFood-Repartidor" className="card-img-top" />
+                <h2 className="card-title">CamellosFood-Repartidor</h2>
+                <p className="card-text">Mobile application system for food delivery, focusing on a delivery driver module.</p>
+                <p className="card-text"><small className="text-muted">Semester: Spring 2021</small></p>
+                <div className="tech-icons d-flex justify-content-center">
+                  <img src="/src/assets/icons/react_native.png" alt="React Native" className="tech-icon" />
+                  <img src="/src/assets/icons/firebase.png" alt="Firebase" className="tech-icon" />
+                </div>
+              </div>
+            </li>
+
           </ul>
         </div>
       </div>
