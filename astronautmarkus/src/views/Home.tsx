@@ -11,13 +11,14 @@ const Home = ({ setSection }: { setSection: (section: string) => void }) => (
             className="astronaut-image"
           />
         </div>
-        <h1 className="title text-white mb-3">
-          Welcome to <span className="text-glow-title">My Universe!</span>
+        <h1 className="title text-white mb-3 mt-3">
+        🚀 Welcome to <span className="text-glow-title">My Universe!</span>
         </h1>
-        <p className="intro text-light">
-          I’m <span className="highlight">Marcos Reyes</span>, a passionate full-stack developer crafting stellar applications and
-          innovative software solutions with creativity and precision.
+        <p className="text-light">
+          My name is Marcos Reyes, but you can call me Markus. 
         </p>
+        <p className="text-light">I'm a Full Stack developer eager to learn new tools and create modern solutions!</p>
+        <p>So... are you ready? ᗜˬᗜ</p>
         <div className="cta-buttons mt-4">
           <button
             onClick={() => setSection('projects')}
