@@ -151,7 +151,7 @@ const Projects = () => (
             <li className="project-item card text-center text-light">
               <div className="card-body">
               <h2>Check Out More Projects on My GitHub</h2>
-            <img src="https://github.com/astronautmarkus.png" alt="GitHub Profile" className="github-profile-picture mt-3 mb-3" style={{ width: '100px', borderRadius: '50%' }} />
+            <img src="https://github.com/astronautmarkus.png" alt="GitHub Profile" className="github-profile-picture mt-3 mb-3 rounded" width="200"  />
             <p>@astronautmarkus</p>
             <p>You can explore more of my open-source projects and contributions by visiting my GitHub profile.</p>
             <div className="d-flex justify-content-center">
