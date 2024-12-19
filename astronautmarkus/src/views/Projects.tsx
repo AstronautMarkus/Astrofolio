@@ -12,48 +12,48 @@ const Projects = () => (
           <ul className="project-list">
             <li className="project-item d-flex">
               <div className="project-details">
-              <h2 className="project-title">Featured project: AbbyBot</h2>
-              <p className="project-description text-center">
-                Multi-functional Discord app with management and entertainment features.
-              </p>
-              <ul className="project-sublist">
-                <li>
-                <strong>Discord AbbyBot:</strong> Multi-purpose tool for Discord with moderation and entertainment.
-                </li>
-                <li>
-                <strong>AbbyBot Website:</strong> Informative site with bot details and updates.
-                </li>
-                <li>
-                <strong>AbbyBot Dashboard:</strong> Admin panel for managing guild configurations and statistics.
-                </li>
-              </ul>
-              <div className="text-center project-links">
-                <a href="https://github.com/AbbyBot/AbbyBot-API" target="_blank" rel="noopener noreferrer" className="btn btn-primary m-2">
-                <FontAwesomeIcon icon={faGithub} /> AbbyBot API
-                </a>
-                <a href="https://github.com/AbbyBot/AbbyBot-Website" target="_blank" rel="noopener noreferrer" className="btn btn-secondary m-2">
-                <FontAwesomeIcon icon={faGithub} /> AbbyBot Website
-                </a>
-                <a href="https://github.com/AbbyBot/AbbyBot-Dashboard" target="_blank" rel="noopener noreferrer" className="btn btn-success m-2">
-                <FontAwesomeIcon icon={faGithub} /> AbbyBot Dashboard
-                </a>
-                <a href="https://www.abbybotproject.com" target="_blank" rel="noopener noreferrer" className="btn btn-info m-2">
-                Visit AbbyBot Project
-                </a>
-              </div>
+                <h2 className="project-title">Featured project: AbbyBot</h2>
+                <p className="project-description text-center">
+                  Multi-functional Discord app with management and entertainment features.
+                </p>
+                <ul className="project-sublist">
+                  <li>
+                    <strong>Discord AbbyBot:</strong> Multi-purpose tool for Discord with moderation and entertainment.
+                  </li>
+                  <li>
+                    <strong>AbbyBot Website:</strong> Informative site with bot details and updates.
+                  </li>
+                  <li>
+                    <strong>AbbyBot Dashboard:</strong> Admin panel for managing guild configurations and statistics.
+                  </li>
+                </ul>
+                <div className="text-center project-links">
+                  <a href="https://github.com/AbbyBot/AbbyBot-API" target="_blank" rel="noopener noreferrer" className="btn btn-primary m-2">
+                    <FontAwesomeIcon icon={faGithub} /> AbbyBot API
+                  </a>
+                  <a href="https://github.com/AbbyBot/AbbyBot-Website" target="_blank" rel="noopener noreferrer" className="btn btn-secondary m-2">
+                    <FontAwesomeIcon icon={faGithub} /> AbbyBot Website
+                  </a>
+                  <a href="https://github.com/AbbyBot/AbbyBot-Dashboard" target="_blank" rel="noopener noreferrer" className="btn btn-success m-2">
+                    <FontAwesomeIcon icon={faGithub} /> AbbyBot Dashboard
+                  </a>
+                  <a href="https://www.abbybotproject.com" target="_blank" rel="noopener noreferrer" className="btn btn-info m-2">
+                    Visit AbbyBot Project
+                  </a>
+                </div>
               </div>
               <div className="project-image">
-              <img src="/src/assets/img/abbybot_logo.png" alt="AbbyBot" />
-              <p className='text-center mt-3'>Hello world!</p>
+                <img src="/src/assets/img/abbybot_logo.png" alt="AbbyBot" />
+                <p className='text-center mt-3'>Hello world!</p>
               </div>
             </li>
 
             <li className="project-item d-flex">
               <div className="project-details">
-              <h2 className="project-title">📝 University Projects</h2>
-              <p className="project-description">
-                Compilation of most of the projects carried out in my years as a computer science student.
-              </p>
+                <h2 className="project-title">📝 University Projects</h2>
+                <p className="project-description">
+                  Compilation of most of the projects carried out in my years as a computer science student.
+                </p>
               </div>
             </li>
 
@@ -100,7 +100,6 @@ const Projects = () => (
                   <img src="/src/assets/img/icons/arduino.svg" alt="Arduino" className="tech-icon" />
                   <img src="/src/assets/img/icons/bootstrap.png" alt="Bootstrap" className="tech-icon" />
                   <img src="/src/assets/img/icons/python.png" alt="Python" className="tech-icon" />
-
                 </div>
               </div>
             </li>
@@ -149,8 +148,24 @@ const Projects = () => (
               </div>
             </li>
 
+            <li className="project-item card text-center text-light">
+              <div className="card-body">
+              <h2>Check Out More Projects on My GitHub</h2>
+            <img src="https://github.com/astronautmarkus.png" alt="GitHub Profile" className="github-profile-picture mt-3 mb-3" style={{ width: '100px', borderRadius: '50%' }} />
+            <p>@astronautmarkus</p>
+            <p>You can explore more of my open-source projects and contributions by visiting my GitHub profile.</p>
+            <div className="d-flex justify-content-center">
+              <a href="https://github.com/astronautmarkus" target="_blank" rel="noopener noreferrer" className="btn btn-primary m-2">
+                <FontAwesomeIcon icon={faGithub} /> GitHub Profile
+              </a>
+              <a href="/" className="btn btn-secondary m-2">
+                Home
+              </a>
+            </div>
+              </div>
+            </li>
           </ul>
-        </div>
+        </div>        
       </div>
     </div>
   </div>
