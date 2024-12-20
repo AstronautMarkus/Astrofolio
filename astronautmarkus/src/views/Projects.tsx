@@ -10,7 +10,7 @@ const Projects = () => (
         <p>Take a look at my most recent projects!</p>
         <div className="content">
           <ul className="project-list">
-            <li className="project-item d-flex">
+            <li className="project-item d-flex flex-column flex-md-row">
               <div className="project-details">
                 <h2 className="project-title">Featured project: AbbyBot</h2>
                 <p className="project-description text-center">
