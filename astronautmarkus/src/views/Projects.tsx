@@ -64,11 +64,7 @@ const Projects = () => (
                 <p className="card-text">Modular backend following Service Oriented Architecture principles. Built with Flask to ensure scalability and interoperability.</p>
                 <p className="card-text"><small className="text-light">Semester: 2 Year: 2024</small></p>
                 <div className="d-flex justify-content-center">
-                  <img src="/src/assets/img/icons/flask.png" alt="Flask" className="tech-icon" />
-                  <img src="/src/assets/img/icons/python.png" alt="Python" className="tech-icon" />
-                  <img src="/src/assets/img/icons/mongodb.svg" alt="Mongo" className="tech-icon" />
-                  <img src="/src/assets/img/icons/docker.png" alt="Docker" className="tech-icon" />
-                  <img src="/src/assets/img/icons/dotenv.png" alt="Dotenv" className="tech-icon" />
+                  <p>Technologies: Flask, Python, MongoDB, Docker, Dotenv</p>
                 </div>
               </div>
             </li>
@@ -80,9 +76,7 @@ const Projects = () => (
                 <p className="card-text">Dynamic front-end application with Flask, featuring an intuitive dashboard for administrators and cooks.</p>
                 <p className="card-text"><small className="text-light">Semester: 2 Year: 2024</small></p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <img src="/src/assets/img/icons/flask.png" alt="Flask" className="tech-icon" />
-                  <img src="/src/assets/img/icons/python.png" alt="Python" className="tech-icon" />
-                  <img src="/src/assets/img/icons/bootstrap.png" alt="Bootstrap" className="tech-icon" />
+                  <p>Technologies: Flask, Python, Bootstrap</p>
                 </div>
               </div>
             </li>
@@ -94,12 +88,7 @@ const Projects = () => (
                 <p className="card-text">Digital totem system for order pickup using API, implemented with Arduino microcontrollers, built with Electron + Vite.</p>
                 <p className="card-text"><small className="text-light">Semester: 2 Year: 2024</small></p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <img src="/src/assets/img/icons/react.webp" alt="React" className="tech-icon" />
-                  <img src="/src/assets/img/icons/vite.svg" alt="Vite" className="tech-icon" />
-                  <img src="/src/assets/img/icons/electron.svg" alt="Electron" className="tech-icon" />
-                  <img src="/src/assets/img/icons/arduino.svg" alt="Arduino" className="tech-icon" />
-                  <img src="/src/assets/img/icons/bootstrap.png" alt="Bootstrap" className="tech-icon" />
-                  <img src="/src/assets/img/icons/python.png" alt="Python" className="tech-icon" />
+                  <p>Technologies: React, Vite, Electron, Arduino, Bootstrap, Python</p>
                 </div>
               </div>
             </li>
@@ -111,10 +100,7 @@ const Projects = () => (
                 <p className="card-text">E-commerce site built with Django, themed around "fumofumo" stuffed animals from the Touhou Project saga.</p>
                 <p className="card-text"><small className="text-light">Semester: 1 Year: 2023</small></p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <img src="/src/assets/img/icons/django.png" alt="Django" className="tech-icon" />
-                  <img src="/src/assets/img/icons/python.png" alt="Python" className="tech-icon" />
-                  <img src="/src/assets/img/icons/bootstrap.png" alt="Bootstrap" className="tech-icon" />
-                  <img src="/src/assets/img/icons/mysql.png" alt="Bootstrap" className="tech-icon" />
+                  <p>Technologies: Django, Python, Bootstrap, MySQL</p>
                 </div>
               </div>
             </li>
@@ -126,10 +112,7 @@ const Projects = () => (
                 <p className="card-text">Web system for household item sales, featuring user accounts, product listings, and an admin module.</p>
                 <p className="card-text"><small className="text-light">Semester: 1 Year: 2024</small></p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <img src="/src/assets/img/icons/django.png" alt="Django" className="tech-icon" />
-                  <img src="/src/assets/img/icons/python.png" alt="Python" className="tech-icon" />
-                  <img src="/src/assets/img/icons/bootstrap.png" alt="Bootstrap" className="tech-icon" />
-                  <img src="/src/assets/img/icons/mysql.png" alt="Bootstrap" className="tech-icon" />
+                  <p>Technologies: Django, Python, Bootstrap, MySQL</p>
                 </div>
               </div>
             </li>
@@ -141,9 +124,7 @@ const Projects = () => (
                 <p className="card-text">Mobile application system for food delivery, focusing on a delivery driver module.</p>
                 <p className="card-text"><small className="text-light">Semester: 2 Year: 2023</small></p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <img src="/src/assets/img/icons/ionic.webp" alt="Ionic" className="tech-icon" />
-                  <img src="/src/assets/img/icons/angular.png" alt="Angular" className="tech-icon" />
-                  <img src="/src/assets/img/icons/nodejs.png" alt="Node.js" className="tech-icon" />
+                  <p>Technologies: Ionic, Angular, Node.js</p>
                 </div>
               </div>
             </li>
