@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Carousel from 'react-bootstrap/Carousel';
 
 import './Resume.css';
@@ -47,10 +45,11 @@ const Resume = () => (
               </div>
             </li>
 
-            {/* New Hobbies Section */}
+            
             <li className="project-item">
               <div className="project-details">
                 <h2 className="project-title">🎨 My Hobbies</h2>
+                <p>🎉 Some things I usually do in my free time!</p>
               </div>
             </li>
           </ul>
@@ -75,6 +74,39 @@ const Resume = () => (
               <Carousel.Caption>
                 <h3>Video Edition</h3>
                 <p>Previously, I used to create stories in video games like GTA: San Andreas, narrated with dialogues and animations to create interesting machinimas for the viewer.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100 carousel-image"
+                src="/src/assets/img/hobbies/coding.gif"
+                alt="Programming"
+              />
+              <Carousel.Caption>
+                <h3>Programming</h3>
+                <p>Programming is not only my job, but also my hobby. I like to create small projects, like this page, to learn new things and improve my skills.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100 carousel-image"
+                src="/src/assets/img/hobbies/hardware.gif"
+                alt="Hardware"
+              />
+              <Carousel.Caption>
+                <h3>Hardware</h3>
+                <p>I enjoy working with Linux, setting up servers, building computers, and experimenting with Arduino projects, among many other things!</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100 carousel-image"
+                src="/src/assets/img/hobbies/extra.gif"
+                alt="Extra"
+              />
+              <Carousel.Caption>
+                <h3>And hmm...</h3>
+                <p>There are many things I like and am passionate about, but I guess these are the most important ones!</p>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
