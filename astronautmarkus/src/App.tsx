@@ -40,7 +40,7 @@ const App = () => {
 
   return (
     <div className="d-flex vh-100">
-      <button className={`sidebar-toggle ${sidebarOpen ? 'open' : ''}`} onClick={toggleSidebar}>
+      <button className={`rounded sidebar-toggle ${sidebarOpen ? 'open' : ''}`} onClick={toggleSidebar}>
         ☰
       </button>
       <div className={`dashboard-sidebar d-flex flex-column p-3 shadow ${sidebarOpen ? 'open' : ''}`}>
