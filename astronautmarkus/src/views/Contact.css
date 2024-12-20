@@ -1,0 +1,70 @@
+.contact-container .content-box {
+    max-width: 900px;
+    padding: 30px 40px;
+    background: linear-gradient(to bottom, #1b1b1b, #111111);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .contact-container .title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #ffffff;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .row .col-md-6 {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .contact-info {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-info strong {
+    color: #ffffff;
+  }
+  
+  .contact-info a {
+    color: #5eead4;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-info a:hover {
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff;
+  }
+  
+  /* Iconos */
+  .contact-info .svg-inline--fa {
+    font-size: 1.5rem;
+    color: #facc15;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-info:hover .svg-inline--fa {
+    transform: scale(1.1);
+  }
+  
+  .row .col-md-6:nth-child(1) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding-right: 1.5rem;
+  }
+  
+  .row .col-md-6:nth-child(2) {
+    padding-left: 1.5rem;
+  }
+  
