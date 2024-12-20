@@ -52,3 +52,21 @@
       flex: 1 1 100%;
     }
   }
+
+  .final-section {
+    text-align: center;
+  }
+
+  .final-message {
+    margin-bottom: 1rem;
+  }
+
+  .final-message h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .final-message p {
+    font-size: 1rem;
+    margin-top: 0;
+  }

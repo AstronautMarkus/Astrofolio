@@ -157,6 +157,15 @@ const Resume = () => (
           </li>
         </ul>
 
+        <div className="final-section d-flex flex-column align-items-center mt-5">
+          <div className="final-message text-center">
+            <h4>🚀 This page will keep growing over time, stay tuned and come back soon!</h4>
+            <p>- Astronautmarkus</p>
+          </div>
+          <div className="final-gif mt-3">
+            <img src="/src/assets/img/fumo-fumo-fumo.gif" alt="Fumo Fumo Fumo" className="img-fluid rounded" style={{ maxWidth: '200px' }} />
+          </div>
+        </div>
 
       </div>
     </div>
