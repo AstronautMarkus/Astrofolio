@@ -13,7 +13,12 @@ import Contact from './views/Contact';
 
 const App = () => {
   const [section, setSection] = useState('home');
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const currentYear = new Date().getFullYear();
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
 
   const renderContent = () => {
     switch (section) {
@@ -35,8 +40,10 @@ const App = () => {
 
   return (
     <div className="d-flex vh-100">
-
-      <div className="dashboard-sidebar d-flex flex-column p-3 shadow">
+      <button className={`sidebar-toggle ${sidebarOpen ? 'open' : ''}`} onClick={toggleSidebar}>
+        ☰
+      </button>
+      <div className={`dashboard-sidebar d-flex flex-column p-3 shadow ${sidebarOpen ? 'open' : ''}`}>
         <div className="dashboard-logo text-center mb-4">
           <img
             src="https://github.com/AstronautMarkus.png"
