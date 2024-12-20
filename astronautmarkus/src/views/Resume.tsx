@@ -53,8 +53,9 @@ const Resume = () => (
               </div>
             </li>
           </ul>
-          <Carousel className="w-100">
-            <Carousel.Item>
+            <div className="rounded overflow-hidden">
+            <Carousel className="w-100">
+              <Carousel.Item>
               <img
                 className="w-100 carousel-image"
                 src="/src/assets/img/hobbies/image_edition.jpg"
@@ -64,8 +65,8 @@ const Resume = () => (
                 <h3>Image Edition</h3>
                 <p>I use image editing tools like Photoshop or Lightroom for personal purposes, such as video game screenshots, environment images, etc.</p>
               </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
+              </Carousel.Item>
+              <Carousel.Item>
               <img
                 className="d-block w-100 carousel-image"
                 src="/src/assets/img/hobbies/video_edition.avif"
@@ -75,8 +76,8 @@ const Resume = () => (
                 <h3>Video Edition</h3>
                 <p>Previously, I used to create stories in video games like GTA: San Andreas, narrated with dialogues and animations to create interesting machinimas for the viewer.</p>
               </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
+              </Carousel.Item>
+              <Carousel.Item>
               <img
                 className="d-block w-100 carousel-image"
                 src="/src/assets/img/hobbies/coding.gif"
@@ -86,8 +87,8 @@ const Resume = () => (
                 <h3>Programming</h3>
                 <p>Programming is not only my job, but also my hobby. I like to create small projects, like this page, to learn new things and improve my skills.</p>
               </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
+              </Carousel.Item>
+              <Carousel.Item>
               <img
                 className="d-block w-100 carousel-image"
                 src="/src/assets/img/hobbies/hardware.gif"
@@ -97,8 +98,8 @@ const Resume = () => (
                 <h3>Hardware</h3>
                 <p>I enjoy working with Linux, setting up servers, building computers, and experimenting with Arduino projects, among many other things!</p>
               </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
+              </Carousel.Item>
+              <Carousel.Item>
               <img
                 className="d-block w-100 carousel-image"
                 src="/src/assets/img/hobbies/extra.gif"
@@ -108,8 +109,9 @@ const Resume = () => (
                 <h3>And hmm...</h3>
                 <p>There are many things I like and am passionate about, but I guess these are the most important ones!</p>
               </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
+              </Carousel.Item>
+            </Carousel>
+            </div>
         </div>        
       </div>
     </div>
