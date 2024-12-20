@@ -1,4 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faHardHat, faLightbulb, faComments, faClock } from '@fortawesome/free-solid-svg-icons';
 
 import './Resume.css';
 
@@ -52,7 +54,9 @@ const Resume = () => (
                 <p>🎉 Some things I usually do in my free time!</p>
               </div>
             </li>
+
           </ul>
+
             <div className="rounded overflow-hidden">
             <Carousel className="w-100">
               <Carousel.Item>
@@ -62,8 +66,8 @@ const Resume = () => (
                 alt="Image Edition"
               />
               <Carousel.Caption>
-                <h3>Image Edition</h3>
-                <p>I use image editing tools like Photoshop or Lightroom for personal purposes, such as video game screenshots, environment images, etc.</p>
+                <h3 className="carousel-caption-text">Image Edition</h3>
+                <p className="carousel-caption-text">I use image editing tools like Photoshop or Lightroom for personal purposes, such as video game screenshots, environment images, etc.</p>
               </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
@@ -73,8 +77,8 @@ const Resume = () => (
                 alt="Video Edition"
               />
               <Carousel.Caption>
-                <h3>Video Edition</h3>
-                <p>Previously, I used to create stories in video games like GTA: San Andreas, narrated with dialogues and animations to create interesting machinimas for the viewer.</p>
+                <h3 className="carousel-caption-text">Video Edition</h3>
+                <p className="carousel-caption-text">Previously, I used to create stories in video games like GTA: San Andreas, narrated with dialogues and animations to create interesting machinimas for the viewer.</p>
               </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
@@ -84,8 +88,8 @@ const Resume = () => (
                 alt="Programming"
               />
               <Carousel.Caption>
-                <h3>Programming</h3>
-                <p>Programming is not only my job, but also my hobby. I like to create small projects, like this page, to learn new things and improve my skills.</p>
+                <h3 className="carousel-caption-text">Programming</h3>
+                <p className="carousel-caption-text">Programming is not only my job, but also my hobby. I like to create small projects, like this page, to learn new things and improve my skills.</p>
               </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
@@ -95,8 +99,8 @@ const Resume = () => (
                 alt="Hardware"
               />
               <Carousel.Caption>
-                <h3>Hardware</h3>
-                <p>I enjoy working with Linux, setting up servers, building computers, and experimenting with Arduino projects, among many other things!</p>
+                <h3 className="carousel-caption-text">Hardware</h3>
+                <p className="carousel-caption-text">I enjoy working with Linux, setting up servers, building computers, and experimenting with Arduino projects, among many other things!</p>
               </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
@@ -106,13 +110,54 @@ const Resume = () => (
                 alt="Extra"
               />
               <Carousel.Caption>
-                <h3>And hmm...</h3>
-                <p>There are many things I like and am passionate about, but I guess these are the most important ones!</p>
+                <h3 className="carousel-caption-text">And hmm...</h3>
+                <p className="carousel-caption-text">There are many things I like and am passionate about, but I guess these are the most important ones!</p>
               </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
             </div>
-        </div>        
+        </div>    
+
+        <ul className="project-list mt-5">
+
+          <li className="project-item">
+            <div className="project-details">
+              <h2 className="project-title text-center mb-4">My Skills</h2>
+              <div className="skills-section">
+                <h3>Soft Skills</h3>
+                <div className="soft-skills">
+                  <div className="skill-item">
+                    <FontAwesomeIcon icon={faBriefcase} size="2x" className="fa-icon" />
+                    <p><strong>Professionalism</strong></p>
+                    <p>I am a serious and dedicated professional, especially in programming.</p>
+                  </div>
+                  <div className="skill-item">
+                    <FontAwesomeIcon icon={faHardHat} size="2x" className="fa-icon" />
+                    <p><strong>Hardworking</strong></p>
+                    <p>Committed to giving my best effort and focusing on delivering quality results.</p>
+                  </div>
+                  <div className="skill-item">
+                    <FontAwesomeIcon icon={faLightbulb} size="2x" className="fa-icon" />
+                    <p><strong>Solution-Oriented</strong></p>
+                    <p>I constantly seek efficient and creative solutions to challenges.</p>
+                  </div>
+                  <div className="skill-item">
+                    <FontAwesomeIcon icon={faComments} size="2x" className="fa-icon" />
+                    <p><strong>Thoughtful Communicator</strong></p>
+                    <p>I may not talk much, but I strive to express ideas clearly in team environments.</p>
+                  </div>
+                  <div className="skill-item">
+                    <FontAwesomeIcon icon={faClock} size="2x" className="fa-icon" />
+                    <p><strong>Time Management</strong></p>
+                    <p>I prioritize deadlines and always aim to deliver projects on time.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+
       </div>
     </div>
   </div>
