@@ -43,7 +43,7 @@ const Projects = () => (
                 </div>
               </div>
               <div className="project-image">
-                <img src="/src/assets/img/abbybot_logo.png" alt="AbbyBot" />
+                <img src="/assets/img/abbybot_logo.png" alt="AbbyBot" />
                 <p className='text-center mt-3'>Hello world!</p>
               </div>
             </li>
@@ -60,7 +60,7 @@ const Projects = () => (
             <li className="project-item card text-center text-light">
               <div className="card-body">
                 <h2 className="card-title">MofuLunches-API</h2>
-                <img src="/src/assets/img/project_img/mofulunches_api.png" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/mofulunches_api.png" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
                 <p className="card-text">Modular backend following Service Oriented Architecture principles. Built with Flask to ensure scalability and interoperability.</p>
                 <p className="card-text"><small className="text-light">Semester: 2 Year: 2024</small></p>
                 <div className="d-flex justify-content-center">
@@ -72,7 +72,7 @@ const Projects = () => (
             <li className="project-item card text-center text-light">
               <div className="card-body">
                 <h2 className="card-title">MofuLunches-Web</h2>
-                <img src="/src/assets/img/project_img/mofulunches_web.jpg" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/mofulunches_web.jpg" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
                 <p className="card-text">Dynamic front-end application with Flask, featuring an intuitive dashboard for administrators and cooks.</p>
                 <p className="card-text"><small className="text-light">Semester: 2 Year: 2024</small></p>
                 <div className="tech-icons d-flex justify-content-center">
@@ -84,7 +84,7 @@ const Projects = () => (
             <li className="project-item card text-center text-light">
               <div className="card-body">
                 <h2 className="card-title">MofuLunches-Totem</h2>
-                <img src="/src/assets/img/project_img/mofulunches_totem.png" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/mofulunches_totem.png" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
                 <p className="card-text">Digital totem system for order pickup using API, implemented with Arduino microcontrollers, built with Electron + Vite.</p>
                 <p className="card-text"><small className="text-light">Semester: 2 Year: 2024</small></p>
                 <div className="tech-icons d-flex justify-content-center">
@@ -95,7 +95,7 @@ const Projects = () => (
 
             <li className="project-item card text-center text-light">
               <div className="card-body">
-                <img src="/src/assets/img/project_img/mofustore.png" alt="Mofu Store" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/mofustore.png" alt="Mofu Store" className="mt-4 mb-4" width="600" />
                 <h2 className="card-title">Mofu Store</h2>
                 <p className="card-text">E-commerce site built with Django, themed around "fumofumo" stuffed animals from the Touhou Project saga.</p>
                 <p className="card-text"><small className="text-light">Semester: 1 Year: 2023</small></p>
@@ -107,7 +107,7 @@ const Projects = () => (
 
             <li className="project-item card text-center text-light">
               <div className="card-body">
-                <img src="/src/assets/img/project_img/construmic.jpg" alt="CONSTRU_MIC" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/construmic.jpg" alt="CONSTRU_MIC" className="mt-4 mb-4" width="600" />
                 <h2 className="card-title">CONSTRU_MIC</h2>
                 <p className="card-text">Web system for household item sales, featuring user accounts, product listings, and an admin module.</p>
                 <p className="card-text"><small className="text-light">Semester: 1 Year: 2024</small></p>
@@ -119,7 +119,7 @@ const Projects = () => (
 
             <li className="project-item card text-center text-light">
               <div className="card-body">
-                <img src="/src/assets/img/project_img/camellosfood.png" alt="CamellosFood-Repartidor" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/camellosfood.png" alt="CamellosFood-Repartidor" className="mt-4 mb-4" width="600" />
                 <h2 className="card-title">CamellosFood-Repartidor</h2>
                 <p className="card-text">Mobile application system for food delivery, focusing on a delivery driver module.</p>
                 <p className="card-text"><small className="text-light">Semester: 2 Year: 2023</small></p>

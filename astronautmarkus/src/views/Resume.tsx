@@ -25,8 +25,8 @@ const Resume = () => (
                     </p>
                   </div>
                   <div className="project-image text-center">
-                    <img src="/src/assets/img/profile_picture.webp" alt="Marcos Reyes" className="img-fluid rounded" style={{ maxWidth: '200px' }} />
-                    <p className="text-center mt-3">That's me! ᗜ˰ᗜ</p>
+                    <img src="/assets/img/profile_picture.webp" alt="Marcos Reyes" className="img-fluid rounded" style={{ maxWidth: '200px' }} />
+                    <p className="text-center mt-3">That's me! ᗜ_ᗜ</p>
                   </div>
                 </div>
               </div>
@@ -62,7 +62,7 @@ const Resume = () => (
               <Carousel.Item>
               <img
                 className="w-100 carousel-image"
-                src="/src/assets/img/hobbies/image_edition.jpg"
+                src="/assets/img/hobbies/image_edition.jpg"
                 alt="Image Edition"
               />
               <Carousel.Caption>
@@ -73,7 +73,7 @@ const Resume = () => (
               <Carousel.Item>
               <img
                 className="d-block w-100 carousel-image"
-                src="/src/assets/img/hobbies/video_edition.avif"
+                src="/assets/img/hobbies/video_edition.avif"
                 alt="Video Edition"
               />
               <Carousel.Caption>
@@ -84,7 +84,7 @@ const Resume = () => (
               <Carousel.Item>
               <img
                 className="d-block w-100 carousel-image"
-                src="/src/assets/img/hobbies/coding.gif"
+                src="/assets/img/hobbies/coding.gif"
                 alt="Programming"
               />
               <Carousel.Caption>
@@ -95,7 +95,7 @@ const Resume = () => (
               <Carousel.Item>
               <img
                 className="d-block w-100 carousel-image"
-                src="/src/assets/img/hobbies/hardware.gif"
+                src="/assets/img/hobbies/hardware.gif"
                 alt="Hardware"
               />
               <Carousel.Caption>
@@ -106,7 +106,7 @@ const Resume = () => (
               <Carousel.Item>
               <img
                 className="d-block w-100 carousel-image"
-                src="/src/assets/img/hobbies/extra.gif"
+                src="/assets/img/hobbies/extra.gif"
                 alt="Extra"
               />
               <Carousel.Caption>
@@ -163,7 +163,7 @@ const Resume = () => (
             <p>- Astronautmarkus</p>
           </div>
           <div className="final-gif mt-3">
-            <img src="/src/assets/img/fumo-fumo-fumo.gif" alt="Fumo Fumo Fumo" className="img-fluid rounded" style={{ maxWidth: '200px' }} />
+            <img src="/assets/img/fumo-fumo-fumo.gif" alt="Fumo Fumo Fumo" className="img-fluid rounded" style={{ maxWidth: '200px' }} />
           </div>
         </div>
 

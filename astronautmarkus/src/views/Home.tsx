@@ -6,7 +6,7 @@ const Home = ({ setSection }: { setSection: (section: string) => void }) => (
       <div className="content-box text-center">
         <div className="header-image mb-4 animate-fade-in">
           <img
-            src="/src/assets/img/astronaut.png"
+            src="/assets/img/astronaut.png"
             alt="Astronaut"
             className="astronaut-image"
           />
@@ -18,7 +18,7 @@ const Home = ({ setSection }: { setSection: (section: string) => void }) => (
           My name is Marcos Reyes, but you can call me Markus. 
         </p>
         <p className="text-light">I'm a Full Stack developer eager to learn new tools and create modern solutions!</p>
-        <p>So... are you ready? ᗜˬᗜ</p>
+        <p>So... are you ready? ᗜ_ᗜ</p>
         <div className="cta-buttons mt-4">
           <button
             onClick={() => setSection('projects')}
