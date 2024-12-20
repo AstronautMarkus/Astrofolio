@@ -80,3 +80,9 @@
   background-color: #333;
   border-color: #fff;
 }
+
+@media (max-width: 768px) {
+  .cta-buttons .btn {
+    margin-bottom: 20px;
+  }
+}
