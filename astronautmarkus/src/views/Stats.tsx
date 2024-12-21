@@ -1,67 +1,99 @@
-import './Stats.css';
+import React, { useEffect, useState } from "react";
+import { Bar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import "./Stats.css";
 
-const Stats = () => (
-  <div className="home-container d-flex justify-content-center align-items-center vh-100">
-    <div className="square-container">
-      <div className="content-box shadow">
-        <h1 className="title">📊 My Coding Stats</h1>
-        <p>📈 Insights from Wakatime</p>
-        <div className="content">
-          <ul className="project-list">
+// Register chart.js modules
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-            <li className="project-item d-flex">
-              <div className="project-details">
-                <h2 className="project-title">💻 Most Used Languages</h2>
-                <div className="project-text mb-4 mt-4">
-                  <p>
-                    These are the programming languages I use the most, according to Wakatime.
-                  </p>
+interface ActivityEntry {
+  range: { date: string };
+  grand_total: { total_seconds: number };
+}
+
+const Stats = () => {
+  const [activityData, setActivityData] = useState<ActivityEntry[]>([]);
+
+  // Get wakatime ststs
+  useEffect(() => {
+    fetch("https://wakatime.com/share/@AstronautMarkus/678807b3-e69a-4a62-83d5-8abe7c01f950.json")
+      .then((response) => response.json())
+      .then((data) => setActivityData(data.data)) // `data.data` 
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
+  // Prepare data
+  const labels = activityData.map((entry) => entry.range.date); // Dates
+  const codingTimes = activityData.map((entry) => entry.grand_total.total_seconds / 3600); // Seconds to hours
+
+  const chartData = {
+    labels,
+    datasets: [
+      {
+        label: "Hours Spent Coding",
+        data: codingTimes,
+        backgroundColor: "rgba(75, 192, 192, 0.6)",
+        borderColor: "rgba(75, 192, 192, 1)",
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: { position: "top" as const },
+      title: { display: true, text: "Coding Activity (Hours per Day)" },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          callback: function (tickValue: string | number) {
+            return `${tickValue}h`;
+          }, // Mostrar valores en horas
+        },
+      },
+    },
+  };
+
+  return (
+    <div className="home-container d-flex justify-content-center align-items-center vh-100">
+      <div className="square-container">
+        <div className="content-box shadow">
+          <h1 className="title">📊 My Coding Stats</h1>
+          <p>📈 Insights from Wakatime</p>
+          <div className="content">
+            <ul className="project-list">
+              <li className="project-item">
+                <div className="project-details">
+                  <h2 className="project-title">⏳ Coding Activity</h2>
+                  <div className="project-text mb-4 mt-4">
+                    <p>Amount of time spent coding in the last days, according to Wakatime.</p>
+                  </div>
+                  <div className="project-image text-center justify-content-center">
+                    {activityData.length > 0 ? (
+                      <Bar data={chartData} options={options} />
+                    ) : (
+                      <p>Loading data...</p>
+                    )}
+                  </div>
                 </div>
-                <div className="project-image text-center">
-                  <figure className="wakatime-figure">
-                    <embed src="https://wakatime.com/share/@AstronautMarkus/3b2f0da6-869d-4bae-a0d5-d2d51e599c25.svg"></embed>
-                  </figure>
-                </div>
-              </div>
-            </li>
-
-            <li className="project-item">
-              <div className="project-details">
-                <h2 className="project-title">⏳ Coding Activity</h2>
-                <div className="project-text mb-4 mt-4">
-                    <p>
-                    Amount of time spent coding in the last time, acording to Wakatime.
-                    </p>
-                </div>
-                <div className="project-image text-center justify-content-center">
-                  <figure>
-                  <embed src="https://wakatime.com/share/@AstronautMarkus/50847ea1-6781-4b54-a084-0c6897655574.svg"></embed>
-                  </figure>
-                </div>
-              </div>
-            </li>
-
-            <li className="project-item">
-              <div className="project-details">
-              <h2 className="project-title">🖥️ Operating Systems</h2>
-              <div className="project-text mb-4 mt-4">
-                <p>
-                The operating systems I use the most, according to Wakatime.
-                </p>
-              </div>
-              <div className="project-image text-center justify-content-center">
-                <figure>
-                <embed src="https://wakatime.com/share/@AstronautMarkus/2b2f807b-c1a4-4371-82bf-1a338510015e.svg"></embed>
-                </figure>
-              </div>
-              </div>
-            </li>
-
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Stats;
