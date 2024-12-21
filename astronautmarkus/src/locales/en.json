@@ -37,5 +37,13 @@
   "stats": "Stats",
   "contact": "Contact Me",
   "phone": "Phone",
-  "location": "Location"
+  "location": "Location",
+  "codingStatsTitle": "📊 My Stats",
+  "insightsFromWakatime": "📈 Insights from Wakatime",
+  "codingActivityTitle": "⏳ Coding Activity",
+  "codingActivityDescription": "Amount of time spent coding in the last days, according to Wakatime.",
+  "mostUsedLanguagesTitle": "💻 Most Used Programming Languages",
+  "mostUsedLanguagesDescription": "These are the programming languages I use the most, according to Wakatime.",
+  "mostUsedOSTitle": "🖥️ Most Used Operating Systems",
+  "mostUsedOSDescription": "These are the operating systems I use the most, according to Wakatime."
 }

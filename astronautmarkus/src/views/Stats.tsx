@@ -34,7 +34,11 @@ interface OSUsageEntry {
 
 const Spinner = () => <div className="spinner"></div>;
 
-const Stats = () => {
+interface StatsProps {
+  locale: any;
+}
+
+const Stats = ({ locale }: StatsProps) => {
   const [activityData, setActivityData] = useState<ActivityEntry[]>([]);
   const [languageData, setLanguageData] = useState<LanguageEntry[]>([]);
   const [osUsageData, setOSUsageData] = useState<OSUsageEntry[]>([]);
@@ -84,7 +88,7 @@ const Stats = () => {
     responsive: true,
     plugins: {
       legend: { position: "top" as const },
-      title: { display: true, text: "Coding Activity (Hours per Day)" },
+      title: { display: true, text: locale.codingActivityTitle },
     },
     scales: {
       y: {
@@ -116,7 +120,7 @@ const Stats = () => {
     indexAxis: "y" as const,
     plugins: {
       legend: { position: "top" as const },
-      title: { display: true, text: "Most Used Programming Languages" },
+      title: { display: true, text: locale.mostUsedLanguagesTitle },
     },
     scales: {
       x: {
@@ -146,7 +150,7 @@ const Stats = () => {
     responsive: true,
     plugins: {
       legend: { position: "top" as const },
-      title: { display: true, text: "Most Used Operating Systems" },
+      title: { display: true, text: locale.mostUsedOSTitle },
     },
   };
 
@@ -154,16 +158,16 @@ const Stats = () => {
     <div className="home-container d-flex justify-content-center align-items-center vh-100">
       <div className="square-container">
         <div className="content-box shadow">
-          <h1 className="title">📊 My Coding Stats</h1>
-          <p>📈 Insights from Wakatime</p>
+          <h1 className="title">{locale.codingStatsTitle}</h1>
+          <p>{locale.insightsFromWakatime}</p>
           <div className="content">
             <ul className="project-list">
               {/* Coding Activity Chart */}
               <li className="project-item">
                 <div className="project-details">
-                  <h2 className="project-title">⏳ Coding Activity</h2>
+                  <h2 className="project-title">{locale.codingActivityTitle}</h2>
                   <div className="project-text mb-4 mt-4">
-                    <p>Amount of time spent coding in the last days, according to Wakatime.</p>
+                    <p>{locale.codingActivityDescription}</p>
                   </div>
                   <div className="project-image text-center justify-content-center">
                     {activityData.length > 0 ? (
@@ -178,9 +182,9 @@ const Stats = () => {
               {/* Most Used Languages Chart */}
               <li className="project-item">
                 <div className="project-details">
-                  <h2 className="project-title">💻 Most Used Programming Languages</h2>
+                  <h2 className="project-title">{locale.mostUsedLanguagesTitle}</h2>
                   <div className="project-text mb-4 mt-4">
-                    <p>These are the programming languages I use the most, according to Wakatime.</p>
+                    <p>{locale.mostUsedLanguagesDescription}</p>
                   </div>
                   <div className="project-image text-center justify-content-center">
                     {languageData.length > 0 ? (
@@ -195,9 +199,9 @@ const Stats = () => {
               {/* Most Used Operating Systems Chart */}
               <li className="project-item">
                 <div className="project-details">
-                  <h2 className="project-title">🖥️ Most Used Operating Systems</h2>
+                  <h2 className="project-title">{locale.mostUsedOSTitle}</h2>
                   <div className="project-text mb-4 mt-4">
-                    <p>These are the operating systems I use the most, according to Wakatime.</p>
+                    <p>{locale.mostUsedOSDescription}</p>
                   </div>
                   <div className="project-image text-center justify-content-center">
                     {osUsageData.length > 0 ? (

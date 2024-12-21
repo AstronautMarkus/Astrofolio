@@ -45,7 +45,7 @@ const App = () => {
       case 'resume':
         return <Resume />;
       case 'stats':
-        return <Stats />;
+        return <Stats locale={locale} />;
       case 'contact':
         return <Contact locale={locale} />;
       default:
