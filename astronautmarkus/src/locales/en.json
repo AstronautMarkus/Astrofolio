@@ -31,5 +31,9 @@
   "year": "Year",
   "technologies": "Technologies",
   "githubProfile": "GitHub Profile",
-  "home": "Home"
+  "home": "Home",
+  "projects": "Projects",
+  "resume": "Resume",
+  "stats": "Stats",
+  "contact": "Contact Me"
 }

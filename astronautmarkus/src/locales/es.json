@@ -31,5 +31,9 @@
   "year": "Año",
   "technologies": "Tecnologías",
   "githubProfile": "Perfil de GitHub",
-  "home": "Inicio"
+  "home": "Inicio",
+  "projects": "Proyectos",
+  "resume": "Currículum",
+  "stats": "Estadísticas",
+  "contact": "Contáctame"
 }

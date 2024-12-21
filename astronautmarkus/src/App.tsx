@@ -32,6 +32,10 @@ const App = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
+  const toggleLanguage = () => {
+    setLocale(locale === enLocale ? esLocale : enLocale);
+  };
+
   const renderContent = () => {
     switch (section) {
       case 'home':
@@ -69,36 +73,39 @@ const App = () => {
         <ul className="nav flex-column mb-auto">
           <li className={`nav-item ${section === 'home' ? 'active' : ''}`}>
             <button className="btn text-start w-100" onClick={() => setSection('home')}>
-              <FontAwesomeIcon icon={faUser} className="me-2" /> Home
+              <FontAwesomeIcon icon={faUser} className="me-2" /> {locale.home}
             </button>
           </li>
           <li className={`nav-item ${section === 'projects' ? 'active' : ''}`}>
             <button className="btn text-start w-100" onClick={() => setSection('projects')}>
-              <FontAwesomeIcon icon={faProjectDiagram} className="me-2" /> Projects
+              <FontAwesomeIcon icon={faProjectDiagram} className="me-2" /> {locale.projects}
             </button>
           </li>
           <li className={`nav-item ${section === 'resume' ? 'active' : ''}`}>
             <button className="btn text-start w-100" onClick={() => setSection('resume')}>
-              <FontAwesomeIcon icon={faFileAlt} className="me-2" /> Resume
+              <FontAwesomeIcon icon={faFileAlt} className="me-2" /> {locale.resume}
             </button>
           </li>
           <li className={`nav-item ${section === 'stats' ? 'active' : ''}`}>
             <button className="btn text-start w-100" onClick={() => setSection('stats')}>
-              <FontAwesomeIcon icon={faChartLine} className="me-2" /> Stats
+              <FontAwesomeIcon icon={faChartLine} className="me-2" /> {locale.stats}
             </button>
           </li>
           <li className={`nav-item ${section === 'contact' ? 'active' : ''}`}>
             <button className="btn text-start w-100" onClick={() => setSection('contact')}>
-              <FontAwesomeIcon icon={faEnvelope} className="me-2" /> Contact Me
+              <FontAwesomeIcon icon={faEnvelope} className="me-2" /> {locale.contact}
             </button>
           </li>
         </ul>
 
 
         <div className="dashboard-footer mt-auto text-center">
-            <a href="https://github.com/AstronautMarkus" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light w-100">
-              <FontAwesomeIcon icon={faGithub} className="me-2" /> GitHub
-            </a>
+          <button onClick={toggleLanguage} className="btn btn-outline-light w-100 mb-2">
+            {locale === enLocale ? 'Español' : 'English'}
+          </button>
+          <a href="https://github.com/AstronautMarkus" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light w-100">
+            <FontAwesomeIcon icon={faGithub} className="me-2" /> GitHub
+          </a>
           <small className="d-block mt-2">&copy; {currentYear} AstronautMarkus</small>
         </div>
       </div>
