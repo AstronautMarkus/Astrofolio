@@ -19,7 +19,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/src/assets/img/space_background.jpg') center/cover no-repeat fixed;
+  background: url('/assets/img/space_background.jpg') center/cover no-repeat fixed;
   filter: blur(5px);
   z-index: -1;
   transform: scale(1.1); /* Zoom in the background image */

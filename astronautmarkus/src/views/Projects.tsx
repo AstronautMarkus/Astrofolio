@@ -2,29 +2,29 @@ import './Projects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-const Projects = () => (
+const Projects = ({ locale }: { locale: any }) => (
   <div className="home-container d-flex justify-content-center align-items-center vh-100">
     <div className="square-container">
       <div className="content-box shadow">
-        <h1 className="title">📂 My Projects</h1>
-        <p>Take a look at my most recent projects!</p>
+        <h1 className="title">📂 {locale.myProjects}</h1>
+        <p>{locale.recentProjects}</p>
         <div className="content">
           <ul className="project-list">
             <li className="project-item d-flex flex-column flex-md-row">
               <div className="project-details">
-                <h2 className="project-title">Featured project: AbbyBot</h2>
+                <h2 className="project-title">{locale.featuredProject}: AbbyBot</h2>
                 <p className="project-description text-center">
-                  Multi-functional Discord app with management and entertainment features.
+                  {locale.abbyBotDescription}
                 </p>
                 <ul className="project-sublist">
                   <li>
-                    <strong>Discord AbbyBot:</strong> Multi-purpose tool for Discord with moderation and entertainment.
+                    <strong>{locale.discordAbbyBot}:</strong> {locale.discordAbbyBotDescription}
                   </li>
                   <li>
-                    <strong>AbbyBot Website:</strong> Informative site with bot details and updates.
+                    <strong>{locale.abbyBotWebsite}:</strong> {locale.abbyBotWebsiteDescription}
                   </li>
                   <li>
-                    <strong>AbbyBot Dashboard:</strong> Admin panel for managing guild configurations and statistics.
+                    <strong>{locale.abbyBotDashboard}:</strong> {locale.abbyBotDashboardDescription}
                   </li>
                 </ul>
                 <div className="text-center project-links">
@@ -38,21 +38,21 @@ const Projects = () => (
                     <FontAwesomeIcon icon={faGithub} /> AbbyBot Dashboard
                   </a>
                   <a href="https://www.abbybotproject.com" target="_blank" rel="noopener noreferrer" className="btn btn-info m-2">
-                    Visit AbbyBot Project
+                    {locale.visitAbbyBotProject}
                   </a>
                 </div>
               </div>
               <div className="project-image">
-                <img src="/src/assets/img/abbybot_logo.png" alt="AbbyBot" />
+                <img src="/assets/img/abbybot_logo.png" alt="AbbyBot" />
                 <p className='text-center mt-3'>Hello world!</p>
               </div>
             </li>
 
             <li className="project-item d-flex">
               <div className="project-details">
-                <h2 className="project-title">📝 University Projects</h2>
+                <h2 className="project-title">📝 {locale.universityProjects}</h2>
                 <p className="project-description">
-                  Compilation of most of the projects carried out in my years as a computer science student.
+                  {locale.universityProjectsDescription}
                 </p>
               </div>
             </li>
@@ -60,11 +60,11 @@ const Projects = () => (
             <li className="project-item card text-center text-light">
               <div className="card-body">
                 <h2 className="card-title">MofuLunches-API</h2>
-                <img src="/src/assets/img/project_img/mofulunches_api.png" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
-                <p className="card-text">Modular backend following Service Oriented Architecture principles. Built with Flask to ensure scalability and interoperability.</p>
-                <p className="card-text"><small className="text-light">Semester: 2 Year: 2024</small></p>
+                <img src="/assets/img/project_img/mofulunches_api.png" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
+                <p className="card-text">{locale.mofuLunchesApiDescription}</p>
+                <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
                 <div className="d-flex justify-content-center">
-                  <p>Technologies: Flask, Python, MongoDB, Docker, Dotenv</p>
+                  <p>{locale.technologies}: Flask, Python, MongoDB, Docker, Dotenv</p>
                 </div>
               </div>
             </li>
@@ -72,11 +72,11 @@ const Projects = () => (
             <li className="project-item card text-center text-light">
               <div className="card-body">
                 <h2 className="card-title">MofuLunches-Web</h2>
-                <img src="/src/assets/img/project_img/mofulunches_web.jpg" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
-                <p className="card-text">Dynamic front-end application with Flask, featuring an intuitive dashboard for administrators and cooks.</p>
-                <p className="card-text"><small className="text-light">Semester: 2 Year: 2024</small></p>
+                <img src="/assets/img/project_img/mofulunches_web.jpg" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
+                <p className="card-text">{locale.mofuLunchesWebDescription}</p>
+                <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <p>Technologies: Flask, Python, Bootstrap</p>
+                  <p>{locale.technologies}: Flask, Python, Bootstrap</p>
                 </div>
               </div>
             </li>
@@ -84,63 +84,63 @@ const Projects = () => (
             <li className="project-item card text-center text-light">
               <div className="card-body">
                 <h2 className="card-title">MofuLunches-Totem</h2>
-                <img src="/src/assets/img/project_img/mofulunches_totem.png" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
-                <p className="card-text">Digital totem system for order pickup using API, implemented with Arduino microcontrollers, built with Electron + Vite.</p>
-                <p className="card-text"><small className="text-light">Semester: 2 Year: 2024</small></p>
+                <img src="/assets/img/project_img/mofulunches_totem.png" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
+                <p className="card-text">{locale.mofuLunchesTotemDescription}</p>
+                <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <p>Technologies: React, Vite, Electron, Arduino, Bootstrap, Python</p>
+                  <p>{locale.technologies}: React, Vite, Electron, Arduino, Bootstrap, Python</p>
                 </div>
               </div>
             </li>
 
             <li className="project-item card text-center text-light">
               <div className="card-body">
-                <img src="/src/assets/img/project_img/mofustore.png" alt="Mofu Store" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/mofustore.png" alt="Mofu Store" className="mt-4 mb-4" width="600" />
                 <h2 className="card-title">Mofu Store</h2>
-                <p className="card-text">E-commerce site built with Django, themed around "fumofumo" stuffed animals from the Touhou Project saga.</p>
-                <p className="card-text"><small className="text-light">Semester: 1 Year: 2023</small></p>
+                <p className="card-text">{locale.mofuStoreDescription}</p>
+                <p className="card-text"><small className="text-light">{locale.semester}: 1 {locale.year}: 2023</small></p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <p>Technologies: Django, Python, Bootstrap, MySQL</p>
+                  <p>{locale.technologies}: Django, Python, Bootstrap, MySQL</p>
                 </div>
               </div>
             </li>
 
             <li className="project-item card text-center text-light">
               <div className="card-body">
-                <img src="/src/assets/img/project_img/construmic.jpg" alt="CONSTRU_MIC" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/construmic.jpg" alt="CONSTRU_MIC" className="mt-4 mb-4" width="600" />
                 <h2 className="card-title">CONSTRU_MIC</h2>
-                <p className="card-text">Web system for household item sales, featuring user accounts, product listings, and an admin module.</p>
-                <p className="card-text"><small className="text-light">Semester: 1 Year: 2024</small></p>
+                <p className="card-text">{locale.construMicDescription}</p>
+                <p className="card-text"><small className="text-light">{locale.semester}: 1 {locale.year}: 2024</small></p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <p>Technologies: Django, Python, Bootstrap, MySQL</p>
+                  <p>{locale.technologies}: Django, Python, Bootstrap, MySQL</p>
                 </div>
               </div>
             </li>
 
             <li className="project-item card text-center text-light">
               <div className="card-body">
-                <img src="/src/assets/img/project_img/camellosfood.png" alt="CamellosFood-Repartidor" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/camellosfood.png" alt="CamellosFood-Repartidor" className="mt-4 mb-4" width="600" />
                 <h2 className="card-title">CamellosFood-Repartidor</h2>
-                <p className="card-text">Mobile application system for food delivery, focusing on a delivery driver module.</p>
-                <p className="card-text"><small className="text-light">Semester: 2 Year: 2023</small></p>
+                <p className="card-text">{locale.camellosFoodDescription}</p>
+                <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2023</small></p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <p>Technologies: Ionic, Angular, Node.js</p>
+                  <p>{locale.technologies}: Ionic, Angular, Node.js</p>
                 </div>
               </div>
             </li>
 
             <li className="project-item card text-center text-light">
               <div className="card-body">
-              <h2>Check Out More Projects on My GitHub</h2>
+              <h2>{locale.moreProjects}</h2>
             <img src="https://github.com/astronautmarkus.png" alt="GitHub Profile" className="github-profile-picture mt-3 mb-3 rounded" width="200"  />
             <p>@astronautmarkus</p>
-            <p>You can explore more of my open-source projects and contributions by visiting my GitHub profile.</p>
+            <p>{locale.exploreMore}</p>
             <div className="d-flex justify-content-center">
               <a href="https://github.com/astronautmarkus" target="_blank" rel="noopener noreferrer" className="btn btn-primary m-2">
-                <FontAwesomeIcon icon={faGithub} /> GitHub Profile
+                <FontAwesomeIcon icon={faGithub} /> {locale.githubProfile}
               </a>
               <a href="/" className="btn btn-secondary m-2">
-                Home
+                {locale.home}
               </a>
             </div>
               </div>
