@@ -43,7 +43,7 @@ const App = () => {
       case 'projects':
         return <Projects locale={locale} />;
       case 'resume':
-        return <Resume />;
+        return <Resume locale={locale} />;
       case 'stats':
         return <Stats locale={locale} />;
       case 'contact':
