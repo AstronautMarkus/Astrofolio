@@ -10,11 +10,19 @@ import Projects from './views/Projects';
 import Resume from './views/Resume';
 import Stats from './views/Stats';
 import Contact from './views/Contact';
+import enLocale from './locales/en.json';
+import esLocale from './locales/es.json';
 
 const App = () => {
   const [section, setSection] = useState(localStorage.getItem('lastSection') || 'home');
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [locale, setLocale] = useState(enLocale);
   const currentYear = new Date().getFullYear();
+
+  useEffect(() => {
+    const browserLanguage = navigator.language.startsWith('es') ? 'es' : 'en';
+    setLocale(browserLanguage === 'es' ? esLocale : enLocale);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('lastSection', section);
@@ -27,9 +35,9 @@ const App = () => {
   const renderContent = () => {
     switch (section) {
       case 'home':
-        return <Home setSection={setSection} />;
+        return <Home setSection={setSection} locale={locale} />;
       case 'projects':
-        return <Projects />;
+        return <Projects locale={locale} />;
       case 'resume':
         return <Resume />;
       case 'stats':
@@ -40,7 +48,6 @@ const App = () => {
         return <div className="content-section">Select an option</div>;
     }
   };
-  
 
   return (
     <div className="d-flex vh-100">
