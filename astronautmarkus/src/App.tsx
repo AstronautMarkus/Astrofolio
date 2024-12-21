@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faFileAlt, faChartLine, faProjectDiagram, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -12,9 +12,13 @@ import Stats from './views/Stats';
 import Contact from './views/Contact';
 
 const App = () => {
-  const [section, setSection] = useState('home');
+  const [section, setSection] = useState(localStorage.getItem('lastSection') || 'home');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const currentYear = new Date().getFullYear();
+
+  useEffect(() => {
+    localStorage.setItem('lastSection', section);
+  }, [section]);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
