@@ -101,7 +101,7 @@ const App = () => {
 
         <div className="dashboard-footer mt-auto text-center">
           <button onClick={toggleLanguage} className="btn btn-outline-light w-100 mb-2">
-            {locale === enLocale ? 'Español' : 'English'}
+            {locale === enLocale ? '🇪🇸 Español' : '🇬🇧 English'}
           </button>
           <a href="https://github.com/AstronautMarkus" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light w-100">
             <FontAwesomeIcon icon={faGithub} className="me-2" /> GitHub
