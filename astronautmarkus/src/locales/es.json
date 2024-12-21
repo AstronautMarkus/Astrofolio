@@ -35,5 +35,7 @@
   "projects": "Proyectos",
   "resume": "Currículum",
   "stats": "Estadísticas",
-  "contact": "Contáctame"
+  "contact": "Contáctame",
+  "phone": "Teléfono",
+  "location": "Ubicación"
 }

@@ -47,7 +47,7 @@ const App = () => {
       case 'stats':
         return <Stats />;
       case 'contact':
-        return <Contact />;
+        return <Contact locale={locale} />;
       default:
         return <div className="content-section">Select an option</div>;
     }
