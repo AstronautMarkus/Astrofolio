@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Bar } from "react-chartjs-2";
+import { Bar, Doughnut } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -8,34 +8,67 @@ import {
   Title,
   Tooltip,
   Legend,
+  ArcElement,
 } from "chart.js";
 import "./Stats.css";
 
-// Register chart.js modules
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+// Register ChartJS modules
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement);
 
 interface ActivityEntry {
   range: { date: string };
   grand_total: { total_seconds: number };
 }
 
+interface LanguageEntry {
+  color: string;
+  name: string;
+  percent: number;
+}
+
+interface OSUsageEntry {
+  color: string;
+  name: string;
+  percent: number;
+}
+
+const Spinner = () => <div className="spinner"></div>;
+
 const Stats = () => {
   const [activityData, setActivityData] = useState<ActivityEntry[]>([]);
+  const [languageData, setLanguageData] = useState<LanguageEntry[]>([]);
+  const [osUsageData, setOSUsageData] = useState<OSUsageEntry[]>([]);
 
-  // Get wakatime ststs
+  // (Coding activity)
   useEffect(() => {
     fetch("https://wakatime.com/share/@AstronautMarkus/678807b3-e69a-4a62-83d5-8abe7c01f950.json")
       .then((response) => response.json())
-      .then((data) => setActivityData(data.data)) // `data.data` 
-      .catch((error) => console.error("Error fetching data:", error));
+      .then((data) => setActivityData(data.data))
+      .catch((error) => console.error("Error fetching activity data:", error));
   }, []);
 
-  // Prepare data
-  const labels = activityData.map((entry) => entry.range.date); // Dates
-  const codingTimes = activityData.map((entry) => entry.grand_total.total_seconds / 3600); // Seconds to hours
+  // (Most used languages)
+  useEffect(() => {
+    fetch("https://wakatime.com/share/@AstronautMarkus/6e3b981a-a628-4e63-82f5-050e12729732.json")
+      .then((response) => response.json())
+      .then((data) => setLanguageData(data.data))
+      .catch((error) => console.error("Error fetching language data:", error));
+  }, []);
 
-  const chartData = {
-    labels,
+  // (Most used operating systems)
+  useEffect(() => {
+    fetch("https://wakatime.com/share/@AstronautMarkus/be109b51-c692-4817-adb6-c09ca597f934.json")
+      .then((response) => response.json())
+      .then((data) => setOSUsageData(data.data))
+      .catch((error) => console.error("Error fetching OS usage data:", error));
+  }, []);
+
+  // (Coding Activity)
+  const activityLabels = activityData.map((entry) => entry.range.date);
+  const codingTimes = activityData.map((entry) => entry.grand_total.total_seconds / 3600); // Convertir segundos a horas
+
+  const activityChartData = {
+    labels: activityLabels,
     datasets: [
       {
         label: "Hours Spent Coding",
@@ -47,7 +80,7 @@ const Stats = () => {
     ],
   };
 
-  const options = {
+  const activityChartOptions = {
     responsive: true,
     plugins: {
       legend: { position: "top" as const },
@@ -59,9 +92,61 @@ const Stats = () => {
         ticks: {
           callback: function (tickValue: string | number) {
             return `${tickValue}h`;
-          }, // Mostrar valores en horas
+          },
         },
       },
+    },
+  };
+
+  // (Most Used Languages)
+  const languageChartData = {
+    labels: languageData.map((lang) => lang.name),
+    datasets: [
+      {
+        label: "Usage Percentage",
+        data: languageData.map((lang) => lang.percent),
+        backgroundColor: languageData.map((lang) => lang.color),
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const languageChartOptions = {
+    responsive: true,
+    indexAxis: "y" as const,
+    plugins: {
+      legend: { position: "top" as const },
+      title: { display: true, text: "Most Used Programming Languages" },
+    },
+    scales: {
+      x: {
+        beginAtZero: true,
+        ticks: {
+          callback: function (tickValue: string | number) {
+            return `${tickValue}%`;
+          },
+        },
+      },
+    },
+  };
+
+  // (Most Used Operating Systems)
+  const osUsageChartData = {
+    labels: osUsageData.map((os) => os.name),
+    datasets: [
+      {
+        data: osUsageData.map((os) => os.percent),
+        backgroundColor: osUsageData.map((os) => os.color),
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const osUsageChartOptions = {
+    responsive: true,
+    plugins: {
+      legend: { position: "top" as const },
+      title: { display: true, text: "Most Used Operating Systems" },
     },
   };
 
@@ -73,6 +158,7 @@ const Stats = () => {
           <p>📈 Insights from Wakatime</p>
           <div className="content">
             <ul className="project-list">
+              {/* Coding Activity Chart */}
               <li className="project-item">
                 <div className="project-details">
                   <h2 className="project-title">⏳ Coding Activity</h2>
@@ -81,9 +167,43 @@ const Stats = () => {
                   </div>
                   <div className="project-image text-center justify-content-center">
                     {activityData.length > 0 ? (
-                      <Bar data={chartData} options={options} />
+                      <Bar data={activityChartData} options={activityChartOptions} />
                     ) : (
-                      <p>Loading data...</p>
+                      <Spinner />
+                    )}
+                  </div>
+                </div>
+              </li>
+
+              {/* Most Used Languages Chart */}
+              <li className="project-item">
+                <div className="project-details">
+                  <h2 className="project-title">💻 Most Used Programming Languages</h2>
+                  <div className="project-text mb-4 mt-4">
+                    <p>These are the programming languages I use the most, according to Wakatime.</p>
+                  </div>
+                  <div className="project-image text-center justify-content-center">
+                    {languageData.length > 0 ? (
+                      <Bar data={languageChartData} options={languageChartOptions} height={400} />
+                    ) : (
+                      <Spinner />
+                    )}
+                  </div>
+                </div>
+              </li>
+
+              {/* Most Used Operating Systems Chart */}
+              <li className="project-item">
+                <div className="project-details">
+                  <h2 className="project-title">🖥️ Most Used Operating Systems</h2>
+                  <div className="project-text mb-4 mt-4">
+                    <p>These are the operating systems I use the most, according to Wakatime.</p>
+                  </div>
+                  <div className="project-image text-center justify-content-center">
+                    {osUsageData.length > 0 ? (
+                      <Doughnut data={osUsageChartData} options={osUsageChartOptions} />
+                    ) : (
+                      <Spinner />
                     )}
                   </div>
                 </div>
