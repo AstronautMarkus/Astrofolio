@@ -153,11 +153,11 @@ const Resume = ({ locale }: { locale: any }) => (
           <li className="project-item">
             <div className="project-details">
               <div className="skills-section">
-                <h3 className="text-center mb-4">Hard Skills</h3>
+                <h3 className="text-center mb-4">{locale.hardSkills}</h3>
                 <div className="row">
                   {/* Frontend Development */}
                   <div className="col-lg-4 col-md-6 text-center mb-4">
-                    <p><strong>Frontend Development</strong></p>
+                    <p><strong>{locale.frontEndDevelopment}</strong></p>
                     <div className="d-flex justify-content-center flex-wrap">
                       <img src="/assets/img/icons/html.png" alt="HTML Icon" className="skill-icon" />
                       <img src="/assets/img/icons/css.png" alt="CSS Icon" className="skill-icon" />
@@ -174,7 +174,7 @@ const Resume = ({ locale }: { locale: any }) => (
                   </div>
                   {/* Backend Development */}
                   <div className="col-lg-4 col-md-6 text-center mb-4">
-                    <p><strong>Backend Development</strong></p>
+                    <p><strong>{locale.backEndDevelopment}</strong></p>
                     <div className="d-flex justify-content-center flex-wrap">
                       <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon" />
                       <img src="/assets/img/icons/django.png" alt="Django Icon" className="skill-icon" />
@@ -186,7 +186,7 @@ const Resume = ({ locale }: { locale: any }) => (
                   </div>
                   {/* DevOps */}
                   <div className="col-lg-4 col-md-6 text-center mb-4">
-                    <p><strong>DevOps</strong></p>
+                    <p><strong>{locale.devOps}</strong></p>
                     <div className="d-flex justify-content-center flex-wrap">
                       <img src="/assets/img/icons/docker.png" alt="Docker Icon" className="skill-icon" />
                       <img src="/assets/img/icons/github-actions.png" alt="GitHub Actions Icon" className="skill-icon" />
@@ -195,7 +195,7 @@ const Resume = ({ locale }: { locale: any }) => (
                   </div>
                   {/* Databases */}
                   <div className="col-lg-4 col-md-6 text-center mb-4">
-                    <p><strong>Databases</strong></p>
+                    <p><strong>{locale.databases}</strong></p>
                     <div className="d-flex justify-content-center flex-wrap">
                       <img src="/assets/img/icons/mysql.png" alt="MySQL Icon" className="skill-icon" />
                       <img src="/assets/img/icons/mariadb.png" alt="MariaDB Icon" className="skill-icon" />
@@ -206,7 +206,7 @@ const Resume = ({ locale }: { locale: any }) => (
                   </div>
                   {/* Tools & Frameworks */}
                   <div className="col-lg-4 col-md-6 text-center mb-4">
-                    <p><strong>Tools & Frameworks</strong></p>
+                    <p><strong>{locale.toolsAndFrameworks}</strong></p>
                     <div className="d-flex justify-content-center flex-wrap">
                       <img src="/assets/img/icons/git.png" alt="Git Icon" className="skill-icon" />
                       <img src="/assets/img/icons/github.png" alt="GitHub Icon" className="skill-icon" />
@@ -215,7 +215,7 @@ const Resume = ({ locale }: { locale: any }) => (
                   </div>
                   {/* Embedded Systems & IoT */}
                   <div className="col-lg-4 col-md-6 text-center mb-4">
-                    <p><strong>Embedded Systems & IoT</strong></p>
+                    <p><strong>{locale.embededSystemsAndIot}</strong></p>
                     <div className="d-flex justify-content-center flex-wrap">
                       <img src="/assets/img/icons/arduino.svg" alt="Arduino Icon" className="skill-icon" />
                       <img src="/assets/img/icons/linux.png" alt="Linux Icon" className="skill-icon" />

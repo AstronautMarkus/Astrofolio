@@ -33,7 +33,7 @@
   "githubProfile": "GitHub Profile",
   "home": "Home",
   "projects": "Projects",
-  "resume": "Resume",
+  "resume": "About me",
   "stats": "Stats",
   "contact": "Contact Me",
   "phone": "Phone",
@@ -80,5 +80,12 @@
   "timeManagementTitle": "Time Management",
   "timeManagementDescription": "I prioritize deadlines and always aim to deliver projects on time.",
   "finalMessageTitle": "This page will keep growing over time, stay tuned and come back soon!",
-  "finalMessageAuthor": "Astronautmarkus"
+  "finalMessageAuthor": "Astronautmarkus",
+  "hardSkills":"Hard Skills",
+  "frontEndDevelopment":"Front-End Development",
+  "backEndDevelopment":"Back-End Development",
+  "devOps":"DevOps",
+  "databases":"Databases",
+  "toolsAndFrameworks":"Tools and Frameworks",
+  "embededSystemsAndIot":"Embeded Systems and IoT"
 }
