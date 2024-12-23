@@ -41,7 +41,7 @@ const App = () => {
       case 'home':
         return <Home setSection={setSection} locale={locale} />;
       case 'projects':
-        return <Projects locale={locale} />;
+        return <Projects locale={locale} setSection={setSection} />;
       case 'resume':
         return <Resume locale={locale} />;
       case 'stats':

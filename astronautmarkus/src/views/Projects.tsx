@@ -2,7 +2,7 @@ import './Projects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-const Projects = ({ locale }: { locale: any }) => (
+const Projects = ({ locale, setSection }: { locale: any, setSection: (section: string) => void }) => (
   <div className="home-container d-flex justify-content-center align-items-center vh-100">
     <div className="square-container">
       <div className="content-box shadow">
@@ -139,9 +139,9 @@ const Projects = ({ locale }: { locale: any }) => (
               <a href="https://github.com/astronautmarkus" target="_blank" rel="noopener noreferrer" className="btn btn-primary m-2">
                 <FontAwesomeIcon icon={faGithub} /> {locale.githubProfile}
               </a>
-              <a href="/" className="btn btn-secondary m-2">
+              <button onClick={() => setSection('home')} className="btn btn-secondary m-2">
                 {locale.home}
-              </a>
+              </button>
             </div>
               </div>
             </li>
