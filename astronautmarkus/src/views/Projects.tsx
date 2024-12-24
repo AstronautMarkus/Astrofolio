@@ -63,8 +63,13 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
                 <img src="/assets/img/project_img/mofulunches_api.png" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
                 <p className="card-text">{locale.mofuLunchesApiDescription}</p>
                 <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
+                <p>{locale.technologies}:</p>
                 <div className="d-flex justify-content-center">
-                  <p>{locale.technologies}: Flask, Python, MongoDB, Docker, Dotenv</p>
+                  <img src="/assets/img/icons/flask.png" alt="Flask Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/mongodb.svg" alt="MongoDB Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/docker.png" alt="Docker Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/dotenv.png" alt="Dotenv Icon" className="skill-icon mx-1" />
                 </div>
               </div>
             </li>
@@ -75,8 +80,11 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
                 <img src="/assets/img/project_img/mofulunches_web.jpg" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
                 <p className="card-text">{locale.mofuLunchesWebDescription}</p>
                 <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
+                <p>{locale.technologies}:</p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <p>{locale.technologies}: Flask, Python, Bootstrap</p>
+                  <img src="/assets/img/icons/flask.png" alt="Flask Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/bootstrap.png" alt="Bootstrap Icon" className="skill-icon mx-1" />
                 </div>
               </div>
             </li>
@@ -87,8 +95,14 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
                 <img src="/assets/img/project_img/mofulunches_totem.png" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
                 <p className="card-text">{locale.mofuLunchesTotemDescription}</p>
                 <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
+                <p>{locale.technologies}:</p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <p>{locale.technologies}: React, Vite, Electron, Arduino, Bootstrap, Python</p>
+                  <img src="/assets/img/icons/react.webp" alt="React Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/vite.svg" alt="Vite Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/electron.svg" alt="Electronjs Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/arduino.svg" alt="Arduino Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/bootstrap.png" alt="Bootstrap Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
                 </div>
               </div>
             </li>
@@ -99,8 +113,12 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
                 <h2 className="card-title">Mofu Store</h2>
                 <p className="card-text">{locale.mofuStoreDescription}</p>
                 <p className="card-text"><small className="text-light">{locale.semester}: 1 {locale.year}: 2023</small></p>
+                <p>{locale.technologies}:</p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <p>{locale.technologies}: Django, Python, Bootstrap, MySQL</p>
+                  <img src="/assets/img/icons/django.png" alt="Django Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/bootstrap.png" alt="Bootstrap Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/mysql.png" alt="MySQL Icon" className="skill-icon mx-1" />
                 </div>
               </div>
             </li>
@@ -111,8 +129,12 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
                 <h2 className="card-title">CONSTRU_MIC</h2>
                 <p className="card-text">{locale.construMicDescription}</p>
                 <p className="card-text"><small className="text-light">{locale.semester}: 1 {locale.year}: 2024</small></p>
+                <p>{locale.technologies}:</p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <p>{locale.technologies}: Django, Python, Bootstrap, MySQL</p>
+                  <img src="/assets/img/icons/django.png" alt="Django Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/bootstrap.png" alt="Bootstrap Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/mysql.png" alt="MySQL Icon" className="skill-icon mx-1" />
                 </div>
               </div>
             </li>
@@ -123,8 +145,11 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
                 <h2 className="card-title">CamellosFood-Repartidor</h2>
                 <p className="card-text">{locale.camellosFoodDescription}</p>
                 <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2023</small></p>
+                <p>{locale.technologies}:</p>
                 <div className="tech-icons d-flex justify-content-center">
-                  <p>{locale.technologies}: Ionic, Angular, Node.js</p>
+                  <img src="/assets/img/icons/ionic.webp" alt="Ionic Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/angular.png" alt="Angular Icon" className="skill-icon mx-1" />
+                  <img src="/assets/img/icons/nodejs.png" alt="Node.js Icon" className="skill-icon mx-1" />
                 </div>
               </div>
             </li>
@@ -146,6 +171,7 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
               </div>
             </li>
           </ul>
+
         </div>        
       </div>
     </div>
