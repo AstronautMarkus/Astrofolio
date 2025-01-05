@@ -155,7 +155,7 @@ const Stats = ({ locale }: StatsProps) => {
   };
 
   return (
-    <div className="home-container d-flex justify-content-center align-items-center vh-100">
+    <div className="home-container d-flex justify-content-center align-items-center">
       <div className="square-container">
         <div className="content-box shadow">
           <h1 className="title">{locale.codingStatsTitle}</h1>

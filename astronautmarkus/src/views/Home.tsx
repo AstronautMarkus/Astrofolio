@@ -1,7 +1,7 @@
 import './Home.css';
 
 const Home = ({ setSection, locale }: { setSection: (section: string) => void, locale: any }) => (
-  <div className="home-container d-flex justify-content-center align-items-center vh-100">
+  <div className="home-container d-flex justify-content-center align-items-center">
     <div className="square-container">
       <div className="content-box text-center">
         <div className="header-image mb-4 animate-fade-in">

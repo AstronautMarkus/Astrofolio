@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Projects = ({ locale, setSection }: { locale: any, setSection: (section: string) => void }) => (
-  <div className="home-container d-flex justify-content-center align-items-center vh-100">
+  <div className="home-container d-flex justify-content-center align-items-center">
     <div className="square-container">
       <div className="content-box shadow">
         <h1 className="title">📂 {locale.myProjects}</h1>

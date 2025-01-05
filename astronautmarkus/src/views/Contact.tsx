@@ -4,7 +4,7 @@ import { faEnvelope, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg
 import { faGithub, faLinkedin, faInstagram, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 const Contact = ({ locale }: { locale: any }) => (
-  <div className="contact-container d-flex justify-content-center align-items-center vh-100">
+  <div className="contact-container d-flex justify-content-center align-items-center">
     <div className="square-container">
       <div className="content-box text-center">
         <h1 className="title text-white mt-5">

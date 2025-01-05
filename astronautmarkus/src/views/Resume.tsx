@@ -5,7 +5,7 @@ import { faBriefcase, faHardHat, faLightbulb, faComments, faClock } from '@forta
 import './Resume.css';
 
 const Resume = ({ locale }: { locale: any }) => (
-  <div className="home-container d-flex justify-content-center align-items-center vh-100">
+  <div className="home-container d-flex justify-content-center align-items-center">
     <div className="square-container">
       <div className="content-box shadow">
         <h1 className="title">🚀 {locale.aboutMeTitle}</h1>
