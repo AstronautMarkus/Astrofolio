@@ -101,4 +101,15 @@
       max-width: 150px;
       object-fit: cover;
     }
+
+    .d-flex.justify-content-center {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .d-flex.justify-content-center a {
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 0.5rem;
+    }
   }
