@@ -9,7 +9,7 @@ const Home = ({ setSection, locale }: { setSection: (section: string) => void, l
         <div className="content-box text-center">
           <div className={`${styles.headerImage} mb-4 animate-fade-in`}>
             <img
-              src="/assets/img/astronaut.png"
+              src="/assets/img/astronaut.webp"
               alt="Astronaut"
               className={styles.astronautImage}
             />
