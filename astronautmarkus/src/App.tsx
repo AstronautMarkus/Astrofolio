@@ -3,11 +3,17 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Sidebar from './Components/Sidebar/Sidebar';
 import './App.css';
 import './Transitions.css';
+
+// Containers
+
 import Home from './Components/Containers/Home/Home';
 import Projects from './Components/Containers/Projects/Projects';
 import Resume from './Components/Containers/Resume/Resume';
 import Stats from './Components/Containers/Stats/Stats';
-import Contact from './Components/Containers/Contact/Contact';
+import ContactMe from './Components/Containers/ContactMe/ContactMe';
+
+// Locales
+
 import enLocale from './locales/en.json';
 import esLocale from './locales/es.json';
 
@@ -42,7 +48,7 @@ const App = () => {
       case 'stats':
         return <Stats locale={locale} />;
       case 'contact':
-        return <Contact locale={locale} />;
+        return <ContactMe setSection={setSection} locale={locale} />;
       default:
         return <div className="content-section">Select an option</div>;
     }
