@@ -5,11 +5,11 @@ import { faUser, faFileAlt, faChartLine, faProjectDiagram, faEnvelope } from '@f
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import './App.css';
 import './Transitions.css';
-import Home from './Components/Home/Home';
-import Projects from './views/Projects';
-import Resume from './views/Resume';
-import Stats from './views/Stats';
-import Contact from './views/Contact';
+import Home from './Components/Containers/Home/Home';
+import Projects from './Components/Containers/Projects/Projects';
+import Resume from './Components/Containers/Resume/Resume';
+import Stats from './Components/Containers/Stats/Stats';
+import Contact from './Components/Containers/Contact/Contact';
 import enLocale from './locales/en.json';
 import esLocale from './locales/es.json';
 
