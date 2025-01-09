@@ -1,0 +1,139 @@
+.headerImage img {
+    width: 250px;
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .headerImage img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .headerImage img {
+        width: 150px;
+    }
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media (max-width: 480px) {
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.purpleButton {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.purpleButton:hover {
+    background-color: #5a0c9d;
+}
+
+.purpleButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(106, 13, 173, 0.5);
+}
+
+@media (max-width: 480px) {
+    .purpleButton {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.contactForm button {
+    align-self: flex-start;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contactInfo div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contactInfo div span {
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: purple;
+}
+
+.purpleButton {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.purpleButton:hover {
+    background-color: #5a0c9d;
+}
+
+.purpleButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(106, 13, 173, 0.5);
+}
+
