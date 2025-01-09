@@ -1,4 +1,6 @@
 import styles from './Home.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRocket, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const Home = ({ setSection, locale }: { setSection: (section: string) => void, locale: any }) => (
   <div className="home-container d-flex justify-content-center align-items-center">
@@ -22,14 +24,16 @@ const Home = ({ setSection, locale }: { setSection: (section: string) => void, l
         <div className="cta-buttons mt-4">
           <button
             onClick={() => setSection('projects')}
-            className="btn btn-primary me-3 btn-lg"
+            className={`${styles.purpleButton} me-3 btn-lg mb-3`}
           >
+            <FontAwesomeIcon icon={faRocket} className="me-2" />
             {locale.discoverProjects}
           </button>
           <button
             onClick={() => setSection('contact')}
-            className="btn btn-outline-light btn-lg"
+            className={`${styles.purpleButton} btn-lg`}
           >
+            <FontAwesomeIcon icon={faEnvelope} className="me-2" />
             {locale.getInTouch}
           </button>
         </div>

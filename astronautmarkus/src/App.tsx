@@ -5,7 +5,7 @@ import { faUser, faFileAlt, faChartLine, faProjectDiagram, faEnvelope } from '@f
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import './App.css';
 import './Transitions.css';
-import Home from './views/Home';
+import Home from './Components/Home/Home';
 import Projects from './views/Projects';
 import Resume from './views/Resume';
 import Stats from './views/Stats';
