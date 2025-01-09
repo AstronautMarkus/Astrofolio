@@ -4,7 +4,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import enLocale from '../../locales/en.json';
 import esLocale from '../../locales/es.json';
 
-interface NavbarProps {
+interface SidebarProps {
   section: string;
   setSection: (section: string) => void;
   sidebarOpen: boolean;
@@ -13,7 +13,7 @@ interface NavbarProps {
   setLocale: React.Dispatch<React.SetStateAction<typeof enLocale>>;
 }
 
-const Navbar = ({ section, setSection, sidebarOpen, toggleSidebar, locale, setLocale }: NavbarProps) => {
+const Sidebar = ({ section, setSection, sidebarOpen, toggleSidebar, locale, setLocale }: SidebarProps) => {
   const currentYear = new Date().getFullYear();
 
   const toggleLanguage = () => {
@@ -78,4 +78,4 @@ const Navbar = ({ section, setSection, sidebarOpen, toggleSidebar, locale, setLo
   );
 };
 
-export default Navbar;
+export default Sidebar;

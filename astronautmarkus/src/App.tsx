@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import Navbar from './Components/Navbar/Navbar';
+import Sidebar from './Components/Sidebar/Sidebar';
 import './App.css';
 import './Transitions.css';
 import Home from './Components/Containers/Home/Home';
@@ -50,7 +50,7 @@ const App = () => {
 
   return (
     <div className="d-flex vh-100">
-      <Navbar
+      <Sidebar
         section={section}
         setSection={setSection}
         sidebarOpen={sidebarOpen}
