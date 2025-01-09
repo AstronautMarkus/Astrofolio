@@ -38,6 +38,69 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.text-glow {
+  color: #00e5ff;
+  text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+}
+
+.text-glow-title {
+  color: #ff66cc;
+  text-shadow: 0 0 15px #ff66cc, 0 0 30px #ff66cc;
+}
+
+.intro {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.cta-buttons .btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #6f42c1;
+  border-color: #6f42c1;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #8a63d2;
+  box-shadow: 0 0 15px rgba(138, 99, 210, 0.6);
+  border-color: #8a63d2;
+}
+
+
+.btn-outline-light {
+  color: #d1d5db;
+  border-color: #d1d5db;
+}
+
+.btn-outline-light:hover {
+  color: #ffffff;
+  background-color: #333;
+  border-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .cta-buttons .btn {
+    margin-bottom: 20px;
+  }
+}
+
 .d-flex.vh-100 {
   background: transparent; /* no background on containers */
 }

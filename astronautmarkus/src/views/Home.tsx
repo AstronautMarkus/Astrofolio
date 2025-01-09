@@ -1,18 +1,18 @@
-import './Home.css';
+import styles from './Home.module.css';
 
 const Home = ({ setSection, locale }: { setSection: (section: string) => void, locale: any }) => (
   <div className="home-container d-flex justify-content-center align-items-center">
     <div className="square-container">
       <div className="content-box text-center">
-        <div className="header-image mb-4 animate-fade-in">
+        <div className={`${styles.headerImage} mb-4 animate-fade-in`}>
           <img
             src="/assets/img/astronaut.png"
             alt="Astronaut"
-            className="astronaut-image"
+            className={styles.astronautImage}
           />
         </div>
-        <h1 className="title text-white mb-3 mt-3">
-        🚀 {locale.welcome} <span className="text-glow-title">{locale.myUniverse}</span>
+        <h1 className={`${styles.title} text-white mb-3 mt-3`}>
+        🚀 {locale.welcome} <span className={styles.textGlowTitle}>{locale.myUniverse}</span>
         </h1>
         <p className="text-light">
           {locale.introduction}
