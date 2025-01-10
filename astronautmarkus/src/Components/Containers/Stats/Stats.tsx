@@ -158,8 +158,8 @@ const Stats = ({ locale }: StatsProps) => {
     <div className="home-container d-flex justify-content-center align-items-center">
       <div className="square-container">
         <div className="content-box shadow">
-          <h1 className="title">{locale.codingStatsTitle}</h1>
-          <p>{locale.insightsFromWakatime}</p>
+          <h1 className="title text-center">{locale.codingStatsTitle}</h1>
+          <p className="text-center">{locale.insightsFromWakatime}</p>
           <div className="content">
             <ul className="project-list">
               {/* Coding Activity Chart */}

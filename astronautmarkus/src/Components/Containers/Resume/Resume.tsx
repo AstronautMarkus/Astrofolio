@@ -8,8 +8,8 @@ const Resume = ({ locale }: { locale: any }) => (
   <div className="home-container d-flex justify-content-center align-items-center">
     <div className="square-container">
       <div className="content-box shadow">
-        <h1 className="title">🚀 {locale.aboutMeTitle}</h1>
-        <p>🌌 {locale.aboutMeSubtitle}</p>
+        <h1 className="title text-center">🚀 {locale.aboutMeTitle}</h1>
+        <p className='text-center'>🌌 {locale.aboutMeSubtitle}</p>
         <div className="content">
             <ul className="project-list">
             <li className="project-item">
