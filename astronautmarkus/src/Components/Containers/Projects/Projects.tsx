@@ -6,8 +6,8 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
   <div className="home-container d-flex justify-content-center align-items-center">
     <div className="square-container">
       <div className="content-box shadow">
-        <h1 className="title">📂 {locale.myProjects}</h1>
-        <p>{locale.recentProjects}</p>
+        <h1 className="title text-center">📂 {locale.myProjects}</h1>
+        <p className='text-center'>{locale.recentProjects}</p>
         <div className="content">
           <ul className="project-list">
             <li className="project-item d-flex flex-column flex-md-row">
