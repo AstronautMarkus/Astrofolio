@@ -60,7 +60,7 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
             <li className="project-item card text-center text-light">
               <div className="card-body">
                 <h2 className="card-title">MofuLunches-API</h2>
-                <img src="/assets/img/project_img/mofulunches_api.png" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/mofulunches_api.png" alt="MofuLunches-API" className="mt-4 mb-4 responsive-project-image" width="600" />
                 <p className="card-text">{locale.mofuLunchesApiDescription}</p>
                 <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
                 <p>{locale.technologies}:</p>
@@ -77,7 +77,7 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
             <li className="project-item card text-center text-light">
               <div className="card-body">
                 <h2 className="card-title">MofuLunches-Web</h2>
-                <img src="/assets/img/project_img/mofulunches_web.jpg" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/mofulunches_web.jpg" alt="MofuLunches-API" className="mt-4 mb-4 responsive-project-image" width="600" />
                 <p className="card-text">{locale.mofuLunchesWebDescription}</p>
                 <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
                 <p>{locale.technologies}:</p>
@@ -92,7 +92,7 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
             <li className="project-item card text-center text-light">
               <div className="card-body">
                 <h2 className="card-title">MofuLunches-Totem</h2>
-                <img src="/assets/img/project_img/mofulunches_totem.png" alt="MofuLunches-API" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/mofulunches_totem.png" alt="MofuLunches-API" className="mt-4 mb-4 responsive-project-image" width="600" />
                 <p className="card-text">{locale.mofuLunchesTotemDescription}</p>
                 <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
                 <p>{locale.technologies}:</p>
@@ -109,7 +109,7 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
 
             <li className="project-item card text-center text-light">
               <div className="card-body">
-                <img src="/assets/img/project_img/mofustore.png" alt="Mofu Store" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/mofustore.png" alt="Mofu Store" className="mt-4 mb-4 responsive-project-image" width="600" />
                 <h2 className="card-title">Mofu Store</h2>
                 <p className="card-text">{locale.mofuStoreDescription}</p>
                 <p className="card-text"><small className="text-light">{locale.semester}: 1 {locale.year}: 2023</small></p>
@@ -125,7 +125,7 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
 
             <li className="project-item card text-center text-light">
               <div className="card-body">
-                <img src="/assets/img/project_img/construmic.jpg" alt="CONSTRU_MIC" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/construmic.jpg" alt="CONSTRU_MIC" className="mt-4 mb-4 responsive-project-image" width="600" />
                 <h2 className="card-title">CONSTRU_MIC</h2>
                 <p className="card-text">{locale.construMicDescription}</p>
                 <p className="card-text"><small className="text-light">{locale.semester}: 1 {locale.year}: 2024</small></p>
@@ -141,7 +141,7 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
 
             <li className="project-item card text-center text-light">
               <div className="card-body">
-                <img src="/assets/img/project_img/camellosfood.png" alt="CamellosFood-Repartidor" className="mt-4 mb-4" width="600" />
+                <img src="/assets/img/project_img/camellosfood.png" alt="CamellosFood-Repartidor" className="mt-4 mb-4 responsive-project-image" width="600" />
                 <h2 className="card-title">CamellosFood-Repartidor</h2>
                 <p className="card-text">{locale.camellosFoodDescription}</p>
                 <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2023</small></p>
