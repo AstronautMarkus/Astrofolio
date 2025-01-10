@@ -1,0 +1,109 @@
+.verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.template-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.square-container {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.content-box {
+    flex: 1;
+    padding: 2rem;
+    background-color: #2e2e2e;
+    border-radius: 0.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.ContactAstronautImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.purpleButton {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.purpleButton:hover {
+    background-color: #5a0c9d;
+}
+
+.purpleButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(106, 13, 173, 0.5);
+}
+
+.contact-text {
+    color: #fff;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hiddenLink {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .square-container {
+        flex-direction: column;
+    }
+
+    .content-box {
+        padding: 1.5rem;
+    }
+
+    .imageContainer {
+        order: -1; 
+    }
+}
+
+@media (max-width: 480px) {
+    .content-box {
+        padding: 1rem;
+    }
+
+    .ContactAstronautImage {
+        width: 70%; 
+    }
+}

@@ -2,7 +2,6 @@
 @import '@fontsource/jetbrains-mono/500.css'; 
 @import '@fontsource/jetbrains-mono/700.css'; 
 
-
 body, html {
   margin: 0;
   padding: 0;
@@ -25,95 +24,80 @@ body::before {
   transform: scale(1.1); /* Zoom in the background image */
 }
 
-.d-flex.vh-100 {
-  background: transparent; /* no background on containers */
+.square-container {
+  background: linear-gradient(to bottom, #1b1b1b, #111111);
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.dashboard-sidebar {
-  width: 250px;
-  height: 100%;
-  flex-shrink: 0;
-  background: linear-gradient(to bottom, #1b1b1b, #111111); /* Dark gray gradient */
-  color: #fff;
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
-.dashboard-logo img {
-  border: 2px solid #fff;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
-  transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+.text-glow {
+  color: #00e5ff;
+  text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
 }
 
-.dashboard-logo img:hover {
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Glow effect on hover */
+.text-glow-title {
+  color: #ff66cc;
+  text-shadow: 0 0 15px #ff66cc, 0 0 30px #ff66cc;
 }
 
-.nav-item {
-  margin-bottom: 10px; /* Add spacing between buttons */
+.intro {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
-.nav-item button {
+.cta-buttons .btn {
+  padding: 12px 24px;
   font-size: 1rem;
-  color: #fff;
-  transition: background-color 0.3s ease;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-  border: none;
-}
-
-.nav-item button:hover,
-.nav-item.active button {
-  background-color: #6f42c1; /* Purple color */
-  color: #fff;
-}
-
-.nav-item.active button {
-  font-weight: bold;
-  box-shadow: 0 0 10px rgba(111, 66, 193, 0.5); /* Purple glow effect */
-}
-
-.btn-outline-light {
-  border: 1px solid #fff;
+  border-radius: 50px;
   transition: all 0.3s ease;
 }
 
+.btn-primary {
+  background-color: #6f42c1;
+  border-color: #6f42c1;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #8a63d2;
+  box-shadow: 0 0 15px rgba(138, 99, 210, 0.6);
+  border-color: #8a63d2;
+}
+
+.btn-outline-light {
+  color: #d1d5db;
+  border-color: #d1d5db;
+}
+
 .btn-outline-light:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-.dashboard-footer {
-  padding: 10px;
-  border-top: 1px solid #fff;
-}
-
-.sidebar-toggle {
-  display: none; /* Hide by default */
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #6f42c1;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1000;
+  color: #ffffff;
+  background-color: #333;
+  border-color: #fff;
 }
 
 @media (max-width: 768px) {
-  .sidebar-toggle {
-    display: block; /* Show in responsive mode */
+  .cta-buttons .btn {
+    margin-bottom: 20px;
   }
+}
 
-  .dashboard-sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    z-index: 999;
-  }
-
-  .dashboard-sidebar.open {
-    transform: translateX(0);
-  }
+.d-flex.vh-100 {
+  background: transparent; /* no background on containers */
 }

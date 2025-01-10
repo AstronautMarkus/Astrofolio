@@ -70,3 +70,10 @@
     font-size: 1rem;
     margin-top: 0;
   }
+
+  .skill-icon {
+    width: auto;
+    height: 40px;
+    margin: 5px;
+  }
+  
