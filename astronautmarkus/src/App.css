@@ -146,6 +146,29 @@ body::before {
   box-shadow: 0 0 10px rgba(111, 66, 193, 0.5); /* Purple glow effect */
 }
 
+.special-nav-item {
+  margin-bottom: 10px; /* Add spacing between buttons */
+}
+
+.special-nav-item button {
+  font-size: 1rem;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  background: rgba(255, 255, 255, 0.1); /* Slightly more transparent background */
+  border: none;
+}
+
+.special-nav-item button:hover,
+.special-nav-item.active button {
+  background-color: #ff5733; /* Bright orange color */
+  color: #fff;
+}
+
+.special-nav-item.active button {
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255, 87, 51, 0.5); /* Bright orange glow effect */
+}
+
 .btn-outline-light {
   border: 1px solid #fff;
   transition: all 0.3s ease;

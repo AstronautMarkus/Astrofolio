@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faFileAlt, faChartLine, faProjectDiagram, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faFileAlt, faChartLine, faProjectDiagram, faEnvelope, faSpaceShuttle } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import enLocale from '../../locales/en.json';
 import esLocale from '../../locales/es.json';
@@ -55,6 +55,11 @@ const Sidebar = ({ section, setSection, sidebarOpen, toggleSidebar, locale, setL
           <li className={`nav-item ${section === 'stats' ? 'active' : ''}`}>
             <button className="btn text-start w-100" onClick={() => setSection('stats')}>
               <FontAwesomeIcon icon={faChartLine} className="me-2" /> {locale.stats}
+            </button>
+          </li>
+          <li className={`special-nav-item ${section === 'special' ? 'active' : ''}`}>
+            <button className="btn text-start w-100" onClick={() => setSection('special')}>
+              <FontAwesomeIcon icon={faSpaceShuttle} className="me-2" /> {locale.marcosreyesgeekzone}
             </button>
           </li>
           <li className={`nav-item ${section === 'contact' ? 'active' : ''}`}>

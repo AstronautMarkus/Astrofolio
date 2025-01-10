@@ -11,6 +11,7 @@ import Projects from './Components/Containers/Projects/Projects';
 import Resume from './Components/Containers/Resume/Resume';
 import Stats from './Components/Containers/Stats/Stats';
 import ContactMe from './Components/Containers/ContactMe/ContactMe';
+import GeekZone from './Components/Containers/GeekZone/GeekZone';
 
 // Locales
 
@@ -49,6 +50,8 @@ const App = () => {
         return <Stats locale={locale} />;
       case 'contact':
         return <ContactMe setSection={setSection} locale={locale} />;
+      case 'special':
+        return <GeekZone setSection={setSection} locale={locale} />;
       default:
         return <div className="content-section">Select an option</div>;
     }
