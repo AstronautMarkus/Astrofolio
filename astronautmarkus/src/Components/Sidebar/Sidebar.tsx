@@ -72,7 +72,12 @@ const Sidebar = ({ section, setSection, sidebarOpen, toggleSidebar, locale, setL
 
         <div className="dashboard-footer mt-auto text-center">
           <button onClick={toggleLanguage} className="btn btn-outline-light w-100 mb-2">
-            {locale === enLocale ? '🇪🇸 Español' : '🇬🇧 English'}
+            <img
+              src={locale === enLocale ? '/assets/img/flags/spanish_flag.svg' : '/assets/img/flags/english_flag.svg'}
+              alt={locale === enLocale ? 'Español' : 'English'}
+              className="language-flag"
+            />
+            {locale === enLocale ? ' Español' : ' English'}
           </button>
           <a href="https://github.com/AstronautMarkus" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light w-100">
             <FontAwesomeIcon icon={faGithub} className="me-2" /> GitHub

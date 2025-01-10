@@ -90,6 +90,13 @@
   z-index: 1000;
 }
 
+.language-flag {
+  width: 40px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 @media (max-width: 768px) {
   .sidebar-toggle {
     display: block; /* Show in responsive mode */
