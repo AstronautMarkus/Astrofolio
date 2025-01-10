@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faFileAlt, faChartLine, faProjectDiagram, faEnvelope, faSpaceShuttle } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import './Sidebar.css';
 import enLocale from '../../locales/en.json';
 import esLocale from '../../locales/es.json';
 
