@@ -37,6 +37,48 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.portfolioButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #6a0dad;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.portfolioButton:hover {
+  background-color: #8a2be2;
+  transform: scale(1.05);
+}
+
+.portfolioButton svg {
+  margin-right: 0.5rem;
+}
+
+.portfolioButton_secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #808080;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.portfolioButton_secondary:hover {
+  background-color: #a9a9a9;
+  transform: scale(1.05);
+}
+
+.portfolioButton_secondary svg {
+  margin-right: 0.5rem;
+}
+
 .title {
   font-size: 3rem;
   font-weight: 600;
