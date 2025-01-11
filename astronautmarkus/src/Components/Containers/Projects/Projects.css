@@ -81,6 +81,10 @@
     aspect-ratio: auto 1 / 1;
   }
 
+  .emote_img{
+    width: 30px;
+  }
+
   @media (max-width: 768px) {
     .project-item {
       flex-direction: column;

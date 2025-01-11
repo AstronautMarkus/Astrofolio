@@ -105,6 +105,20 @@ const getAbbyBotProjects = (locale: any): Project[] => [
     githubLink: 'https://github.com/AbbyBot/AbbyBot-Website/',
   },
   {
+    image: '/assets/img/abbybot_project_img/abbybot_API.png',
+    title: 'AbbyBot-API',
+    description: locale.abbybotAPIDescription,
+    details: [`${locale.month}: 8`, `${locale.year}: 2024`],
+    technologies: [
+      '/assets/img/icons/flask.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/mysql.png',
+      '/assets/img/icons/dotenv.png',
+      '/assets/img/icons/requests.png',
+    ],
+    githubLink: 'https://github.com/AbbyBot/AbbyBot-Website/',
+  },
+  {
     image: '/assets/img/abbybot_project_img/old_abbybot_web.png',
     title: 'OLD-AbbyBot-Website',
     description: locale.oldabbybotwebsiteDescription,
@@ -181,20 +195,16 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
                     <strong>{locale.abbyBotDashboard}:</strong> {locale.abbyBotDashboardDescription}
                   </li>
                 </ul>
+
                 <div className="text-center project-links">
-                  <a href="https://github.com/AbbyBot/AbbyBot-API" target="_blank" rel="noopener noreferrer" className="btn btn-primary m-2">
-                    <FontAwesomeIcon icon={faGithub} /> AbbyBot API
+                  <a href="https://github.com/AbbyBot" target="_blank" rel="noopener noreferrer" className="portfolioButton">
+                    <img className='emote_img' src="/assets/img/abbybot_emotes/abbybot_laptop.png" alt="" /> AbbyBot Project
                   </a>
-                  <a href="https://github.com/AbbyBot/AbbyBot-Website" target="_blank" rel="noopener noreferrer" className="btn btn-secondary m-2">
-                    <FontAwesomeIcon icon={faGithub} /> AbbyBot Website
-                  </a>
-                  <a href="https://github.com/AbbyBot/AbbyBot-Dashboard" target="_blank" rel="noopener noreferrer" className="btn btn-success m-2">
-                    <FontAwesomeIcon icon={faGithub} /> AbbyBot Dashboard
-                  </a>
-                  <a href="https://abbybotproject.com" target="_blank" rel="noopener noreferrer" className="btn btn-info m-2">
-                    {locale.visitAbbyBotProject}
+                  <a href="https://abbybotproject.com" target="_blank" rel="noopener noreferrer" className="portfolioButton_secondary">
+                    <img className='emote_img' src="/assets/img/abbybot_emotes/abbybot_party.png" alt="" /> AbbyBot Website
                   </a>
                 </div>
+
               </div>
               <div className="project-image-rounded">
                 <img src="/assets/img/abbybot_logo.png" alt="AbbyBot" />
