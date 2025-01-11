@@ -19,7 +19,7 @@ import enLocale from './locales/en.json';
 import esLocale from './locales/es.json';
 
 const App = () => {
-  const [section, setSection] = useState(localStorage.getItem('lastSection') || 'home');
+  const [section, setSection] = useState('home');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [locale, setLocale] = useState(enLocale);
 
@@ -29,10 +29,6 @@ const App = () => {
     const browserLanguage = navigator.language.startsWith('es') ? 'es' : 'en';
     setLocale(browserLanguage === 'es' ? esLocale : enLocale);
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem('lastSection', section);
-  }, [section]);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
