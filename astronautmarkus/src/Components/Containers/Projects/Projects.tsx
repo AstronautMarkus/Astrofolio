@@ -1,6 +1,75 @@
 import './Projects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import ProjectCarousel from './ProjectCarousel/ProjectCarousel';
+
+type Project = {
+  image: string;
+  title: string;
+  description: string;
+  details?: string[]; 
+  technologies?: string[];
+  githubLink: string;
+};
+
+
+const getUniversityProjects = (locale: any): Project[] => [
+  {
+    image: '/assets/img/project_img/mofulunches_api.png',
+    title: 'MofuLunches-API',
+    description: locale.mofuLunchesApiDescription,
+    details: [`${locale.semester}: 2`, `${locale.year}: 2024`],
+    technologies: [
+      '/assets/img/icons/flask.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/mongodb.svg',
+      '/assets/img/icons/docker.png',
+      '/assets/img/icons/dotenv.png',
+    ],
+    githubLink: 'https://github.com/astronautmarkus/mofulunches-api',
+  },
+  {
+    image: '/assets/img/project_img/mofulunches_web.jpg',
+    title: 'MofuLunches-Web',
+    description: locale.mofuLunchesWebDescription,
+    details: [`${locale.semester}: 2`, `${locale.year}: 2024`],
+    technologies: [
+      '/assets/img/icons/flask.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/bootstrap.png',
+    ],
+    githubLink: 'https://github.com/astronautmarkus/mofulunches-web',
+  },
+  {
+    image: '/assets/img/project_img/mofulunches_totem.png',
+    title: 'MofuLunches-Totem',
+    description: locale.mofuLunchesTotemDescription,
+    details: [`${locale.semester}: 2`, `${locale.year}: 2024`],
+    technologies: [
+      '/assets/img/icons/react.webp',
+      '/assets/img/icons/vite.svg',
+      '/assets/img/icons/electron.svg',
+      '/assets/img/icons/arduino.svg',
+      '/assets/img/icons/bootstrap.png',
+      '/assets/img/icons/python.png',
+    ],
+    githubLink: 'https://github.com/astronautmarkus/mofulunches-totem',
+  },
+  {
+    image: '/assets/img/project_img/mofustore.png',
+    title: 'Mofu Store',
+    description: locale.mofuStoreDescription,
+    details: [`${locale.semester}: 1`, `${locale.year}: 2023`],
+    technologies: [
+      '/assets/img/icons/django.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/bootstrap.png',
+      '/assets/img/icons/mysql.png',
+    ],
+    githubLink: 'https://github.com/astronautmarkus/mofu-store',
+  },
+];
+
 
 const Projects = ({ locale, setSection }: { locale: any, setSection: (section: string) => void }) => (
   <div className="home-container d-flex justify-content-center align-items-center">
@@ -78,102 +147,7 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
               </div>
             </li>
 
-            <li className="project-item card text-center text-light">
-              <div className="card-body">
-                <h2 className="card-title">MofuLunches-API</h2>
-                <img src="/assets/img/project_img/mofulunches_api.png" alt="MofuLunches-API" className="mt-4 mb-4 responsive-project-image" width="600" />
-                <p className="card-text">{locale.mofuLunchesApiDescription}</p>
-                <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
-                <p>{locale.technologies}:</p>
-                <div className="d-flex justify-content-center">
-                  <img src="/assets/img/icons/flask.png" alt="Flask Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/mongodb.svg" alt="MongoDB Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/docker.png" alt="Docker Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/dotenv.png" alt="Dotenv Icon" className="skill-icon mx-1" />
-                </div>
-              </div>
-            </li>
-
-            <li className="project-item card text-center text-light">
-              <div className="card-body">
-                <h2 className="card-title">MofuLunches-Web</h2>
-                <img src="/assets/img/project_img/mofulunches_web.jpg" alt="MofuLunches-API" className="mt-4 mb-4 responsive-project-image" width="600" />
-                <p className="card-text">{locale.mofuLunchesWebDescription}</p>
-                <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
-                <p>{locale.technologies}:</p>
-                <div className="tech-icons d-flex justify-content-center">
-                  <img src="/assets/img/icons/flask.png" alt="Flask Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/bootstrap.png" alt="Bootstrap Icon" className="skill-icon mx-1" />
-                </div>
-              </div>
-            </li>
-
-            <li className="project-item card text-center text-light">
-              <div className="card-body">
-                <h2 className="card-title">MofuLunches-Totem</h2>
-                <img src="/assets/img/project_img/mofulunches_totem.png" alt="MofuLunches-API" className="mt-4 mb-4 responsive-project-image" width="600" />
-                <p className="card-text">{locale.mofuLunchesTotemDescription}</p>
-                <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
-                <p>{locale.technologies}:</p>
-                <div className="tech-icons d-flex justify-content-center">
-                  <img src="/assets/img/icons/react.webp" alt="React Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/vite.svg" alt="Vite Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/electron.svg" alt="Electronjs Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/arduino.svg" alt="Arduino Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/bootstrap.png" alt="Bootstrap Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
-                </div>
-              </div>
-            </li>
-
-            <li className="project-item card text-center text-light">
-              <div className="card-body">
-                <img src="/assets/img/project_img/mofustore.png" alt="Mofu Store" className="mt-4 mb-4 responsive-project-image" width="600" />
-                <h2 className="card-title">Mofu Store</h2>
-                <p className="card-text">{locale.mofuStoreDescription}</p>
-                <p className="card-text"><small className="text-light">{locale.semester}: 1 {locale.year}: 2023</small></p>
-                <p>{locale.technologies}:</p>
-                <div className="tech-icons d-flex justify-content-center">
-                  <img src="/assets/img/icons/django.png" alt="Django Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/bootstrap.png" alt="Bootstrap Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/mysql.png" alt="MySQL Icon" className="skill-icon mx-1" />
-                </div>
-              </div>
-            </li>
-
-            <li className="project-item card text-center text-light">
-              <div className="card-body">
-                <img src="/assets/img/project_img/construmic.jpg" alt="CONSTRU_MIC" className="mt-4 mb-4 responsive-project-image" width="600" />
-                <h2 className="card-title">CONSTRU_MIC</h2>
-                <p className="card-text">{locale.construMicDescription}</p>
-                <p className="card-text"><small className="text-light">{locale.semester}: 1 {locale.year}: 2024</small></p>
-                <p>{locale.technologies}:</p>
-                <div className="tech-icons d-flex justify-content-center">
-                  <img src="/assets/img/icons/django.png" alt="Django Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/bootstrap.png" alt="Bootstrap Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/mysql.png" alt="MySQL Icon" className="skill-icon mx-1" />
-                </div>
-              </div>
-            </li>
-
-            <li className="project-item card text-center text-light">
-              <div className="card-body">
-                <img src="/assets/img/project_img/camellosfood.png" alt="CamellosFood-Repartidor" className="mt-4 mb-4 responsive-project-image" width="600" />
-                <h2 className="card-title">CamellosFood-Repartidor</h2>
-                <p className="card-text">{locale.camellosFoodDescription}</p>
-                <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2023</small></p>
-                <p>{locale.technologies}:</p>
-                <div className="tech-icons d-flex justify-content-center">
-                  <img src="/assets/img/icons/ionic.webp" alt="Ionic Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/angular.png" alt="Angular Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/nodejs.png" alt="Node.js Icon" className="skill-icon mx-1" />
-                </div>
-              </div>
-            </li>
+            <ProjectCarousel projects={getUniversityProjects(locale)} />
 
             <li className="project-item card text-center text-light">
               <div className="card-body">
