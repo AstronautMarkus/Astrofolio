@@ -1,0 +1,152 @@
+.projectCarousel {
+  margin: 2rem auto;
+  width: 100%;
+}
+
+.projectItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espaciado uniforme */
+  align-items: center;
+  background: #1f1f1f;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 700px; /* Altura fija uniforme */
+  width: 100%; /* Ancho completo */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total */
+  overflow: hidden; /* Evita que elementos internos se desborden */
+}
+
+.projectContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center;
+  height: 100%; /* Ocupa todo el alto del contenedor */
+  text-align: center;
+}
+
+.projectTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.projectDescription {
+  color: #d1d5db;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.projectDetails {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  color: #d1d5db;
+  font-size: 0.95rem;
+}
+
+.projectDetails li {
+  margin-bottom: 0.5rem;
+}
+
+.projectImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%; /* Evita que se expanda más allá del contenedor */
+  height: 250px; /* Altura fija para todas las imágenes */
+  margin-bottom: 1.5rem;
+}
+
+.projectImage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ajusta la imagen sin deformarla */
+  border-radius: 12px;
+}
+
+.techIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skillIcon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.githubButtonContainer {
+  margin-top: 1.5rem;
+}
+
+.githubButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #6a0dad;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.githubButton:hover {
+  background-color: #8a2be2;
+  transform: scale(1.05);
+}
+
+.githubButton svg {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .projectItem {
+    height: 600px;
+  }
+
+  .projectImage {
+    height: 200px;
+  }
+
+  .skillIcon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectItem {
+    height: 700px;
+  }
+
+  .projectTitle {
+    font-size: 1.8rem;
+  }
+
+  .projectDescription {
+    font-size: 0.9rem;
+  }
+
+  .projectImage {
+    height: 150px;
+  }
+
+  .skillIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .githubButton {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
