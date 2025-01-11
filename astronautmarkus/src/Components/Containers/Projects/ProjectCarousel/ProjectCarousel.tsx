@@ -52,7 +52,7 @@ const ProjectCarousel = ({ projects }: { projects: Project[] }) => {
                     rel="noopener noreferrer"
                     className={styles.githubButton}
                   >
-                    <FontAwesomeIcon icon={faGithub} /> View on GitHub
+                    <FontAwesomeIcon icon={faGithub} /> GitHub
                   </a>
                 </div>
               </div>
