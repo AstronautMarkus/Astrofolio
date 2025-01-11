@@ -92,5 +92,7 @@
   "databases":"Databases",
   "toolsAndFrameworks":"Tools and Frameworks",
   "embededSystemsAndIot":"Embeded Systems and IoT",
-  "marcosreyesgeekzone": "Geek Zone"
+  "marcosreyesgeekzone": "Geek Zone",
+  "welcomeVisitor":"Welcome, visitor. Welcome to my project museum, a space where each creation tells a story and reflects a piece of my journey as a developer. Here you will find projects organized into categories that represent different stages and objectives: from academic works that challenged my learning, to professional developments that sought to solve real problems, without forgetting the personal projects that were born from curiosity and passion for creating. I invite you to explore this journey, where each line of code and each idea has its special place.",
+  "welcomeSubtitle": "Each project here reflects hours of effort, passion, mistakes, failures, anger, despair, but above all, determination."
 }

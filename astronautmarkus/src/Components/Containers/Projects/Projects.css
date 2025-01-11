@@ -39,6 +39,12 @@
   .project-image img {
     width: 250px;
     height: auto;
+    object-fit: cover;
+  }
+
+  .project-image-rounded img {
+    width: 250px;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
   }

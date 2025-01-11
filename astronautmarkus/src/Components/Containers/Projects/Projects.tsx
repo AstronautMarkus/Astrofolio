@@ -8,6 +8,27 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
       <div className="content-box shadow">
         <h1 className="title text-center">📂 {locale.myProjects}</h1>
         <p className='text-center'>{locale.recentProjects}</p>
+
+        <div className="content">
+            <ul className="project-list">
+              <li className="project-item d-flex flex-column flex-md-row">
+                <ul className='project-list'>
+                  <li>
+                    <div className="text-center">
+                      <p>{locale.welcomeVisitor}</p>
+                      <div className="project-image">
+                        <img src="/assets/img/code-crafted-digital-astronaut.png" alt="" />
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <p className='text-center'>{locale.welcomeSubtitle}</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+
         <div className="content">
           <ul className="project-list">
             <li className="project-item d-flex flex-column flex-md-row">
@@ -37,12 +58,12 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
                   <a href="https://github.com/AbbyBot/AbbyBot-Dashboard" target="_blank" rel="noopener noreferrer" className="btn btn-success m-2">
                     <FontAwesomeIcon icon={faGithub} /> AbbyBot Dashboard
                   </a>
-                  <a href="https://www.abbybotproject.com" target="_blank" rel="noopener noreferrer" className="btn btn-info m-2">
+                  <a href="https://abbybotproject.com" target="_blank" rel="noopener noreferrer" className="btn btn-info m-2">
                     {locale.visitAbbyBotProject}
                   </a>
                 </div>
               </div>
-              <div className="project-image">
+              <div className="project-image-rounded">
                 <img src="/assets/img/abbybot_logo.png" alt="AbbyBot" />
                 <p className='text-center mt-3'>Hello world!</p>
               </div>
