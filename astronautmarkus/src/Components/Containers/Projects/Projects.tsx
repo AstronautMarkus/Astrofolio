@@ -25,6 +25,7 @@ const getUniversityProjects = (locale: any): Project[] => [
       '/assets/img/icons/mongodb.svg',
       '/assets/img/icons/docker.png',
       '/assets/img/icons/dotenv.png',
+      '/assets/img/icons/requests.png',
     ],
     githubLink: 'https://github.com/astronautmarkus/mofulunches-api',
   },
@@ -37,6 +38,7 @@ const getUniversityProjects = (locale: any): Project[] => [
       '/assets/img/icons/flask.png',
       '/assets/img/icons/python.png',
       '/assets/img/icons/bootstrap.png',
+      '/assets/img/icons/dotenv.png',
     ],
     githubLink: 'https://github.com/astronautmarkus/mofulunches-web',
   },
@@ -67,6 +69,21 @@ const getUniversityProjects = (locale: any): Project[] => [
       '/assets/img/icons/mysql.png',
     ],
     githubLink: 'https://github.com/astronautmarkus/mofu-store',
+  },
+  {
+    image: '/assets/img/project_img/construmic.jpg',
+    title: 'Constru_MIC',
+    description: locale.construMicDescription,
+    details: [`${locale.semester}: 1`, `${locale.year}: 2024`],
+    technologies: [
+      '/assets/img/icons/django.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/mysql.png',
+      '/assets/img/icons/bootstrap.png',
+      '/assets/img/icons/sqlite.png',
+      '/assets/img/icons/dotenv.png',
+    ],
+    githubLink: 'https://github.com/astronautmarkus/mofulunches-api',
   },
 ];
 
