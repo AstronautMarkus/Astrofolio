@@ -99,5 +99,6 @@
   "month": "Month",
   "abbybotwebsiteDescription": "Informative website with details and updates about the AbbyBot project. Improved version of the original website.",
   "oldabbybotwebsiteDescription": "Informative website with details and updates about the AbbyBot project. Original version of the website.",
-  "abbybotAPIDescription": "RESTful API for the AbbyBot project, providing endpoints for the website features."
+  "abbybotAPIDescription": "RESTful API for the AbbyBot project, providing endpoints for the website features.",
+  "discordabbybotDescription": "Multi-functional Discord bot with management and entertainment features."
 }

@@ -89,6 +89,19 @@ const getUniversityProjects = (locale: any): Project[] => [
 
 const getAbbyBotProjects = (locale: any): Project[] => [
   {
+    image: '/assets/img/abbybot_project_img/discord_abbybot.png',
+    title: 'Discord-AbbyBot',
+    description: locale.discordabbybotDescription,
+    details: [`${locale.month}: 12`, `${locale.year}: 2023`],
+    technologies: [
+      '/assets/img/icons/discordpy.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/mysql.png',
+      '/assets/img/icons/dotenv.png',
+    ],
+    githubLink: 'https://github.com/AbbyBot/Discord-AbbyBot',
+  },
+  {
     image: '/assets/img/abbybot_project_img/abbybot_web.png',
     title: 'AbbyBot-Website',
     description: locale.abbybotwebsiteDescription,
@@ -116,7 +129,7 @@ const getAbbyBotProjects = (locale: any): Project[] => [
       '/assets/img/icons/dotenv.png',
       '/assets/img/icons/requests.png',
     ],
-    githubLink: 'https://github.com/AbbyBot/AbbyBot-Website/',
+    githubLink: 'https://github.com/AbbyBot/AbbyBot-API/',
   },
   {
     image: '/assets/img/abbybot_project_img/old_abbybot_web.png',
