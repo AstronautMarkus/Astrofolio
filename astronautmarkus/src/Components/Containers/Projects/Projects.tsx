@@ -87,6 +87,25 @@ const getUniversityProjects = (locale: any): Project[] => [
   },
 ];
 
+const getAbbyBotProjects = (locale: any): Project[] => [
+  {
+    image: '/assets/img/abbybot_project_img/abbybot_web.png',
+    title: 'AbbyBot-Website',
+    description: locale.abbybotwebsiteDescription,
+    details: [`${locale.month}: 10`, `${locale.year}: 2024`],
+    technologies: [
+      '/assets/img/icons/flask.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/mysql.png',
+      '/assets/img/icons/docker.png',
+      '/assets/img/icons/bulma.png',
+      '/assets/img/icons/dotenv.png',
+      '/assets/img/icons/requests.png',
+    ],
+    githubLink: 'https://github.com/AbbyBot/Discord-AbbyBot/',
+  }
+];
+
 
 const Projects = ({ locale, setSection }: { locale: any, setSection: (section: string) => void }) => (
   <div className="home-container d-flex justify-content-center align-items-center">
@@ -117,6 +136,18 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
 
         <div className="content">
           <ul className="project-list">
+            
+            <li className="project-item d-flex">
+              <div className="project-details">
+                <h2 className="project-title">📝 {locale.universityProjects}</h2>
+                <p className="project-description">
+                  {locale.universityProjectsDescription}
+                </p>
+              </div>
+            </li>
+
+            <ProjectCarousel projects={getUniversityProjects(locale)} />
+
             <li className="project-item d-flex flex-column flex-md-row">
               <div className="project-details">
                 <h2 className="project-title">{locale.featuredProject}: AbbyBot</h2>
@@ -155,16 +186,7 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
               </div>
             </li>
 
-            <li className="project-item d-flex">
-              <div className="project-details">
-                <h2 className="project-title">📝 {locale.universityProjects}</h2>
-                <p className="project-description">
-                  {locale.universityProjectsDescription}
-                </p>
-              </div>
-            </li>
-
-            <ProjectCarousel projects={getUniversityProjects(locale)} />
+            <ProjectCarousel projects={getAbbyBotProjects(locale)} />
 
             <li className="project-item card text-center text-light">
               <div className="card-body">
