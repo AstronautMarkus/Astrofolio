@@ -102,7 +102,23 @@ const getAbbyBotProjects = (locale: any): Project[] => [
       '/assets/img/icons/dotenv.png',
       '/assets/img/icons/requests.png',
     ],
-    githubLink: 'https://github.com/AbbyBot/Discord-AbbyBot/',
+    githubLink: 'https://github.com/AbbyBot/AbbyBot-Website/',
+  },
+  {
+    image: '/assets/img/abbybot_project_img/old_abbybot_web.png',
+    title: 'OLD-AbbyBot-Website',
+    description: locale.oldabbybotwebsiteDescription,
+    details: [`${locale.month}: 8`, `${locale.year}: 2024`],
+    technologies: [
+      '/assets/img/icons/flask.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/mysql.png',
+      '/assets/img/icons/docker.png',
+      '/assets/img/icons/bulma.png',
+      '/assets/img/icons/dotenv.png',
+      '/assets/img/icons/requests.png',
+    ],
+    githubLink: 'https://github.com/AbbyBot/OLD-AbbyBot-Website/',
   }
 ];
 
