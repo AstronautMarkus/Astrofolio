@@ -5,7 +5,7 @@ import { faGithub, faInstagram, faSteam, faDiscord } from '@fortawesome/free-bra
 
 const ContactMe = ({ setSection, locale }: { setSection: (section: string) => void, locale: any }) => (
   <div className={`${styles.verticalCenter}`}>
-    <div className="template-container d-flex justify-content-center align-items-center">
+    <div className="d-flex justify-content-center align-items-center">
       <div className="square-container d-flex flex-column-reverse flex-md-row">
         <div className={styles.imageContainer}>
           <img src="/assets/img/astronaut_relax.webp" alt="Astronaut" className={styles.ContactAstronautImage} />
@@ -14,30 +14,38 @@ const ContactMe = ({ setSection, locale }: { setSection: (section: string) => vo
             <div className={styles.contactCard}>
               <h2>{locale.contact}</h2>
               <p>{locale.contact_subtitle}</p>
-              <p className={styles.hiddenLink}>
-              <FontAwesomeIcon icon={faMapMarkerAlt} />
-              <span> Santiago de Chile</span>
-              </p>
-              <p className={styles.hiddenLink}>
-              <FontAwesomeIcon icon={faPhone} />
-              <span> +56 9 5036 9308</span>
-              </p>
-              <p className={styles.hiddenLink}>
-              <FontAwesomeIcon icon={faGithub} />
-              <span> github.com/astronautmarkus</span>
-              </p>
-              <p className={styles.hiddenLink}>
-              <FontAwesomeIcon icon={faInstagram} />
-              <span> instagram.com/sky._marc</span>
-              </p>
-              <p className={styles.hiddenLink}>
-              <FontAwesomeIcon icon={faSteam} />
-              <span> steamcommunity.com/id/astronautmarkus</span>
-              </p>
-              <p className={styles.hiddenLink}>
-              <FontAwesomeIcon icon={faDiscord} />
-              <span> astronautmarkus</span>
-              </p>
+              <ul className={styles.contactList}>
+                <li className={styles.hiddenLink}>
+                  <FontAwesomeIcon icon={faMapMarkerAlt} />
+                  <span> Santiago de Chile</span>
+                </li>
+                <li className={styles.hiddenLink}>
+                  <FontAwesomeIcon icon={faPhone} />
+                  <span> +56 9 5036 9308</span>
+                </li>
+                <li className={styles.hiddenLink}>
+                  <FontAwesomeIcon icon={faGithub} />
+                  <a href="https://github.com/astronautmarkus" target="_blank" rel="noopener noreferrer" className={styles.hiddenLink}>
+                    {" "}astronautmarkus
+                  </a>
+                </li>
+                <li className={styles.hiddenLink}>
+                  <FontAwesomeIcon icon={faInstagram} />
+                  <a href="https://instagram.com/sky._marc" target="_blank" rel="noopener noreferrer" className={styles.hiddenLink}>
+                    {" "}sky._marc
+                  </a>
+                </li>
+                <li className={styles.hiddenLink}>
+                  <FontAwesomeIcon icon={faSteam} />
+                  <a href="https://steamcommunity.com/id/astronautmarkus" target="_blank" rel="noopener noreferrer" className={styles.hiddenLink}>
+                    {" "}astronautmarkus
+                  </a>
+                </li>
+                <li className={styles.hiddenLink}>
+                  <FontAwesomeIcon icon={faDiscord} />
+                  <span> astronautmarkus</span>
+                </li>
+              </ul>
             </div>
           <div className="cta-buttons mt-4">
             <button
