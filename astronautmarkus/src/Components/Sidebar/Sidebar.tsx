@@ -17,8 +17,20 @@ interface SidebarProps {
 const Sidebar = ({ section, setSection, sidebarOpen, toggleSidebar, locale, setLocale }: SidebarProps) => {
   const currentYear = new Date().getFullYear();
 
+  // Leer si el usuario aceptó cookies
+  const cookiesAccepted = document.cookie
+    .split('; ')
+    .find((row) => row.startsWith('cookiesAccepted='))
+    ?.split('=')[1] === 'true';
+
   const toggleLanguage = () => {
-    setLocale(locale === enLocale ? esLocale : enLocale);
+    const newLocale = locale === enLocale ? esLocale : enLocale;
+    setLocale(newLocale);
+
+    // Guardar el idioma solo si el usuario aceptó cookies
+    if (cookiesAccepted) {
+      document.cookie = `locale=${newLocale === esLocale ? 'es' : 'en'}; path=/; max-age=31536000`;
+    }
   };
 
   return (

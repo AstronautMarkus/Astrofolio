@@ -92,5 +92,17 @@
   "databases": "Bases de Datos",
   "toolsAndFrameworks": "Herramientas y Frameworks",
   "embededSystemsAndIot": "Sistemas Embebidos e IoT",
-  "marcosreyesgeekzone":"Zona Geek"
+  "marcosreyesgeekzone":"Zona Geek",
+  "welcomeVisitor":"Bienvenido, visitante. Bienvenido a mi museo de proyectos, un espacio donde cada creación cuenta una historia y refleja un pedazo de mi viaje como desarrollador. Aquí encontrarás proyectos organizados en categorías que representan distintas etapas y objetivos: desde trabajos académicos que desafiaron mi aprendizaje, hasta desarrollos profesionales que buscaron resolver problemas reales, sin olvidar los proyectos personales que nacieron de la curiosidad y la pasión por crear. Te invito a explorar este recorrido, donde cada línea de código y cada idea tiene su lugar especial.",
+  "welcomeSubtitle":"Cada proyecto aquí refleja horas de esfuerzo, pasión, error, fracaso, ira, desesperación, pero sobre todo, determinación.",
+  "projectRepository":"Repositorio del Proyecto",
+  "month":"Mes",
+  "abbybotwebsiteDescription":"Sitio web informativo con detalles y actualizaciones del proyecto AbbyBot. Version mejorada del sitio web original.",
+  "oldabbybotwebsiteDescription": "Sitio web informativo con detalles y actualizaciones sobre el proyecto AbbyBot. Versión original del sitio web.",
+  "abbybotAPIDescription":"API RESTful para el proyecto AbbyBot, proporcionando puntos finales para las características del sitio web.",
+  "discordabbybotDescription":"Bot de Discord multifuncional con características de gestión y entretenimiento.",
+  "cookiesLanguageInfo": "Este sitio web utiliza cookies para mejorar tus preferencias de idioma. Al hacer clic en 'Aceptar', aceptas el uso de cookies.",
+  "cookiesAccept": "Aceptar ᗜˬᗜ",
+  "cookiesDecline": "Rechazar ᗜ˰ᗜ",
+  "geekZoneWip": "¡Zona Geek en construcción! ᗜ_ᗜ"
 }

@@ -1,6 +1,154 @@
 import './Projects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import ProjectCarousel from './ProjectCarousel/ProjectCarousel';
+
+type Project = {
+  image: string;
+  title: string;
+  description: string;
+  details?: string[]; 
+  technologies?: string[];
+  githubLink: string;
+};
+
+
+const getUniversityProjects = (locale: any): Project[] => [
+  {
+    image: '/assets/img/project_img/mofulunches_api.png',
+    title: 'MofuLunches-API',
+    description: locale.mofuLunchesApiDescription,
+    details: [`${locale.semester}: 2`, `${locale.year}: 2024`],
+    technologies: [
+      '/assets/img/icons/flask.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/mongodb.svg',
+      '/assets/img/icons/docker.png',
+      '/assets/img/icons/dotenv.png',
+      '/assets/img/icons/requests.png',
+    ],
+    githubLink: 'https://github.com/astronautmarkus/mofulunches-api',
+  },
+  {
+    image: '/assets/img/project_img/mofulunches_web.jpg',
+    title: 'MofuLunches-Web',
+    description: locale.mofuLunchesWebDescription,
+    details: [`${locale.semester}: 2`, `${locale.year}: 2024`],
+    technologies: [
+      '/assets/img/icons/flask.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/bootstrap.png',
+      '/assets/img/icons/dotenv.png',
+    ],
+    githubLink: 'https://github.com/astronautmarkus/mofulunches-web',
+  },
+  {
+    image: '/assets/img/project_img/mofulunches_totem.png',
+    title: 'MofuLunches-Totem',
+    description: locale.mofuLunchesTotemDescription,
+    details: [`${locale.semester}: 2`, `${locale.year}: 2024`],
+    technologies: [
+      '/assets/img/icons/react.webp',
+      '/assets/img/icons/vite.svg',
+      '/assets/img/icons/electron.svg',
+      '/assets/img/icons/arduino.svg',
+      '/assets/img/icons/bootstrap.png',
+      '/assets/img/icons/python.png',
+    ],
+    githubLink: 'https://github.com/astronautmarkus/mofulunches-totem',
+  },
+  {
+    image: '/assets/img/project_img/mofustore.png',
+    title: 'Mofu Store',
+    description: locale.mofuStoreDescription,
+    details: [`${locale.semester}: 1`, `${locale.year}: 2023`],
+    technologies: [
+      '/assets/img/icons/django.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/bootstrap.png',
+      '/assets/img/icons/mysql.png',
+    ],
+    githubLink: 'https://github.com/astronautmarkus/mofu-store',
+  },
+  {
+    image: '/assets/img/project_img/construmic.jpg',
+    title: 'Constru_MIC',
+    description: locale.construMicDescription,
+    details: [`${locale.semester}: 1`, `${locale.year}: 2024`],
+    technologies: [
+      '/assets/img/icons/django.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/mysql.png',
+      '/assets/img/icons/bootstrap.png',
+      '/assets/img/icons/sqlite.png',
+      '/assets/img/icons/dotenv.png',
+    ],
+    githubLink: 'https://github.com/astronautmarkus/mofulunches-api',
+  },
+];
+
+const getAbbyBotProjects = (locale: any): Project[] => [
+  {
+    image: '/assets/img/abbybot_project_img/discord_abbybot.png',
+    title: 'Discord-AbbyBot',
+    description: locale.discordabbybotDescription,
+    details: [`${locale.month}: 12`, `${locale.year}: 2023`],
+    technologies: [
+      '/assets/img/icons/discordpy.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/mysql.png',
+      '/assets/img/icons/dotenv.png',
+    ],
+    githubLink: 'https://github.com/AbbyBot/Discord-AbbyBot',
+  },
+  {
+    image: '/assets/img/abbybot_project_img/abbybot_web.png',
+    title: 'AbbyBot-Website',
+    description: locale.abbybotwebsiteDescription,
+    details: [`${locale.month}: 10`, `${locale.year}: 2024`],
+    technologies: [
+      '/assets/img/icons/flask.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/mysql.png',
+      '/assets/img/icons/docker.png',
+      '/assets/img/icons/bulma.png',
+      '/assets/img/icons/dotenv.png',
+      '/assets/img/icons/requests.png',
+    ],
+    githubLink: 'https://github.com/AbbyBot/AbbyBot-Website/',
+  },
+  {
+    image: '/assets/img/abbybot_project_img/abbybot_API.png',
+    title: 'AbbyBot-API',
+    description: locale.abbybotAPIDescription,
+    details: [`${locale.month}: 8`, `${locale.year}: 2024`],
+    technologies: [
+      '/assets/img/icons/flask.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/mysql.png',
+      '/assets/img/icons/dotenv.png',
+      '/assets/img/icons/requests.png',
+    ],
+    githubLink: 'https://github.com/AbbyBot/AbbyBot-API/',
+  },
+  {
+    image: '/assets/img/abbybot_project_img/old_abbybot_web.png',
+    title: 'OLD-AbbyBot-Website',
+    description: locale.oldabbybotwebsiteDescription,
+    details: [`${locale.month}: 8`, `${locale.year}: 2024`],
+    technologies: [
+      '/assets/img/icons/flask.png',
+      '/assets/img/icons/python.png',
+      '/assets/img/icons/mysql.png',
+      '/assets/img/icons/docker.png',
+      '/assets/img/icons/bulma.png',
+      '/assets/img/icons/dotenv.png',
+      '/assets/img/icons/requests.png',
+    ],
+    githubLink: 'https://github.com/AbbyBot/OLD-AbbyBot-Website/',
+  }
+];
+
 
 const Projects = ({ locale, setSection }: { locale: any, setSection: (section: string) => void }) => (
   <div className="home-container d-flex justify-content-center align-items-center">
@@ -8,8 +156,41 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
       <div className="content-box shadow">
         <h1 className="title text-center">📂 {locale.myProjects}</h1>
         <p className='text-center'>{locale.recentProjects}</p>
+
+        <div className="content">
+            <ul className="project-list">
+              <li className="project-item d-flex flex-column flex-md-row">
+                <ul className='project-list'>
+                  <li>
+                    <div className="text-center">
+                      <p>{locale.welcomeVisitor}</p>
+                      <div className="project-image">
+                        <img src="/assets/img/code-crafted-digital-astronaut.png" alt="" />
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <p className='text-center'>{locale.welcomeSubtitle}</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+
         <div className="content">
           <ul className="project-list">
+            
+            <li className="project-item d-flex">
+              <div className="project-details">
+                <h2 className="project-title">📝 {locale.universityProjects}</h2>
+                <p className="project-description">
+                  {locale.universityProjectsDescription}
+                </p>
+              </div>
+            </li>
+
+            <ProjectCarousel projects={getUniversityProjects(locale)} />
+
             <li className="project-item d-flex flex-column flex-md-row">
               <div className="project-details">
                 <h2 className="project-title">{locale.featuredProject}: AbbyBot</h2>
@@ -27,132 +208,24 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
                     <strong>{locale.abbyBotDashboard}:</strong> {locale.abbyBotDashboardDescription}
                   </li>
                 </ul>
+
                 <div className="text-center project-links">
-                  <a href="https://github.com/AbbyBot/AbbyBot-API" target="_blank" rel="noopener noreferrer" className="btn btn-primary m-2">
-                    <FontAwesomeIcon icon={faGithub} /> AbbyBot API
+                  <a href="https://github.com/AbbyBot" target="_blank" rel="noopener noreferrer" className="portfolioButton">
+                    <img className='emote_img' src="/assets/img/abbybot_emotes/abbybot_laptop.png" alt="" /> AbbyBot Project
                   </a>
-                  <a href="https://github.com/AbbyBot/AbbyBot-Website" target="_blank" rel="noopener noreferrer" className="btn btn-secondary m-2">
-                    <FontAwesomeIcon icon={faGithub} /> AbbyBot Website
-                  </a>
-                  <a href="https://github.com/AbbyBot/AbbyBot-Dashboard" target="_blank" rel="noopener noreferrer" className="btn btn-success m-2">
-                    <FontAwesomeIcon icon={faGithub} /> AbbyBot Dashboard
-                  </a>
-                  <a href="https://www.abbybotproject.com" target="_blank" rel="noopener noreferrer" className="btn btn-info m-2">
-                    {locale.visitAbbyBotProject}
+                  <a href="https://abbybotproject.com" target="_blank" rel="noopener noreferrer" className="portfolioButton_secondary">
+                    <img className='emote_img' src="/assets/img/abbybot_emotes/abbybot_party.png" alt="" /> AbbyBot Website
                   </a>
                 </div>
+
               </div>
-              <div className="project-image">
+              <div className="project-image-rounded">
                 <img src="/assets/img/abbybot_logo.png" alt="AbbyBot" />
                 <p className='text-center mt-3'>Hello world!</p>
               </div>
             </li>
 
-            <li className="project-item d-flex">
-              <div className="project-details">
-                <h2 className="project-title">📝 {locale.universityProjects}</h2>
-                <p className="project-description">
-                  {locale.universityProjectsDescription}
-                </p>
-              </div>
-            </li>
-
-            <li className="project-item card text-center text-light">
-              <div className="card-body">
-                <h2 className="card-title">MofuLunches-API</h2>
-                <img src="/assets/img/project_img/mofulunches_api.png" alt="MofuLunches-API" className="mt-4 mb-4 responsive-project-image" width="600" />
-                <p className="card-text">{locale.mofuLunchesApiDescription}</p>
-                <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
-                <p>{locale.technologies}:</p>
-                <div className="d-flex justify-content-center">
-                  <img src="/assets/img/icons/flask.png" alt="Flask Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/mongodb.svg" alt="MongoDB Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/docker.png" alt="Docker Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/dotenv.png" alt="Dotenv Icon" className="skill-icon mx-1" />
-                </div>
-              </div>
-            </li>
-
-            <li className="project-item card text-center text-light">
-              <div className="card-body">
-                <h2 className="card-title">MofuLunches-Web</h2>
-                <img src="/assets/img/project_img/mofulunches_web.jpg" alt="MofuLunches-API" className="mt-4 mb-4 responsive-project-image" width="600" />
-                <p className="card-text">{locale.mofuLunchesWebDescription}</p>
-                <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
-                <p>{locale.technologies}:</p>
-                <div className="tech-icons d-flex justify-content-center">
-                  <img src="/assets/img/icons/flask.png" alt="Flask Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/bootstrap.png" alt="Bootstrap Icon" className="skill-icon mx-1" />
-                </div>
-              </div>
-            </li>
-
-            <li className="project-item card text-center text-light">
-              <div className="card-body">
-                <h2 className="card-title">MofuLunches-Totem</h2>
-                <img src="/assets/img/project_img/mofulunches_totem.png" alt="MofuLunches-API" className="mt-4 mb-4 responsive-project-image" width="600" />
-                <p className="card-text">{locale.mofuLunchesTotemDescription}</p>
-                <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2024</small></p>
-                <p>{locale.technologies}:</p>
-                <div className="tech-icons d-flex justify-content-center">
-                  <img src="/assets/img/icons/react.webp" alt="React Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/vite.svg" alt="Vite Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/electron.svg" alt="Electronjs Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/arduino.svg" alt="Arduino Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/bootstrap.png" alt="Bootstrap Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
-                </div>
-              </div>
-            </li>
-
-            <li className="project-item card text-center text-light">
-              <div className="card-body">
-                <img src="/assets/img/project_img/mofustore.png" alt="Mofu Store" className="mt-4 mb-4 responsive-project-image" width="600" />
-                <h2 className="card-title">Mofu Store</h2>
-                <p className="card-text">{locale.mofuStoreDescription}</p>
-                <p className="card-text"><small className="text-light">{locale.semester}: 1 {locale.year}: 2023</small></p>
-                <p>{locale.technologies}:</p>
-                <div className="tech-icons d-flex justify-content-center">
-                  <img src="/assets/img/icons/django.png" alt="Django Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/bootstrap.png" alt="Bootstrap Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/mysql.png" alt="MySQL Icon" className="skill-icon mx-1" />
-                </div>
-              </div>
-            </li>
-
-            <li className="project-item card text-center text-light">
-              <div className="card-body">
-                <img src="/assets/img/project_img/construmic.jpg" alt="CONSTRU_MIC" className="mt-4 mb-4 responsive-project-image" width="600" />
-                <h2 className="card-title">CONSTRU_MIC</h2>
-                <p className="card-text">{locale.construMicDescription}</p>
-                <p className="card-text"><small className="text-light">{locale.semester}: 1 {locale.year}: 2024</small></p>
-                <p>{locale.technologies}:</p>
-                <div className="tech-icons d-flex justify-content-center">
-                  <img src="/assets/img/icons/django.png" alt="Django Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/python.png" alt="Python Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/bootstrap.png" alt="Bootstrap Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/mysql.png" alt="MySQL Icon" className="skill-icon mx-1" />
-                </div>
-              </div>
-            </li>
-
-            <li className="project-item card text-center text-light">
-              <div className="card-body">
-                <img src="/assets/img/project_img/camellosfood.png" alt="CamellosFood-Repartidor" className="mt-4 mb-4 responsive-project-image" width="600" />
-                <h2 className="card-title">CamellosFood-Repartidor</h2>
-                <p className="card-text">{locale.camellosFoodDescription}</p>
-                <p className="card-text"><small className="text-light">{locale.semester}: 2 {locale.year}: 2023</small></p>
-                <p>{locale.technologies}:</p>
-                <div className="tech-icons d-flex justify-content-center">
-                  <img src="/assets/img/icons/ionic.webp" alt="Ionic Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/angular.png" alt="Angular Icon" className="skill-icon mx-1" />
-                  <img src="/assets/img/icons/nodejs.png" alt="Node.js Icon" className="skill-icon mx-1" />
-                </div>
-              </div>
-            </li>
+            <ProjectCarousel projects={getAbbyBotProjects(locale)} />
 
             <li className="project-item card text-center text-light">
               <div className="card-body">

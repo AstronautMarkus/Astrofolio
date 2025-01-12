@@ -8,7 +8,7 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
       <div className="square-container">
         <div className="content-box text-center">
             <p>
-            This page is a work in progress. Please check back later ᗜ_ᗜ
+            {locale.geekZoneWip}
             </p>
             <img src="/assets/img/fumo-fumo-fumo.gif" alt="Penguin" />
             <div className="cta-buttons mt-4">
@@ -17,7 +17,7 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
               className={`${styles.purpleButton} me-3 btn-lg mb-3`}
             >
               <FontAwesomeIcon icon={faHome} className="me-2" />
-              Home
+              {locale.home}
             </button>
             </div>
         </div>
