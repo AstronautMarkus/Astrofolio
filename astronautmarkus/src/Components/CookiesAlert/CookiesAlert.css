@@ -4,52 +4,71 @@
   right: 20px;
   background: linear-gradient(to bottom, #1b1b1b, #111111);
   color: white;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 15px;
+  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1000;
   opacity: 0;
-  transition: opacity 2s;
+  transition: opacity 2s, max-height 1s;
+  max-width: 400px;
+  width: calc(100% - 40px);
 }
 
 .cookies-alert.visible {
   opacity: 1;
 }
 
-.cookies-alert p {
-  margin: 0 0 10px;
+.cookies-header {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.cookies-alert .btn-accept,
-.cookies-alert .btn-reject {
+.cookies-body {
+  margin: 5px 0 15px;
+}
+
+.cookies-body p {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.cookies-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cookies-footer .btn-accept,
+.cookies-footer .btn-reject {
+  flex: 1;
   color: white;
   border: none;
-  padding: 5px 10px;
-  margin-right: 5px;
+  padding: 10px;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-.cookies-alert .btn-accept {
-  background-color: #28a745; 
+.cookies-footer .btn-accept {
+  background-color: #6a0dad;
 }
 
-.cookies-alert .btn-reject {
-  background-color: #dc3545; 
+.cookies-footer .btn-reject {
+  background-color: #9c2632;
 }
 
-.cookies-alert .btn-accept:hover {
-  background-color: #218838; 
+.cookies-footer .btn-accept:hover {
+  background-color: #8a2be2;
 }
 
-.cookies-alert .btn-reject:hover {
-  background-color: #c82333;
+.cookies-footer .btn-reject:hover {
+  background-color: #e33849;
 }
 
-.cookies-alert .btn-close {
-  position: absolute;
-  top: 5px;
-  right: 5px;
+.cookies-header .btn-close {
   background: none;
   border: none;
   color: white;
@@ -62,7 +81,23 @@
     left: 50%;
     bottom: 20px;
     transform: translateX(-50%);
-    width: calc(100% - 40px);
-    max-width: 100%;
+    max-width: 90%;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .cookies-body p {
+    font-size: 13px;
+  }
+
+  .cookies-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cookies-footer .btn-accept,
+  .cookies-footer .btn-reject {
+    padding: 8px;
+    font-size: 13px;
   }
 }

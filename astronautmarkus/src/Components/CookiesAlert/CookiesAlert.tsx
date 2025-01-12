@@ -40,12 +40,18 @@ const CookiesAlert: React.FC<CookiesAlertProps & { locale: any }> = ({ onAccept,
   if (!visible) return null;
 
   return (
-    <div className={`cookies-alert ${fade ? 'visible' : ''}`}>
+  <div className={`cookies-alert ${fade ? 'visible' : ''}`}>
+    <div className="cookies-header">
       <button onClick={handleClose} className="btn-close">X</button>
+    </div>
+    <div className="cookies-body">
       <p>{locale.cookiesLanguageInfo}</p>
+    </div>
+    <div className="cookies-footer btn-container">
       <button onClick={handleAccept} className="btn-accept">{locale.cookiesAccept}</button>
       <button onClick={handleReject} className="btn-reject">{locale.cookiesDecline}</button>
     </div>
+  </div>
   );
 };
 
