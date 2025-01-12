@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Sidebar from './Components/Sidebar/Sidebar';
+import CookiesAlert from './Components/CookiesAlert/CookiesAlert';
 import './App.css';
 import './Transitions.css';
 
@@ -22,16 +23,48 @@ const App = () => {
   const [section, setSection] = useState('home');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [locale, setLocale] = useState(enLocale);
+  const [cookiesAccepted, setCookiesAccepted] = useState(false);
 
-  
-
+  // Load language from cookies or detect browser language
   useEffect(() => {
-    const browserLanguage = navigator.language.startsWith('es') ? 'es' : 'en';
-    setLocale(browserLanguage === 'es' ? esLocale : enLocale);
+    // Check if cookies have been accepted
+    const cookiesConsent = document.cookie
+      .split('; ')
+      .find((row) => row.startsWith('cookiesAccepted='))
+      ?.split('=')[1];
+  
+    if (cookiesConsent === 'true') {
+      setCookiesAccepted(true);
+    }
+  
+    // Check language from cookies or detect from browser
+    const savedLocale = document.cookie
+      .split('; ')
+      .find((row) => row.startsWith('locale='))
+      ?.split('=')[1];
+  
+    if (savedLocale) {
+      setLocale(savedLocale === 'es' ? esLocale : enLocale);
+    } else {
+      const browserLanguage = navigator.language.startsWith('es') ? 'es' : 'en';
+      setLocale(browserLanguage === 'es' ? esLocale : enLocale);
+    }
   }, []);
+  
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
+  };
+
+  const handleAcceptCookies = () => {
+    document.cookie = `locale=${locale === esLocale ? 'es' : 'en'}; path=/; max-age=31536000`; // Save language from cookies for 1 year
+    document.cookie = `cookiesAccepted=true; path=/; max-age=31536000`; // Save consent for 1 year
+    setCookiesAccepted(true);
+  };
+  
+
+  const handleRejectCookies = () => {
+    setCookiesAccepted(false);
   };
 
   const renderContent = () => {
@@ -70,6 +103,9 @@ const App = () => {
           </CSSTransition>
         </TransitionGroup>
       </div>
+      {!cookiesAccepted && (
+        <CookiesAlert onAccept={handleAcceptCookies} onReject={handleRejectCookies} locale={locale}/>
+      )}
     </div>
   );
 };
