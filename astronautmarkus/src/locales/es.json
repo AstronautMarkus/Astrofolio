@@ -102,7 +102,10 @@
   "abbybotAPIDescription":"API RESTful para el proyecto AbbyBot, proporcionando puntos finales para las características del sitio web.",
   "discordabbybotDescription":"Bot de Discord multifuncional con características de gestión y entretenimiento.",
   "cookiesLanguageInfo": "Este sitio web utiliza cookies para mejorar tus preferencias de idioma. Al hacer clic en 'Aceptar', aceptas el uso de cookies.",
-  "cookiesAccept": "Aceptar ᗜˬᗜ",
-  "cookiesDecline": "Rechazar ᗜ˰ᗜ",
-  "geekZoneWip": "¡Zona Geek en construcción! ᗜ_ᗜ"
+  "cookiesAccept": "Acepto",
+  "cookiesDecline": "No acepto",
+  "geekZoneWip": "¡Zona Geek en construcción! ᗜ_ᗜ",
+  "geekZoneDescription": "👆 La zona donde publico mis cosas especiales y espero que no sacadas de tono.",
+  "geekZoneInfo": "Bienvenido a esta zona, este lugar es como si fuera \"mi habitación\" es decir, puedes encontrar distintas cosas, quizá no mucho relacionadas a la informática (lo más probable es que sí), un par de historias o acontecimientos que he vivido. Así que siéntete como en casa.",
+  "geekZoneMusic":"Antes de empezar, ¿Quieres escuchar algo? aquí tienes algunas playlist."
 }
