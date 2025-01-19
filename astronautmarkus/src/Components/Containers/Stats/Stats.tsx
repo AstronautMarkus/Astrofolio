@@ -157,7 +157,7 @@ const Stats = ({ locale }: StatsProps) => {
   return (
     <div className="home-container d-flex justify-content-center align-items-center">
       <div className="square-container">
-        <div className="content-box shadow">
+        <div className="content-box">
           <h1 className="title text-center">{locale.codingStatsTitle}</h1>
           <p className="text-center">{locale.insightsFromWakatime}</p>
           <div className="content">

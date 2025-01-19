@@ -7,7 +7,7 @@ import './Resume.css';
 const Resume = ({ locale }: { locale: any }) => (
   <div className="home-container d-flex justify-content-center align-items-center">
     <div className="square-container">
-      <div className="content-box shadow">
+      <div className="content-box">
         <h1 className="title text-center">🚀 {locale.aboutMeTitle}</h1>
         <p className='text-center'>🌌 {locale.aboutMeSubtitle}</p>
         <div className="content">

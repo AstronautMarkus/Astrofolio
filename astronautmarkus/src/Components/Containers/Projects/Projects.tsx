@@ -153,7 +153,7 @@ const getAbbyBotProjects = (locale: any): Project[] => [
 const Projects = ({ locale, setSection }: { locale: any, setSection: (section: string) => void }) => (
   <div className="home-container d-flex justify-content-center align-items-center">
     <div className="square-container">
-      <div className="content-box shadow">
+      <div className="content-box">
         <h1 className="title text-center">📂 {locale.myProjects}</h1>
         <p className='text-center'>{locale.recentProjects}</p>
 
