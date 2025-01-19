@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Sidebar from './Components/Sidebar/Sidebar';
 import CookiesAlert from './Components/CookiesAlert/CookiesAlert';
 import './App.css';
@@ -20,10 +21,11 @@ import enLocale from './locales/en.json';
 import esLocale from './locales/es.json';
 
 const App = () => {
-  const [section, setSection] = useState('home');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [locale, setLocale] = useState(enLocale);
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // Load language from cookies or detect browser language
   useEffect(() => {
@@ -51,7 +53,6 @@ const App = () => {
     }
   }, []);
   
-
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
@@ -61,26 +62,25 @@ const App = () => {
     document.cookie = `cookiesAccepted=true; path=/; max-age=31536000`; // Save consent for 1 year
     setCookiesAccepted(true);
   };
-  
 
   const handleRejectCookies = () => {
     setCookiesAccepted(false);
   };
 
   const renderContent = () => {
-    switch (section) {
-      case 'home':
-        return <Home setSection={setSection} locale={locale} />;
-      case 'projects':
-        return <Projects locale={locale} setSection={setSection} />;
-      case 'resume':
+    switch (location.pathname) {
+      case '/':
+        return <Home setSection={(section) => navigate(`/${section}`)} locale={locale} />;
+      case '/projects':
+        return <Projects locale={locale} setSection={(section) => navigate(`/${section}`)} />;
+      case '/resume':
         return <Resume locale={locale} />;
-      case 'stats':
+      case '/stats':
         return <Stats locale={locale} />;
-      case 'contact':
-        return <ContactMe setSection={setSection} locale={locale} />;
-      case 'special':
-        return <GeekZone setSection={setSection} locale={locale} />;
+      case '/contact':
+        return <ContactMe setSection={(section) => navigate(`/${section}`)} locale={locale} />;
+      case '/special':
+        return <GeekZone setSection={(section) => navigate(`/${section}`)} locale={locale} />;
       default:
         return <div className="content-section">Select an option</div>;
     }
@@ -89,8 +89,8 @@ const App = () => {
   return (
     <div className="d-flex vh-100">
       <Sidebar
-        section={section}
-        setSection={setSection}
+        section={location.pathname === '/' ? 'home' : location.pathname.slice(1)}
+        setSection={(section) => navigate(section === 'home' ? '/' : `/${section}`)}
         sidebarOpen={sidebarOpen}
         toggleSidebar={toggleSidebar}
         locale={locale}
@@ -98,7 +98,7 @@ const App = () => {
       />
       <div className="flex-grow-1 p-4 overflow-auto">
         <TransitionGroup>
-          <CSSTransition key={section} timeout={300} classNames="fade">
+          <CSSTransition key={location.pathname} timeout={300} classNames="fade">
             <div>{renderContent()}</div>
           </CSSTransition>
         </TransitionGroup>
