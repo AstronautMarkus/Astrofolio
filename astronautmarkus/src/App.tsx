@@ -79,7 +79,7 @@ const App = () => {
         return <Stats locale={locale} />;
       case '/contact':
         return <ContactMe setSection={(section) => navigate(`/${section}`)} locale={locale} />;
-      case '/special':
+      case '/geekzone':
         return <GeekZone setSection={(section) => navigate(`/${section}`)} locale={locale} />;
       default:
         return <div className="content-section">Select an option</div>;
