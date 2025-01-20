@@ -33,7 +33,7 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
               </ul>
             </div>
 
-            <div className="content playlist-carousel">
+            <div className="content playlist-carousel mt-5 mb-5">
               <h5 className='text-center'>{locale.geekZoneMusic}</h5>
               <div id="playlistCarousel" className="mt-5 carousel slide" data-bs-ride="carousel">
               <div className="carousel-inner">
@@ -56,6 +56,25 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
                 <span className="visually-hidden">Next</span>
               </button>
               </div>
+            </div>
+
+            <div className="content">
+              <ul className="project-list">
+                <li className="project-item d-flex flex-column flex-md-row">
+                  <ul className='project-list'>
+                    <li>
+                      <div className="text-center">
+
+                        <p>
+                          WIP CONTENT
+                        </p>
+                        
+
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
 
             <div className="cta-buttons mt-4">
