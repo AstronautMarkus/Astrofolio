@@ -182,6 +182,7 @@ const Resume = ({ locale }: { locale: any }) => (
                       <img src="/assets/img/icons/flask.png" alt="Flask Icon" className="skill-icon" />
                       <img src="/assets/img/icons/java.png" alt="Java Icon" className="skill-icon" />
                       <img src="/assets/img/icons/php.png" alt="PHP Icon" className="skill-icon" />
+                      <img src="/assets/img/icons/laravel.png" alt="Laravel Icon" className="skill-icon" />
                     </div>
                   </div>
                   {/* DevOps */}
