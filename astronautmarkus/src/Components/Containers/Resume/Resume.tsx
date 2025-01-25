@@ -1,6 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faHardHat, faLightbulb, faComments, faClock } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 import './Resume.css';
 
@@ -192,6 +193,7 @@ const Resume = ({ locale }: { locale: any }) => (
                       <img src="/assets/img/icons/docker.png" alt="Docker Icon" className="skill-icon" />
                       <img src="/assets/img/icons/github-actions.png" alt="GitHub Actions Icon" className="skill-icon" />
                       <img src="/assets/img/icons/firebase.png" alt="Firebase Icon" className="skill-icon" />
+                      <img src="/assets/img/icons/systemd.png" alt="Systemd" className="skill-icon" />
                     </div>
                   </div>
                   {/* Databases */}
@@ -203,6 +205,7 @@ const Resume = ({ locale }: { locale: any }) => (
                       <img src="/assets/img/icons/mongodb.svg" alt="MongoDB Icon" className="skill-icon" />
                       <img src="/assets/img/icons/sqlite.png" alt="SQLite Icon" className="skill-icon" />
                       <img src="/assets/img/icons/oracle-sql.png" alt="Oracle Icon" className="skill-icon" />
+                      <img src="/assets/img/icons/cassandra.png" alt="Cassandra Icon" className="skill-icon" />
                     </div>
                   </div>
                   {/* Tools & Frameworks */}
@@ -212,6 +215,8 @@ const Resume = ({ locale }: { locale: any }) => (
                       <img src="/assets/img/icons/git.png" alt="Git Icon" className="skill-icon" />
                       <img src="/assets/img/icons/github.png" alt="GitHub Icon" className="skill-icon" />
                       <img src="/assets/img/icons/vscode.png" alt="Visual Studio Code Icon" className="skill-icon" />
+                      <img src="/assets/img/icons/visual-studio.png" alt="Visual Studio Icon" className="skill-icon" />
+                      <img src="/assets/img/icons/trello.png" alt="Trello Icon" className="skill-icon" />
                     </div>
                   </div>
                   {/* Embedded Systems & IoT */}
@@ -220,6 +225,11 @@ const Resume = ({ locale }: { locale: any }) => (
                     <div className="d-flex justify-content-center flex-wrap">
                       <img src="/assets/img/icons/arduino.svg" alt="Arduino Icon" className="skill-icon" />
                       <img src="/assets/img/icons/linux.png" alt="Linux Icon" className="skill-icon" />
+                      <img src="/assets/img/icons/debian.png" alt="Debian Icon" className="skill-icon" />
+                      <img src="/assets/img/icons/arch.png" alt="Arch Icon" className="skill-icon" />
+                      <img src="/assets/img/icons/manjaro.png" alt="Manjaro Icon" className="skill-icon" />
+                      <img src="/assets/img/icons/postman.webp" alt="Postman Icon" className="skill-icon" />
+                      <img src="/assets/img/icons/bash.png" alt="Bash Icon" className="skill-icon" />
                     </div>
                   </div>
                 </div>
@@ -230,11 +240,8 @@ const Resume = ({ locale }: { locale: any }) => (
 
         <div className="final-section d-flex flex-column align-items-center mt-5">
           <div className="final-message text-center">
-            <h4>🚀 {locale.finalMessageTitle}</h4>
-            <p>- {locale.finalMessageAuthor}</p>
-          </div>
-          <div className="final-gif mt-3">
-            <img src="/assets/img/fumo-fumo-fumo.gif" alt="Fumo Fumo Fumo" className="img-fluid rounded" style={{ maxWidth: '200px' }} />
+            <h4>🚀 Bueno.. poner imágenes con lenguajes de programación y tecnologías es fácil, no?</h4>
+            <p>Mejor revisa mi <Link to={""} className='text-info'>Lista de proyectos</Link> y descubre los frutos que han dado todos estos conocimientos!</p>
           </div>
         </div>
 
