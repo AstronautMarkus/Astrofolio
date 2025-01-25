@@ -107,5 +107,9 @@
   "geekZoneWip": "Geek Zone under construction! ᗜ_ᗜ",
   "geekZoneDescription": "👆 The zone where I publish my special stuff and hope it's not out of line.",
   "geekZoneInfo": "Welcome to this zone, this place is like \"my room\" meaning you can find different things, maybe not much related to computer science (most likely yes), a couple of stories or events that I have experienced. So feel at home.",
-  "geekZoneMusic": "Before we start, would you like to listen to something? Here are some playlists."
+  "geekZoneMusic": "Before we start, would you like to listen to something? Here are some playlists.",
+  "resumeEnd": "Well.. putting images with programming languages and technologies is easy, right?",
+  "resumeLinkStart": "Better check my",
+  "resumeLinkButton": "Project List",
+  "resumeLinkEnd": "and discover the fruits of all this knowledge!"
 }

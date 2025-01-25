@@ -240,8 +240,8 @@ const Resume = ({ locale }: { locale: any }) => (
 
         <div className="final-section d-flex flex-column align-items-center mt-5">
           <div className="final-message text-center">
-            <h4>🚀 Bueno.. poner imágenes con lenguajes de programación y tecnologías es fácil, no?</h4>
-            <p>Mejor revisa mi <Link to={""} className='text-info'>Lista de proyectos</Link> y descubre los frutos que han dado todos estos conocimientos!</p>
+            <h4>🚀 {locale.resumeEnd}</h4>
+            <p>{locale.resumeLinkStart} <Link to={"/projects"} className='text-info'>{locale.resumeLinkButton}</Link> {locale.resumeLinkEnd}</p>
           </div>
         </div>
 
