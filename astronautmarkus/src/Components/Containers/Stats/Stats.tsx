@@ -10,10 +10,11 @@ import {
   Legend,
   ArcElement,
 } from "chart.js";
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import "./Stats.css";
 
 // Register ChartJS modules
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement, ChartDataLabels);
 
 interface ActivityEntry {
   range: { date: string };
@@ -151,6 +152,22 @@ const Stats = ({ locale }: StatsProps) => {
     plugins: {
       legend: { position: "top" as const },
       title: { display: true, text: locale.mostUsedOSTitle },
+      tooltip: {
+        callbacks: {
+          label: function (tooltipItem:any) {
+            const data = tooltipItem.dataset.data[tooltipItem.dataIndex];
+            const label = tooltipItem.label || '';
+            return `${label}: ${data}%`;
+          },
+        },
+      },
+      datalabels: {
+        formatter: (value: number) => `${value}%`,
+        color: '#fff',
+        font: {
+          weight: 'bold' as const,
+        },
+      },
     },
   };
 
