@@ -90,6 +90,13 @@ const Stats = ({ locale }: StatsProps) => {
     plugins: {
       legend: { position: "top" as const },
       title: { display: true, text: locale.codingActivityTitle },
+      datalabels: {
+        color: '#fff',
+        formatter: (value: number) => `${value.toFixed(2)}h`,
+        font: {
+          weight: 'bold' as const,
+        },
+      },
     },
     scales: {
       y: {
@@ -122,6 +129,13 @@ const Stats = ({ locale }: StatsProps) => {
     plugins: {
       legend: { position: "top" as const },
       title: { display: true, text: locale.mostUsedLanguagesTitle },
+      datalabels: {
+        color: '#fff',
+        formatter: (value: number) => `${value.toFixed(2)}%`,
+        font: {
+          weight: 'bold' as const,
+        },
+      },
     },
     scales: {
       x: {
@@ -162,7 +176,7 @@ const Stats = ({ locale }: StatsProps) => {
         },
       },
       datalabels: {
-        formatter: (value: number) => `${value}%`,
+        formatter: (value: number) => `${value.toFixed(2)}%`,
         color: '#fff',
         font: {
           weight: 'bold' as const,
