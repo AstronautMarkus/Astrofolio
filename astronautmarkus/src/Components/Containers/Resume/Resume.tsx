@@ -22,7 +22,7 @@ const Resume = ({ locale }: { locale: any }) => (
                     <p>{locale.whatIDoDescription2}</p>
                   </div>
                   <div className="project-image text-center">
-                    <img src="/assets/img/profile_picture.webp" alt="Marcos Reyes" className="img-fluid rounded" style={{ maxWidth: '200px' }} />
+                    <img src="/assets/img/profile_picture.jpg" alt="Marcos Reyes" className="img-fluid rounded" style={{ maxWidth: '200px' }} />
                     <p className="text-center mt-3">{locale.profilePictureCaption}</p>
                   </div>
                 </div>
