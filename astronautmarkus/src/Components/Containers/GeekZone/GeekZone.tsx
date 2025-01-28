@@ -58,18 +58,16 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
               </div>
             </div>
 
+            <h1 className="title text-center mt-2">🤖 {locale.geekZoneMarkusRecommendationsTitle}</h1>
+            <p className='text-center'>Hell yeah!</p>
+
             <div className="content">
               <ul className="project-list">
                 <li className="project-item d-flex flex-column flex-md-row">
                   <ul className='project-list'>
                     <li>
                       <div className="text-center">
-
-                        <p>
-                          WIP CONTENT
-                        </p>
-                        
-
+                        <p>{locale.geekZoneMarkusRecommendationsDescription}</p>
                       </div>
                     </li>
                   </ul>
