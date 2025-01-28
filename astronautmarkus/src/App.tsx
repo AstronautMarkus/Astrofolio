@@ -82,7 +82,8 @@ const App = () => {
       case '/geekzone':
         return <GeekZone setSection={(section) => navigate(`/${section}`)} locale={locale} />;
       default:
-        return <div className="content-section">Select an option</div>;
+        navigate('/');
+        return null;
     }
   };
 
