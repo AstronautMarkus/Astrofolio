@@ -75,6 +75,49 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
               </ul>
             </div>
 
+            <h1 className="title text-center mt-2">🎥 Anime Recommendations</h1>
+            <p className='subtitle mb-5'>watch my favorite anime </p>
+
+            <div id="animeCarousel" className="carousel slide" data-bs-ride="carousel">
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <div className="text-center">
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div>
+                      <img src="https://picsum.photos/200" className={styles.anime_image} alt="Lorem Ipsum" />
+                    </div>
+                    <p><strong>Why I like it</strong>: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p><strong>Pros</strong>: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p><strong>Cons</strong>: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="https://example.com" target="_blank" rel="noopener noreferrer">More about Lorem Ipsum</a>
+                  </div>
+                </div>
+                <div className="carousel-item">
+                  <div className="text-center">
+                    <h3>Dolor Sit Amet</h3>
+                    <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                    <div>
+                      <img src="https://picsum.photos/200" className={styles.anime_image} alt="Dolor Sit Amet" />
+                    </div>
+                    <p><strong>Why I like it</strong>: Dolor sit amet, consectetur adipiscing elit.</p>
+                    <p><strong>Pros</strong>: Dolor sit amet, consectetur adipiscing elit.</p>
+                    <p><strong>Cons</strong>: Dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="https://example.com" target="_blank" rel="noopener noreferrer">More about Dolor Sit Amet</a>
+                  </div>
+                </div>
+                {/* Add more carousel items as needed */}
+              </div>
+              <button className="carousel-control-prev" type="button" data-bs-target="#animeCarousel" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button className="carousel-control-next" type="button" data-bs-target="#animeCarousel" data-bs-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+
             <div className="cta-buttons mt-4">
               <button onClick={() => setSection('home')}className={`${styles.purpleButton} me-3 btn-lg mb-3`}>
                 <FontAwesomeIcon icon={faHome} className="me-2" />

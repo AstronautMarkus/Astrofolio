@@ -24,6 +24,10 @@ body::before {
   transform: scale(1.1); /* Zoom in the background image */
 }
 
+li {
+  list-style-type: none;
+}
+
 .square-container {
   background: linear-gradient(to bottom, #1b1b1b, #111111);
   width: auto;
