@@ -25,56 +25,56 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
     {
       title: "Sousou no Frieren",
       description: locale.sousouNoFrierenDescription,
-      image: "https://picsum.photos/200",
+      image: "/assets/img/recommendations/anime/138006l.jpg",
       whyILikeIt: locale.sousouNoFrierenWhyILikeIt,
       pros: locale.sousouNoFrierenPros,
       cons: locale.sousouNoFrierenCons,
-      link: "https://example.com"
+      link: "https://myanimelist.net/anime/52991/Sousou_no_Frieren"
     },
     {
       title: "Witch Craft Works",
       description: locale.witchCraftWorksDescription,
-      image: "https://picsum.photos/200",
+      image: "/assets/img/recommendations/anime/112982l.jpg",
       whyILikeIt: locale.witchCraftWorksWhyILikeIt,
       pros: locale.witchCraftWorksPros,
       cons: locale.witchCraftWorksCons,
-      link: "https://example.com"
+      link: "https://myanimelist.net/anime/21085/Witch_Craft_Works"
     },
     {
       title: "BOCCHI THE ROCK!",
       description: locale.bocchiTheRockDescription,
-      image: "https://picsum.photos/200",
+      image: "/assets/img/recommendations/anime/127956l.jpg",
       whyILikeIt: locale.bocchiTheRockWhyILikeIt,
       pros: locale.bocchiTheRockPros,
       cons: locale.bocchiTheRockCons,
-      link: "https://example.com"
+      link: "https://myanimelist.net/anime/47917/Bocchi_the_Rock"
     },
     {
       title: "The Melancholy of Haruhi Suzumiya",
       description: locale.haruhiSuzumiyaDescription,
-      image: "https://picsum.photos/200",
+      image: "/assets/img/recommendations/anime/137929l.jpg",
       whyILikeIt: locale.haruhiSuzumiyaWhyILikeIt,
       pros: locale.haruhiSuzumiyaPros,
       cons: locale.haruhiSuzumiyaCons,
-      link: "https://example.com"
+      link: "https://myanimelist.net/anime/849/Suzumiya_Haruhi_no_Yuuutsu"
     },
     {
       title: "Assasination Classroom",
       description: locale.assasinationClassroomDescription,
-      image: "https://picsum.photos/200",
+      image: "/assets/img/recommendations/anime/75639l.jpg",
       whyILikeIt: locale.assasinationClassroomWhyILikeIt,
       pros: locale.assasinationClassroomPros,
       cons: locale.assasinationClassroomCons,
-      link: "https://example.com"
+      link: "https://myanimelist.net/anime/24833/Ansatsu_Kyoushitsu"
     },
     {
       title: "Little Witch Academia",
       description: locale.littleWitchAcademiaDescription,
-      image: "https://picsum.photos/200",
+      image: "/assets/img/recommendations/anime/120456l.jpg",
       whyILikeIt: locale.littleWitchAcademiaWhyILikeIt,
       pros: locale.littleWitchAcademiaPros,
       cons: locale.littleWitchAcademiaCons,
-      link: "https://example.com"
+      link: "https://myanimelist.net/anime/33489/Little_Witch_Academia_TV"
     }
   ];
 
