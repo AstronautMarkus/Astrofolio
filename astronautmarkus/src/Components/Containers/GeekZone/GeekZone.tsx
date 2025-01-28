@@ -2,11 +2,33 @@ import styles from './GeekZone.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 
-const GeekZone = ({ setSection, locale }: { setSection: (section: string) => void, locale: any }) => (
-  <div className={`${styles.verticalCenter}`}>
-    <div className="template-container d-flex justify-content-center align-items-center">
-      <div className="square-container">
-        <div className="content-box text-center">
+const GeekZone = ({ setSection, locale }: { setSection: (section: string) => void, locale: any }) => {
+  const animeRecommendations = [
+    {
+      title: "Lorem Ipsum",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      image: "https://picsum.photos/200",
+      whyILikeIt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      pros: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      cons: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      link: "https://example.com"
+    },
+    {
+      title: "Dolor Sit Amet",
+      description: "Dolor sit amet, consectetur adipiscing elit.",
+      image: "https://picsum.photos/200",
+      whyILikeIt: "Dolor sit amet, consectetur adipiscing elit.",
+      pros: "Dolor sit amet, consectetur adipiscing elit.",
+      cons: "Dolor sit amet, consectetur adipiscing elit.",
+      link: "https://example.com"
+    }
+  ];
+
+  return (
+    <div className={`${styles.verticalCenter}`}>
+      <div className="template-container d-flex justify-content-center align-items-center">
+        <div className="square-container">
+          <div className="content-box text-center">
             <h1 className='title text-center'>🤓 AstronautMarkus Geek Zone</h1>
             <p className='text-center'>{locale.geekZoneDescription}</p>
             
@@ -75,38 +97,26 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
               </ul>
             </div>
 
-            <h1 className="title text-center mt-2">🎥 Anime Recommendations</h1>
-            <p className='subtitle mb-5'>watch my favorite anime </p>
+            <h1 className="title text-center mt-2">🎥 {locale.geekZoneMarkusRecommendationsAnime}</h1>
+            <p className='subtitle mb-5'>{locale.geekZoneMarkusRecommendationsAnimeDescription} </p>
 
             <div id="animeCarousel" className="carousel slide" data-bs-ride="carousel">
               <div className="carousel-inner">
-                <div className="carousel-item active">
-                  <div className="text-center">
-                    <h3>Lorem Ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div>
-                      <img src="https://picsum.photos/200" className={styles.anime_image} alt="Lorem Ipsum" />
+                {animeRecommendations.map((anime, index) => (
+                  <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                    <div className="text-center">
+                      <h3>{anime.title}</h3>
+                      <p>{anime.description}</p>
+                      <div>
+                        <img src={anime.image} className={styles.anime_image} alt={anime.title} />
+                      </div>
+                      <p><strong>Why I like it</strong>: {anime.whyILikeIt}</p>
+                      <p><strong>Pros</strong>: {anime.pros}</p>
+                      <p><strong>Cons</strong>: {anime.cons}</p>
+                      <a href={anime.link} target="_blank" rel="noopener noreferrer">More about {anime.title}</a>
                     </div>
-                    <p><strong>Why I like it</strong>: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p><strong>Pros</strong>: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p><strong>Cons</strong>: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="https://example.com" target="_blank" rel="noopener noreferrer">More about Lorem Ipsum</a>
                   </div>
-                </div>
-                <div className="carousel-item">
-                  <div className="text-center">
-                    <h3>Dolor Sit Amet</h3>
-                    <p>Dolor sit amet, consectetur adipiscing elit.</p>
-                    <div>
-                      <img src="https://picsum.photos/200" className={styles.anime_image} alt="Dolor Sit Amet" />
-                    </div>
-                    <p><strong>Why I like it</strong>: Dolor sit amet, consectetur adipiscing elit.</p>
-                    <p><strong>Pros</strong>: Dolor sit amet, consectetur adipiscing elit.</p>
-                    <p><strong>Cons</strong>: Dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="https://example.com" target="_blank" rel="noopener noreferrer">More about Dolor Sit Amet</a>
-                  </div>
-                </div>
-                {/* Add more carousel items as needed */}
+                ))}
               </div>
               <button className="carousel-control-prev" type="button" data-bs-target="#animeCarousel" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -129,6 +139,7 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
       </div>
     </div>
   </div>
-);
+  );
+};
 
 export default GeekZone;
