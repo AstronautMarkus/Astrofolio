@@ -197,7 +197,7 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
             
 
             <div className="cta-buttons mt-4">
-              <button onClick={() => setSection('home')}className={`${styles.purpleButton} me-3 btn-lg mb-3`}>
+              <button onClick={() => setSection('')}className={`${styles.purpleButton} me-3 btn-lg mb-3`}>
                 <FontAwesomeIcon icon={faHome} className="me-2" />
                 {locale.home}
               </button>

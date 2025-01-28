@@ -49,7 +49,7 @@ const ContactMe = ({ setSection, locale }: { setSection: (section: string) => vo
             </div>
           <div className="cta-buttons mt-4">
             <button
-              onClick={() => setSection('home')}
+              onClick={() => setSection('')}
               className={`${styles.purpleButton} btn-lg`}
             >
               <FontAwesomeIcon icon={faHome} className="me-2" />

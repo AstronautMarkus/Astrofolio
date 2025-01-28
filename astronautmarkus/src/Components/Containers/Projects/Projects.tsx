@@ -237,7 +237,7 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
               <a href="https://github.com/astronautmarkus" target="_blank" rel="noopener noreferrer" className="btn btn-primary m-2">
                 <FontAwesomeIcon icon={faGithub} /> {locale.githubProfile}
               </a>
-              <button onClick={() => setSection('home')} className="btn btn-secondary m-2">
+              <button onClick={() => setSection('')} className="btn btn-secondary m-2">
                 {locale.home}
               </button>
             </div>
