@@ -111,7 +111,7 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
 
             <div className="content playlist-carousel mt-5 mb-5">
               <h5 className='text-center'>{locale.geekZoneMusic}</h5>
-              <div id="playlistCarousel" className="mt-5 carousel slide" data-bs-ride="carousel">
+              <div id="playlistCarousel" className="mt-5 carousel slide">
               <div className="carousel-inner">
                 <div className="carousel-item active">
                 <iframe style={{ borderRadius: '12px', width: '70%' }} src="https://open.spotify.com/embed/playlist/03OXOTX3VQyHLpQMb0lVwW?utm_source=generator" height="352" frameBorder="0" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -160,7 +160,7 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
                   <ul className='project-list'>
                     <li>
 
-                      <div id="animeCarousel" className="carousel slide" data-bs-ride="carousel">
+                      <div id="animeCarousel" className="carousel slide">
                         <div className="carousel-inner">
                           {animeRecommendations.map((anime, index) => (
                             <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
