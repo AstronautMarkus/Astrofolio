@@ -5,21 +5,75 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 const GeekZone = ({ setSection, locale }: { setSection: (section: string) => void, locale: any }) => {
   const animeRecommendations = [
     {
-      title: "Lorem Ipsum",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "Initial D (1th stage - final stage)",
+      description: locale.initialDDescription,
+      image: "/assets/img/recommendations/anime/initiald.jpg",
+      whyILikeIt: locale.initialDWhyILikeIt,
+      pros: locale.initialDPros,
+      cons: locale.initialDCons,
+      link: "https://myanimelist.net/anime/185/Initial_D_First_Stage"
+    },
+    {
+      title: "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+      description: locale.seishunButaYarouDescription,
+      image: "/assets/img/recommendations/anime/93586l.jpg",
+      whyILikeIt: locale.seishunButaYarouWhyILikeIt,
+      pros: locale.seishunButaYarouPros,
+      cons: locale.seishunButaYarouCons,
+      link: "https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai"
+    },
+    {
+      title: "Sousou no Frieren",
+      description: locale.sousouNoFrierenDescription,
       image: "https://picsum.photos/200",
-      whyILikeIt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      pros: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      cons: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      whyILikeIt: locale.sousouNoFrierenWhyILikeIt,
+      pros: locale.sousouNoFrierenPros,
+      cons: locale.sousouNoFrierenCons,
       link: "https://example.com"
     },
     {
-      title: "Dolor Sit Amet",
-      description: "Dolor sit amet, consectetur adipiscing elit.",
+      title: "Witch Craft Works",
+      description: locale.witchCraftWorksDescription,
       image: "https://picsum.photos/200",
-      whyILikeIt: "Dolor sit amet, consectetur adipiscing elit.",
-      pros: "Dolor sit amet, consectetur adipiscing elit.",
-      cons: "Dolor sit amet, consectetur adipiscing elit.",
+      whyILikeIt: locale.witchCraftWorksWhyILikeIt,
+      pros: locale.witchCraftWorksPros,
+      cons: locale.witchCraftWorksCons,
+      link: "https://example.com"
+    },
+    {
+      title: "BOCCHI THE ROCK!",
+      description: locale.bocchiTheRockDescription,
+      image: "https://picsum.photos/200",
+      whyILikeIt: locale.bocchiTheRockWhyILikeIt,
+      pros: locale.bocchiTheRockPros,
+      cons: locale.bocchiTheRockCons,
+      link: "https://example.com"
+    },
+    {
+      title: "The Melancholy of Haruhi Suzumiya",
+      description: locale.haruhiSuzumiyaDescription,
+      image: "https://picsum.photos/200",
+      whyILikeIt: locale.haruhiSuzumiyaWhyILikeIt,
+      pros: locale.haruhiSuzumiyaPros,
+      cons: locale.haruhiSuzumiyaCons,
+      link: "https://example.com"
+    },
+    {
+      title: "Assasination Classroom",
+      description: locale.assasinationClassroomDescription,
+      image: "https://picsum.photos/200",
+      whyILikeIt: locale.assasinationClassroomWhyILikeIt,
+      pros: locale.assasinationClassroomPros,
+      cons: locale.assasinationClassroomCons,
+      link: "https://example.com"
+    },
+    {
+      title: "Little Witch Academia",
+      description: locale.littleWitchAcademiaDescription,
+      image: "https://picsum.photos/200",
+      whyILikeIt: locale.littleWitchAcademiaWhyILikeIt,
+      pros: locale.littleWitchAcademiaPros,
+      cons: locale.littleWitchAcademiaCons,
       link: "https://example.com"
     }
   ];
@@ -107,9 +161,9 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
                     <div className="text-center">
                       <h3>{anime.title}</h3>
                       <p>{anime.description}</p>
-                      <div>
-                        <img src={anime.image} className={styles.anime_image} alt={anime.title} />
-                      </div>
+                        <div>
+                        <img src={anime.image} className={`${styles.anime_image} rounded`} alt={anime.title} />
+                        </div>
                       <p><strong>Why I like it</strong>: {anime.whyILikeIt}</p>
                       <p><strong>Pros</strong>: {anime.pros}</p>
                       <p><strong>Cons</strong>: {anime.cons}</p>
