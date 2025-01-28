@@ -154,33 +154,47 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
             <h1 className="title text-center mt-2">🎥 {locale.geekZoneMarkusRecommendationsAnime}</h1>
             <p className='subtitle mb-5'>{locale.geekZoneMarkusRecommendationsAnimeDescription} </p>
 
-            <div id="animeCarousel" className="carousel slide" data-bs-ride="carousel">
-              <div className="carousel-inner">
-                {animeRecommendations.map((anime, index) => (
-                  <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-                    <div className="text-center">
-                      <h3>{anime.title}</h3>
-                      <p>{anime.description}</p>
-                        <div>
-                        <img src={anime.image} className={`${styles.anime_image} rounded`} alt={anime.title} />
+            <div className="content">
+              <ul className="project-list">
+                <li className="project-item d-flex flex-column flex-md-row">
+                  <ul className='project-list'>
+                    <li>
+
+                      <div id="animeCarousel" className="carousel slide" data-bs-ride="carousel">
+                        <div className="carousel-inner">
+                          {animeRecommendations.map((anime, index) => (
+                            <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                              <div className="text-center">
+                                <h3>{anime.title}</h3>
+                                <p>{anime.description}</p>
+                                  <div>
+                                  <img src={anime.image} className={`${styles.anime_image} rounded`} alt={anime.title} />
+                                  </div>
+                                <p><strong>{locale.geekZoneMarkusRecommendationsAnimeWhyILikeIt}</strong> {anime.whyILikeIt}</p>
+                                <p><strong>{locale.geekZoneMarkusRecommendationsAnimePros}</strong>: {anime.pros}</p>
+                                <p><strong>{locale.geekZoneMarkusRecommendationsAnimeCons}</strong>: {anime.cons}</p>
+                                <a href={anime.link} className='text-warning' target="_blank" rel="noopener noreferrer">MyAnimeList</a>
+                              </div>
+                            </div>
+                          ))}
                         </div>
-                      <p><strong>{locale.geekZoneMarkusRecommendationsAnimeWhyILikeIt}</strong> {anime.whyILikeIt}</p>
-                      <p><strong>{locale.geekZoneMarkusRecommendationsAnimePros}</strong>: {anime.pros}</p>
-                      <p><strong>{locale.geekZoneMarkusRecommendationsAnimeCons}</strong>: {anime.cons}</p>
-                      <a href={anime.link} className='text-warning' target="_blank" rel="noopener noreferrer">MyAnimeList</a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <button className="carousel-control-prev" type="button" data-bs-target="#animeCarousel" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button className="carousel-control-next" type="button" data-bs-target="#animeCarousel" data-bs-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Next</span>
-              </button>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#animeCarousel" data-bs-slide="prev">
+                          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button className="carousel-control-next" type="button" data-bs-target="#animeCarousel" data-bs-slide="next">
+                          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span className="visually-hidden">Next</span>
+                        </button>
+                      </div>
+
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
+
+            
 
             <div className="cta-buttons mt-4">
               <button onClick={() => setSection('home')}className={`${styles.purpleButton} me-3 btn-lg mb-3`}>
