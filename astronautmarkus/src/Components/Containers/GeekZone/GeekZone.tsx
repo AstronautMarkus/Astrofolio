@@ -164,10 +164,10 @@ const GeekZone = ({ setSection, locale }: { setSection: (section: string) => voi
                         <div>
                         <img src={anime.image} className={`${styles.anime_image} rounded`} alt={anime.title} />
                         </div>
-                      <p><strong>Why I like it</strong>: {anime.whyILikeIt}</p>
-                      <p><strong>Pros</strong>: {anime.pros}</p>
-                      <p><strong>Cons</strong>: {anime.cons}</p>
-                      <a href={anime.link} target="_blank" rel="noopener noreferrer">More about {anime.title}</a>
+                      <p><strong>{locale.geekZoneMarkusRecommendationsAnimeWhyILikeIt}</strong> {anime.whyILikeIt}</p>
+                      <p><strong>{locale.geekZoneMarkusRecommendationsAnimePros}</strong>: {anime.pros}</p>
+                      <p><strong>{locale.geekZoneMarkusRecommendationsAnimeCons}</strong>: {anime.cons}</p>
+                      <a href={anime.link} className='text-warning' target="_blank" rel="noopener noreferrer">MyAnimeList</a>
                     </div>
                   </div>
                 ))}
