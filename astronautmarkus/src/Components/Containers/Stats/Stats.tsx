@@ -1,21 +1,8 @@
 import { useEffect, useState } from "react";
 import { Bar, Doughnut } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-  ArcElement,
-} from "chart.js";
-import ChartDataLabels from 'chartjs-plugin-datalabels';
 import "./Stats.css";
 import { fetchActivityData, fetchLanguageData, fetchOSUsageData, ActivityEntry, LanguageEntry, OSUsageEntry } from "../../../helpers/wakatimeDataHelper";
-
-// Register ChartJS modules
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement, ChartDataLabels);
+import { getActivityChartOptions, getLanguageChartOptions, getOSUsageChartOptions } from "../../../helpers/chartConfigHelper";
 
 const Spinner = () => <div className="spinner"></div>;
 
@@ -63,30 +50,7 @@ const Stats = ({ locale }: StatsProps) => {
     ],
   };
 
-  const activityChartOptions = {
-    responsive: true,
-    plugins: {
-      legend: { position: "top" as const },
-      title: { display: true, text: locale.codingActivityTitle },
-      datalabels: {
-        color: '#fff',
-        formatter: (value: number) => `${value.toFixed(2)}h`,
-        font: {
-          weight: 'bold' as const,
-        },
-      },
-    },
-    scales: {
-      y: {
-        beginAtZero: true,
-        ticks: {
-          callback: function (tickValue: string | number) {
-            return `${tickValue}h`;
-          },
-        },
-      },
-    },
-  };
+  const activityChartOptions = getActivityChartOptions(locale);
 
   // (Most Used Languages)
   const languageChartData = {
@@ -101,31 +65,7 @@ const Stats = ({ locale }: StatsProps) => {
     ],
   };
 
-  const languageChartOptions = {
-    responsive: true,
-    indexAxis: "y" as const,
-    plugins: {
-      legend: { position: "top" as const },
-      title: { display: true, text: locale.mostUsedLanguagesTitle },
-      datalabels: {
-        color: '#fff',
-        formatter: (value: number) => `${value.toFixed(2)}%`,
-        font: {
-          weight: 'bold' as const,
-        },
-      },
-    },
-    scales: {
-      x: {
-        beginAtZero: true,
-        ticks: {
-          callback: function (tickValue: string | number) {
-            return `${tickValue}%`;
-          },
-        },
-      },
-    },
-  };
+  const languageChartOptions = getLanguageChartOptions(locale);
 
   // (Most Used Operating Systems)
   const osUsageChartData = {
@@ -139,29 +79,7 @@ const Stats = ({ locale }: StatsProps) => {
     ],
   };
 
-  const osUsageChartOptions = {
-    responsive: true,
-    plugins: {
-      legend: { position: "top" as const },
-      title: { display: true, text: locale.mostUsedOSTitle },
-      tooltip: {
-        callbacks: {
-          label: function (tooltipItem:any) {
-            const data = tooltipItem.dataset.data[tooltipItem.dataIndex];
-            const label = tooltipItem.label || '';
-            return `${label}: ${data}%`;
-          },
-        },
-      },
-      datalabels: {
-        formatter: (value: number) => `${value.toFixed(2)}%`,
-        color: '#fff',
-        font: {
-          weight: 'bold' as const,
-        },
-      },
-    },
-  };
+  const osUsageChartOptions = getOSUsageChartOptions(locale);
 
   return (
     <div className="home-container d-flex justify-content-center align-items-center">
