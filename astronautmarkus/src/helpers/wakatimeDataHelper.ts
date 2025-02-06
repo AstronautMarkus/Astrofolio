@@ -24,7 +24,7 @@ export const fetchActivityData = async (): Promise<ActivityEntry[]> => {
 export const fetchLanguageData = async (): Promise<LanguageEntry[]> => {
   const response = await fetch("https://wakatime.com/share/@AstronautMarkus/6e3b981a-a628-4e63-82f5-050e12729732.json");
   const data = await response.json();
-  return data.data;
+  return data.data.slice(0, 5);
 };
 
 export const fetchOSUsageData = async (): Promise<OSUsageEntry[]> => {
