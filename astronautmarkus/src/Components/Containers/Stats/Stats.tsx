@@ -115,7 +115,7 @@ const Stats = ({ locale }: StatsProps) => {
                   </div>
                   <div className="project-image text-center justify-content-center">
                     {languageData.length > 0 ? (
-                      <Bar data={languageChartData} options={languageChartOptions} height={400} />
+                      <Doughnut data={languageChartData} options={languageChartOptions} />
                     ) : (
                       <Spinner />
                     )}
