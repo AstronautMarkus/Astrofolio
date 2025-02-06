@@ -12,26 +12,10 @@ import {
 } from "chart.js";
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import "./Stats.css";
+import { fetchActivityData, fetchLanguageData, fetchOSUsageData, ActivityEntry, LanguageEntry, OSUsageEntry } from "../../../helpers/wakatimeDataHelper";
 
 // Register ChartJS modules
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement, ChartDataLabels);
-
-interface ActivityEntry {
-  range: { date: string };
-  grand_total: { total_seconds: number };
-}
-
-interface LanguageEntry {
-  color: string;
-  name: string;
-  percent: number;
-}
-
-interface OSUsageEntry {
-  color: string;
-  name: string;
-  percent: number;
-}
 
 const Spinner = () => <div className="spinner"></div>;
 
@@ -44,27 +28,21 @@ const Stats = ({ locale }: StatsProps) => {
   const [languageData, setLanguageData] = useState<LanguageEntry[]>([]);
   const [osUsageData, setOSUsageData] = useState<OSUsageEntry[]>([]);
 
-  // (Coding activity)
   useEffect(() => {
-    fetch("https://wakatime.com/share/@AstronautMarkus/678807b3-e69a-4a62-83d5-8abe7c01f950.json")
-      .then((response) => response.json())
-      .then((data) => setActivityData(data.data))
+    fetchActivityData()
+      .then(setActivityData)
       .catch((error) => console.error("Error fetching activity data:", error));
   }, []);
 
-  // (Most used languages)
   useEffect(() => {
-    fetch("https://wakatime.com/share/@AstronautMarkus/6e3b981a-a628-4e63-82f5-050e12729732.json")
-      .then((response) => response.json())
-      .then((data) => setLanguageData(data.data))
+    fetchLanguageData()
+      .then(setLanguageData)
       .catch((error) => console.error("Error fetching language data:", error));
   }, []);
 
-  // (Most used operating systems)
   useEffect(() => {
-    fetch("https://wakatime.com/share/@AstronautMarkus/be109b51-c692-4817-adb6-c09ca597f934.json")
-      .then((response) => response.json())
-      .then((data) => setOSUsageData(data.data))
+    fetchOSUsageData()
+      .then(setOSUsageData)
       .catch((error) => console.error("Error fetching OS usage data:", error));
   }, []);
 
