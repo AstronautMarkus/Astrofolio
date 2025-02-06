@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Bar, Doughnut } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import "./Stats.css";
 import { fetchActivityData, fetchLanguageData, fetchOSUsageData, ActivityEntry, LanguageEntry, OSUsageEntry } from "../../../helpers/wakatimeDataHelper";
 import { getActivityChartOptions, getLanguageChartOptions, getOSUsageChartOptions } from "../../../helpers/chartConfigHelper";
@@ -97,15 +97,16 @@ const Stats = ({ locale }: StatsProps) => {
                     <p>{locale.codingActivityDescription}</p>
                   </div>
                   <div className="project-image text-center justify-content-center">
-                    {activityData.length > 0 ? (
-                      <Bar data={activityChartData} options={activityChartOptions} />
-                    ) : (
-                      <Spinner />
-                    )}
+                    <div className="chart-wrapper">
+                      {activityData.length > 0 ? (
+                        <Bar data={activityChartData} options={activityChartOptions} />
+                      ) : (
+                        <Spinner />
+                      )}
+                    </div>
                   </div>
                 </div>
               </li>
-
               {/* Most Used Languages Chart */}
               <li className="project-item">
                 <div className="project-details">
@@ -114,15 +115,16 @@ const Stats = ({ locale }: StatsProps) => {
                     <p>{locale.mostUsedLanguagesDescription}</p>
                   </div>
                   <div className="project-image text-center justify-content-center">
-                    {languageData.length > 0 ? (
-                      <Doughnut data={languageChartData} options={languageChartOptions} />
-                    ) : (
-                      <Spinner />
-                    )}
+                    <div className="chart-wrapper">
+                      {languageData.length > 0 ? (
+                        <Bar data={languageChartData} options={languageChartOptions} />
+                      ) : (
+                        <Spinner />
+                      )}
+                    </div>
                   </div>
                 </div>
               </li>
-
               {/* Most Used Operating Systems Chart */}
               <li className="project-item">
                 <div className="project-details">
@@ -131,11 +133,13 @@ const Stats = ({ locale }: StatsProps) => {
                     <p>{locale.mostUsedOSDescription}</p>
                   </div>
                   <div className="project-image text-center justify-content-center">
-                    {osUsageData.length > 0 ? (
-                      <Doughnut data={osUsageChartData} options={osUsageChartOptions} />
-                    ) : (
-                      <Spinner />
-                    )}
+                    <div className="chart-wrapper">
+                      {osUsageData.length > 0 ? (
+                        <Bar data={osUsageChartData} options={osUsageChartOptions} />
+                      ) : (
+                        <Spinner />
+                      )}
+                    </div>
                   </div>
                 </div>
               </li>
