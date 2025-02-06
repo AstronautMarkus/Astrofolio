@@ -15,6 +15,7 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend,
 
 export const getActivityChartOptions = (locale: any) => ({
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: { position: "top" as const },
     title: { display: true, text: locale.codingActivityTitle },
@@ -36,10 +37,13 @@ export const getActivityChartOptions = (locale: any) => ({
       },
     },
   },
+  height: 400,
+  width: 1200,
 });
 
 export const getLanguageChartOptions = (locale: any) => ({
   responsive: true,
+  maintainAspectRatio: false,
   indexAxis: "y" as const,
   plugins: {
     legend: { position: "top" as const },
@@ -62,10 +66,13 @@ export const getLanguageChartOptions = (locale: any) => ({
       },
     },
   },
+  height: 400,
+  width: 1200,
 });
 
 export const getOSUsageChartOptions = (locale: any) => ({
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: { position: "top" as const },
     title: { display: true, text: locale.mostUsedOSTitle },
@@ -86,4 +93,6 @@ export const getOSUsageChartOptions = (locale: any) => ({
       },
     },
   },
+  height: 400,
+  width: 1200,
 });
