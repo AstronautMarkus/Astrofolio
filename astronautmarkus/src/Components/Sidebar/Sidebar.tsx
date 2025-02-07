@@ -70,8 +70,8 @@ const Sidebar = ({ section, setSection, sidebarOpen, toggleSidebar, locale, setL
               <FontAwesomeIcon icon={faChartLine} className="me-2" /> {locale.stats}
             </button>
           </li>
-          <li className={`special-nav-item ${section === 'special' ? 'active' : ''}`}>
-            <button className="btn text-start w-100" onClick={() => setSection('special')}>
+          <li className={`special-nav-item ${section === 'geekzone' ? 'active' : ''}`}>
+            <button className="btn text-start w-100" onClick={() => setSection('geekzone')}>
               <FontAwesomeIcon icon={faSpaceShuttle} className="me-2" /> {locale.marcosreyesgeekzone}
             </button>
           </li>

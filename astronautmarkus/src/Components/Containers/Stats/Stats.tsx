@@ -1,36 +1,8 @@
 import { useEffect, useState } from "react";
-import { Bar, Doughnut } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-  ArcElement,
-} from "chart.js";
+import { Bar } from "react-chartjs-2";
 import "./Stats.css";
-
-// Register ChartJS modules
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement);
-
-interface ActivityEntry {
-  range: { date: string };
-  grand_total: { total_seconds: number };
-}
-
-interface LanguageEntry {
-  color: string;
-  name: string;
-  percent: number;
-}
-
-interface OSUsageEntry {
-  color: string;
-  name: string;
-  percent: number;
-}
+import { fetchActivityData, fetchLanguageData, fetchOSUsageData, ActivityEntry, LanguageEntry, OSUsageEntry } from "../../../helpers/wakatimeDataHelper";
+import { getActivityChartOptions, getLanguageChartOptions, getOSUsageChartOptions } from "../../../helpers/chartConfigHelper";
 
 const Spinner = () => <div className="spinner"></div>;
 
@@ -43,27 +15,21 @@ const Stats = ({ locale }: StatsProps) => {
   const [languageData, setLanguageData] = useState<LanguageEntry[]>([]);
   const [osUsageData, setOSUsageData] = useState<OSUsageEntry[]>([]);
 
-  // (Coding activity)
   useEffect(() => {
-    fetch("https://wakatime.com/share/@AstronautMarkus/678807b3-e69a-4a62-83d5-8abe7c01f950.json")
-      .then((response) => response.json())
-      .then((data) => setActivityData(data.data))
+    fetchActivityData()
+      .then(setActivityData)
       .catch((error) => console.error("Error fetching activity data:", error));
   }, []);
 
-  // (Most used languages)
   useEffect(() => {
-    fetch("https://wakatime.com/share/@AstronautMarkus/6e3b981a-a628-4e63-82f5-050e12729732.json")
-      .then((response) => response.json())
-      .then((data) => setLanguageData(data.data))
+    fetchLanguageData()
+      .then(setLanguageData)
       .catch((error) => console.error("Error fetching language data:", error));
   }, []);
 
-  // (Most used operating systems)
   useEffect(() => {
-    fetch("https://wakatime.com/share/@AstronautMarkus/be109b51-c692-4817-adb6-c09ca597f934.json")
-      .then((response) => response.json())
-      .then((data) => setOSUsageData(data.data))
+    fetchOSUsageData()
+      .then(setOSUsageData)
       .catch((error) => console.error("Error fetching OS usage data:", error));
   }, []);
 
@@ -84,23 +50,7 @@ const Stats = ({ locale }: StatsProps) => {
     ],
   };
 
-  const activityChartOptions = {
-    responsive: true,
-    plugins: {
-      legend: { position: "top" as const },
-      title: { display: true, text: locale.codingActivityTitle },
-    },
-    scales: {
-      y: {
-        beginAtZero: true,
-        ticks: {
-          callback: function (tickValue: string | number) {
-            return `${tickValue}h`;
-          },
-        },
-      },
-    },
-  };
+  const activityChartOptions = getActivityChartOptions(locale);
 
   // (Most Used Languages)
   const languageChartData = {
@@ -115,24 +65,7 @@ const Stats = ({ locale }: StatsProps) => {
     ],
   };
 
-  const languageChartOptions = {
-    responsive: true,
-    indexAxis: "y" as const,
-    plugins: {
-      legend: { position: "top" as const },
-      title: { display: true, text: locale.mostUsedLanguagesTitle },
-    },
-    scales: {
-      x: {
-        beginAtZero: true,
-        ticks: {
-          callback: function (tickValue: string | number) {
-            return `${tickValue}%`;
-          },
-        },
-      },
-    },
-  };
+  const languageChartOptions = getLanguageChartOptions(locale);
 
   // (Most Used Operating Systems)
   const osUsageChartData = {
@@ -146,18 +79,12 @@ const Stats = ({ locale }: StatsProps) => {
     ],
   };
 
-  const osUsageChartOptions = {
-    responsive: true,
-    plugins: {
-      legend: { position: "top" as const },
-      title: { display: true, text: locale.mostUsedOSTitle },
-    },
-  };
+  const osUsageChartOptions = getOSUsageChartOptions(locale);
 
   return (
     <div className="home-container d-flex justify-content-center align-items-center">
       <div className="square-container">
-        <div className="content-box shadow">
+        <div className="content-box">
           <h1 className="title text-center">{locale.codingStatsTitle}</h1>
           <p className="text-center">{locale.insightsFromWakatime}</p>
           <div className="content">
@@ -170,15 +97,16 @@ const Stats = ({ locale }: StatsProps) => {
                     <p>{locale.codingActivityDescription}</p>
                   </div>
                   <div className="project-image text-center justify-content-center">
-                    {activityData.length > 0 ? (
-                      <Bar data={activityChartData} options={activityChartOptions} />
-                    ) : (
-                      <Spinner />
-                    )}
+                    <div className="chart-wrapper">
+                      {activityData.length > 0 ? (
+                        <Bar data={activityChartData} options={activityChartOptions} />
+                      ) : (
+                        <Spinner />
+                      )}
+                    </div>
                   </div>
                 </div>
               </li>
-
               {/* Most Used Languages Chart */}
               <li className="project-item">
                 <div className="project-details">
@@ -187,15 +115,16 @@ const Stats = ({ locale }: StatsProps) => {
                     <p>{locale.mostUsedLanguagesDescription}</p>
                   </div>
                   <div className="project-image text-center justify-content-center">
-                    {languageData.length > 0 ? (
-                      <Bar data={languageChartData} options={languageChartOptions} height={400} />
-                    ) : (
-                      <Spinner />
-                    )}
+                    <div className="chart-wrapper">
+                      {languageData.length > 0 ? (
+                        <Bar data={languageChartData} options={languageChartOptions} />
+                      ) : (
+                        <Spinner />
+                      )}
+                    </div>
                   </div>
                 </div>
               </li>
-
               {/* Most Used Operating Systems Chart */}
               <li className="project-item">
                 <div className="project-details">
@@ -204,11 +133,13 @@ const Stats = ({ locale }: StatsProps) => {
                     <p>{locale.mostUsedOSDescription}</p>
                   </div>
                   <div className="project-image text-center justify-content-center">
-                    {osUsageData.length > 0 ? (
-                      <Doughnut data={osUsageChartData} options={osUsageChartOptions} />
-                    ) : (
-                      <Spinner />
-                    )}
+                    <div className="chart-wrapper">
+                      {osUsageData.length > 0 ? (
+                        <Bar data={osUsageChartData} options={osUsageChartOptions} />
+                      ) : (
+                        <Spinner />
+                      )}
+                    </div>
                   </div>
                 </div>
               </li>

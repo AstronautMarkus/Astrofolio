@@ -75,5 +75,9 @@
     width: auto;
     height: 40px;
     margin: 5px;
+    transition: transform 0.3s ease-in-out;
   }
-  
+
+  .skill-icon:hover {
+    transform: scale(1.1);
+  }

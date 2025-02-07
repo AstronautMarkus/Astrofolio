@@ -7,5 +7,14 @@ export default defineConfig({
   server: {
     host: true
   },
-  base: '/'
+  base: '/',
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+        },
+      },
+    },
+  }
 })

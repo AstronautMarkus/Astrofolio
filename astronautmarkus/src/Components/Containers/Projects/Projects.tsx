@@ -153,7 +153,7 @@ const getAbbyBotProjects = (locale: any): Project[] => [
 const Projects = ({ locale, setSection }: { locale: any, setSection: (section: string) => void }) => (
   <div className="home-container d-flex justify-content-center align-items-center">
     <div className="square-container">
-      <div className="content-box shadow">
+      <div className="content-box">
         <h1 className="title text-center">📂 {locale.myProjects}</h1>
         <p className='text-center'>{locale.recentProjects}</p>
 
@@ -237,7 +237,7 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
               <a href="https://github.com/astronautmarkus" target="_blank" rel="noopener noreferrer" className="btn btn-primary m-2">
                 <FontAwesomeIcon icon={faGithub} /> {locale.githubProfile}
               </a>
-              <button onClick={() => setSection('home')} className="btn btn-secondary m-2">
+              <button onClick={() => setSection('')} className="btn btn-secondary m-2">
                 {locale.home}
               </button>
             </div>
