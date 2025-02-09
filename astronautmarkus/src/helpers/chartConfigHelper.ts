@@ -13,12 +13,12 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 // Register ChartJS modules
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement, ChartDataLabels);
 
-export const getActivityChartOptions = (locale: any) => ({
+export const getActivityChartOptions = () => ({
   responsive: true,
   maintainAspectRatio: false,
   plugins: {
     legend: { position: "top" as const },
-    title: { display: true, text: locale.codingActivityTitle },
+    title: { display: false }, // Quitar el título
     datalabels: {
       color: '#fff',
       formatter: (value: number) => `${value.toFixed(2)}h`,
@@ -41,13 +41,12 @@ export const getActivityChartOptions = (locale: any) => ({
   width: 1200,
 });
 
-export const getLanguageChartOptions = (locale: any) => ({
+export const getLanguageChartOptions = () => ({
   responsive: true,
   maintainAspectRatio: false,
-  indexAxis: "y" as const,
   plugins: {
     legend: { position: "top" as const },
-    title: { display: true, text: locale.mostUsedLanguagesTitle },
+    title: { display: false }, // Quitar el título
     datalabels: {
       color: '#fff',
       formatter: (value: number) => `${value.toFixed(2)}%`,
@@ -56,26 +55,16 @@ export const getLanguageChartOptions = (locale: any) => ({
       },
     },
   },
-  scales: {
-    x: {
-      beginAtZero: true,
-      ticks: {
-        callback: function (tickValue: string | number) {
-          return `${tickValue}%`;
-        },
-      },
-    },
-  },
   height: 400,
   width: 1200,
 });
 
-export const getOSUsageChartOptions = (locale: any) => ({
+export const getOSUsageChartOptions = () => ({
   responsive: true,
   maintainAspectRatio: false,
   plugins: {
     legend: { position: "top" as const },
-    title: { display: true, text: locale.mostUsedOSTitle },
+    title: { display: false }, // Quitar el título
     tooltip: {
       callbacks: {
         label: function (tooltipItem: any) {

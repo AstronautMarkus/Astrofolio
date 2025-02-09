@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Bar } from "react-chartjs-2";
+import { Bar, Pie } from "react-chartjs-2";
 import "./Stats.css";
 import { fetchActivityData, fetchLanguageData, fetchOSUsageData, ActivityEntry, LanguageEntry, OSUsageEntry } from "../../../helpers/wakatimeDataHelper";
 import { getActivityChartOptions, getLanguageChartOptions, getOSUsageChartOptions } from "../../../helpers/chartConfigHelper";
@@ -50,7 +50,7 @@ const Stats = ({ locale }: StatsProps) => {
     ],
   };
 
-  const activityChartOptions = getActivityChartOptions(locale);
+  const activityChartOptions = getActivityChartOptions();
 
   // (Most Used Languages)
   const languageChartData = {
@@ -60,12 +60,13 @@ const Stats = ({ locale }: StatsProps) => {
         label: "Usage Percentage",
         data: languageData.map((lang) => lang.percent),
         backgroundColor: languageData.map((lang) => lang.color),
+        borderColor: languageData.map(() => 'rgba(128, 128, 128, 0.5)'), 
         borderWidth: 1,
       },
     ],
   };
 
-  const languageChartOptions = getLanguageChartOptions(locale);
+  const languageChartOptions = getLanguageChartOptions();
 
   // (Most Used Operating Systems)
   const osUsageChartData = {
@@ -79,7 +80,7 @@ const Stats = ({ locale }: StatsProps) => {
     ],
   };
 
-  const osUsageChartOptions = getOSUsageChartOptions(locale);
+  const osUsageChartOptions = getOSUsageChartOptions();
 
   return (
     <div className="home-container d-flex justify-content-center align-items-center">
@@ -117,7 +118,7 @@ const Stats = ({ locale }: StatsProps) => {
                   <div className="project-image text-center justify-content-center">
                     <div className="chart-wrapper">
                       {languageData.length > 0 ? (
-                        <Bar data={languageChartData} options={languageChartOptions} />
+                        <Pie data={languageChartData} options={languageChartOptions} />
                       ) : (
                         <Spinner />
                       )}
