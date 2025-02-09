@@ -101,7 +101,7 @@ const getProfessionalPracticesProjects = (locale: any): Project[] => [
     githubLink: 'https://github.com/AstronautMarkus/Multi-Stock-Sync',
   },
   {
-    image: '/assets/img/project_img/multistocksyncapi.png',
+    image: '/assets/img/project_img/multistocksync-api.png',
     title: ' Multi-Stock-Sync-Back ',
     description: locale.multiStockAPIDescription,
     details: [`${locale.semester}: 1`, `${locale.year}: 2025`],
