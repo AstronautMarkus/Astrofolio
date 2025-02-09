@@ -87,6 +87,33 @@ const getUniversityProjects = (locale: any): Project[] => [
   },
 ];
 
+const getProfessionalPracticesProjects = (locale: any): Project[] => [
+  {
+    image: '/assets/img/project_img/multistocksync.png',
+    title: 'Multi-Stock-Sync',
+    description: locale.multiStockDescription,
+    details: [`${locale.semester}: 1`, `${locale.year}: 2025`],
+    technologies: [
+      '/assets/img/icons/react.webp',
+      '/assets/img/icons/bootstrap.png',
+      '/assets/img/icons/dotenv.png',
+    ],
+    githubLink: 'https://github.com/AstronautMarkus/Multi-Stock-Sync',
+  },
+  {
+    image: '/assets/img/project_img/multistocksyncapi.png',
+    title: ' Multi-Stock-Sync-Back ',
+    description: locale.multiStockAPIDescription,
+    details: [`${locale.semester}: 1`, `${locale.year}: 2025`],
+    technologies: [
+      '/assets/img/icons/react.webp',
+      '/assets/img/icons/bootstrap.png',
+      '/assets/img/icons/dotenv.png',
+    ],
+    githubLink: 'https://github.com/AstronautMarkus/Multi-Stock-Sync-Back ',
+  }
+];
+
 const getAbbyBotProjects = (locale: any): Project[] => [
   {
     image: '/assets/img/abbybot_project_img/discord_abbybot.png',
@@ -182,7 +209,7 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
             
             <li className="project-item d-flex">
               <div className="project-details">
-                <h2 className="project-title">📝 {locale.universityProjects}</h2>
+                <h2 className="project-title">🎓 {locale.universityProjects} 📚</h2>
                 <p className="project-description">
                   {locale.universityProjectsDescription}
                 </p>
@@ -190,6 +217,18 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
             </li>
 
             <ProjectCarousel projects={getUniversityProjects(locale)} />
+
+            <li className="project-item d-flex">
+              <div className="project-details">
+                <h2 className="project-title">👔 {locale.professionalPracticeTitle} 💻</h2>
+                <p className="project-description">
+                  {locale.professionalPracticeDescription}
+                </p>
+              </div>
+            </li>
+
+            <ProjectCarousel projects={getProfessionalPracticesProjects(locale)} />
+
 
             <li className="project-item d-flex flex-column flex-md-row">
               <div className="project-details">
@@ -229,7 +268,7 @@ const Projects = ({ locale, setSection }: { locale: any, setSection: (section: s
 
             <li className="project-item card text-center text-light">
               <div className="card-body">
-              <h2>{locale.moreProjects}</h2>
+              <h2>{locale.moreProjects} <FontAwesomeIcon icon={faGithub} /></h2>
             <img src="https://github.com/astronautmarkus.png" alt="GitHub Profile" className="github-profile-picture mt-3 mb-3 rounded" width="200"  />
             <p>@astronautmarkus</p>
             <p>{locale.exploreMore}</p>

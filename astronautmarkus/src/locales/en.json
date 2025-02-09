@@ -150,5 +150,9 @@
   "littleWitchAcademiaDescription": "Little Witch Academia is a Japanese anime that tells the story of Atsuko Kagari, a young girl who enrolls in Luna Nova Magical Academy to become a witch. The series focuses on the adventures of Akko and her friends Lotte and Sucy as they strive to achieve their dreams and discover the true meaning of magic.",
   "littleWitchAcademiaWhyILikeIt": "I watched this series in 2020 and I liked it a lot, even though it's a shojo series. The plot is simple but interesting, the protagonist's determination to achieve her dream is admirable. This series made me shed a few tears when the truth is revealed, but I really enjoyed it and have a lot of fondness for it. I would recommend it to anyone. Chariot Du Nord my waifu.",
   "littleWitchAcademiaPros": "Akko's determination, characters, plot, animation, etc.",
-  "littleWitchAcademiaCons": "Probably there will never be a season 2, the hopes are so low that it's worth dreaming."
+  "littleWitchAcademiaCons": "Probably there will never be a season 2, the hopes are so low that it's worth dreaming.",
+  "professionalPracticeTitle": "Professional Practice Projects",
+  "professionalPracticeDescription": "Compilation of my projects carried out during my professional practice as a programming analyst, working in a team with other great professionals.",
+  "multiStockDescription": "Multi-Stock-Sync is an application for managing businesses with MercadoLibre accounts. It allows for the entry of new products, stock assignment, price changes, and product modifications, among other functions. It also has the capability to generate sales reports or specific data through date ranges, such as years, months, etc.",
+  "multiStockAPIDescription": "RESTful API for the Multi-Stock-Sync project, providing endpoints for the application's features."
 }
