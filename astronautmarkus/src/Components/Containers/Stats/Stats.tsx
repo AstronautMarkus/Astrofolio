@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Bar, Pie } from "react-chartjs-2";
+import { Bar, Pie, Doughnut } from "react-chartjs-2";
 import "./Stats.css";
 import { fetchActivityData, fetchLanguageData, fetchOSUsageData, ActivityEntry, LanguageEntry, OSUsageEntry } from "../../../helpers/wakatimeDataHelper";
 import { getActivityChartOptions, getLanguageChartOptions, getOSUsageChartOptions } from "../../../helpers/chartConfigHelper";
@@ -73,8 +73,10 @@ const Stats = ({ locale }: StatsProps) => {
     labels: osUsageData.map((os) => os.name),
     datasets: [
       {
+        label: "Usage Percentage", 
         data: osUsageData.map((os) => os.percent),
         backgroundColor: osUsageData.map((os) => os.color),
+        borderColor: osUsageData.map(() => 'rgba(128, 128, 128, 0.5)'), 
         borderWidth: 1,
       },
     ],
@@ -136,7 +138,7 @@ const Stats = ({ locale }: StatsProps) => {
                   <div className="project-image text-center justify-content-center">
                     <div className="chart-wrapper">
                       {osUsageData.length > 0 ? (
-                        <Bar data={osUsageChartData} options={osUsageChartOptions} />
+                        <Doughnut data={osUsageChartData} options={osUsageChartOptions} />
                       ) : (
                         <Spinner />
                       )}
