@@ -1,7 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faHardHat, faLightbulb, faComments, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faHardHat, faLightbulb, faComments, faClock, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+
 
 import './Resume.css';
 
@@ -13,6 +14,7 @@ const Resume = ({ locale }: { locale: any }) => (
         <p className='text-center'>🌌 {locale.aboutMeSubtitle}</p>
         <div className="content">
           <ul className="project-list">
+
             <li className="project-item">
               <div className="project-details">
                 <h2 className="project-title">💻 {locale.whatIDoTitle}</h2>
@@ -113,26 +115,32 @@ const Resume = ({ locale }: { locale: any }) => (
             <h2 className="project-title">📜 {locale.certificationsTitle}</h2>
             <div className="project-text mb-4 mt-4">
               <ul>
-          <li>
-            <FontAwesomeIcon icon={faBriefcase} className="fa-icon" /> <strong>-{locale.softwareArchitecture}</strong>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faHardHat} className="fa-icon" /> <strong>-{locale.dataModeling}</strong>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faLightbulb} className="fa-icon" /> <strong>-{locale.softwareProgramming}</strong>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faComments} className="fa-icon" /> <strong>-{locale.softwareQuality}</strong>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faClock} className="fa-icon" /> <strong>-{locale.requirementsAnalysis}</strong>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faComments} className="fa-icon" /> <strong>-{locale.intermediateEnglish}</strong>
-          </li>
+                <li>
+                  <FontAwesomeIcon icon={faBriefcase} className="fa-icon" /> <strong>-{locale.softwareArchitecture}</strong>
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faHardHat} className="fa-icon" /> <strong>-{locale.dataModeling}</strong>
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faLightbulb} className="fa-icon" /> <strong>-{locale.softwareProgramming}</strong>
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faComments} className="fa-icon" /> <strong>-{locale.softwareQuality}</strong>
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faClock} className="fa-icon" /> <strong>-{locale.requirementsAnalysis}</strong>
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faComments} className="fa-icon" /> <strong>-{locale.intermediateEnglish}</strong>
+                </li>
               </ul>
             </div>
+            
+            <a href="/assets/pdf/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-lg purpleButton" style={{ textDecoration: 'none' }}>
+              <FontAwesomeIcon icon={faFilePdf} className="me-2" />
+              {locale.viewPDF}
+            </a>
+
           </div>
         </li>
 

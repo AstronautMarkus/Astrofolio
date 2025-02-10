@@ -81,3 +81,18 @@
   .skill-icon:hover {
     transform: scale(1.1);
   }
+
+  .purpleButton {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.purpleButton:hover {
+    background-color: #5a0c9d;
+}
