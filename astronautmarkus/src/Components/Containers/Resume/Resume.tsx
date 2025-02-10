@@ -108,6 +108,34 @@ const Resume = ({ locale }: { locale: any }) => (
           </div>
         </div>
 
+        <li className="project-item d-flex mt-4">
+          <div className="project-details">
+            <h2 className="project-title">📜 {locale.certificationsTitle}</h2>
+            <div className="project-text mb-4 mt-4">
+              <ul>
+          <li>
+            <FontAwesomeIcon icon={faBriefcase} className="fa-icon" /> <strong>-{locale.softwareArchitecture}</strong>
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faHardHat} className="fa-icon" /> <strong>-{locale.dataModeling}</strong>
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faLightbulb} className="fa-icon" /> <strong>-{locale.softwareProgramming}</strong>
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faComments} className="fa-icon" /> <strong>-{locale.softwareQuality}</strong>
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faClock} className="fa-icon" /> <strong>-{locale.requirementsAnalysis}</strong>
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faComments} className="fa-icon" /> <strong>-{locale.intermediateEnglish}</strong>
+          </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
         <ul className="project-list mt-5">
           <li className="project-item">
             <div className="project-details">

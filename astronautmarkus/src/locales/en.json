@@ -154,5 +154,12 @@
   "professionalPracticeTitle": "Professional Practice Projects",
   "professionalPracticeDescription": "Compilation of my projects carried out during my professional practice as a programming analyst, working in a team with other great professionals.",
   "multiStockDescription": "Multi-Stock-Sync is an application for managing businesses with MercadoLibre accounts. It allows for the entry of new products, stock assignment, price changes, and product modifications, among other functions. It also has the capability to generate sales reports or specific data through date ranges, such as years, months, etc.",
-  "multiStockAPIDescription": "RESTful API for the Multi-Stock-Sync project, providing endpoints for the application's features."
+  "multiStockAPIDescription": "RESTful API for the Multi-Stock-Sync project, providing endpoints for the application's features.",
+  "certificationsTitle": "Certifications of my career (Computer Programming Analyst)",
+  "softwareArchitecture": "SOFTWARE ARCHITECTURE",
+  "dataModeling": "DATA MODELING AND DEVELOPMENT",
+  "softwareProgramming": "SOFTWARE PROGRAMMING",
+  "softwareQuality": "SOFTWARE QUALITY",
+  "requirementsAnalysis": "REQUIREMENTS ANALYSIS AND PLANNING",
+  "intermediateEnglish": "INTERMEDIATE ENGLISH"
 }
